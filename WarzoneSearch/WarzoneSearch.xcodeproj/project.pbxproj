@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		868AE36580FBBA6F8C3E6CB5 /* Pods_WarzoneSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F44096B3C64635C28D02BA1 /* Pods_WarzoneSearch.framework */; };
+		EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB742420691600B8E285 /* AppDelegate.swift */; };
+		EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB7D2420691600B8E285 /* WarzoneSearch.xcdatamodeld */; };
+		EF5BAB812420691D00B8E285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5BAB802420691D00B8E285 /* Assets.xcassets */; };
+		EF5BAB842420691D00B8E285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5BAB822420691D00B8E285 /* LaunchScreen.storyboard */; };
+		EF5BAB8E24206A5300B8E285 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB8D24206A5300B8E285 /* AppComponents.swift */; };
+		EF5BAB9724206A8600B8E285 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB9224206A8600B8E285 /* RootRouter.swift */; };
+		EF5BAB9824206A8600B8E285 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB9324206A8600B8E285 /* RootViewController.swift */; };
+		EF5BAB9924206A8600B8E285 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB9424206A8600B8E285 /* RootBuilder.swift */; };
+		EF5BAB9A24206A8600B8E285 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BAB9524206A8600B8E285 /* RootInteractor.swift */; };
+		EF5BABA624206B6B00B8E285 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABA524206B6B00B8E285 /* IndicatorView.swift */; };
+		EF5BABB924206D6600B8E285 /* LoggedInSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABB424206D6600B8E285 /* LoggedInSearchRouter.swift */; };
+		EF5BABBA24206D6600B8E285 /* LoggedInSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABB524206D6600B8E285 /* LoggedInSearchViewController.swift */; };
+		EF5BABBB24206D6600B8E285 /* LoggedInSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABB624206D6600B8E285 /* LoggedInSearchBuilder.swift */; };
+		EF5BABBC24206D6600B8E285 /* LoggedInSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABB724206D6600B8E285 /* LoggedInSearchInteractor.swift */; };
+		EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BABB824206D6600B8E285 /* LoggedInSearchViewController.xib */; };
+		EF5BABC324206D7300B8E285 /* LoggedOutSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABBE24206D7300B8E285 /* LoggedOutSearchRouter.swift */; };
+		EF5BABC424206D7300B8E285 /* LoggedOutSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABBF24206D7300B8E285 /* LoggedOutSearchViewController.swift */; };
+		EF5BABC524206D7300B8E285 /* LoggedOutSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABC024206D7300B8E285 /* LoggedOutSearchBuilder.swift */; };
+		EF5BABC624206D7300B8E285 /* LoggedOutSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABC124206D7300B8E285 /* LoggedOutSearchInteractor.swift */; };
+		EF5BABC724206D7300B8E285 /* LoggedOutSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BABC224206D7300B8E285 /* LoggedOutSearchViewController.xib */; };
+		EF5BABC924206DFB00B8E285 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BABC824206DFB00B8E285 /* RootViewController.xib */; };
+		EF5BABDA2420749E00B8E285 /* UserUseCaseImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABD92420749E00B8E285 /* UserUseCaseImplement.swift */; };
+		EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABDB242074AC00B8E285 /* UserRepositoryImplement.swift */; };
+		EF5BABDE242074BA00B8E285 /* UserDataStoreImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BABDD242074BA00B8E285 /* UserDataStoreImplement.swift */; };
+		EF5BB1A6242077DE00B8E285 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5BB1A5242077DE00B8E285 /* Domain.framework */; };
+		EF5BB1A7242077DE00B8E285 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5BB1A5242077DE00B8E285 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF5BB1AB2420990500B8E285 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1AA2420990500B8E285 /* UserViewModel.swift */; };
+		EF5BB1B02420A00100B8E285 /* UserStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1AF2420A00100B8E285 /* UserStream.swift */; };
+		EF5BB1BB2420C2CE00B8E285 /* InfomationUseCaseImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1BA2420C2CE00B8E285 /* InfomationUseCaseImplement.swift */; };
+		EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1BC2420C2DD00B8E285 /* InfomationRepositoryImplement.swift */; };
+		EF5BB1BF2420C2EB00B8E285 /* InfomationDataStoreImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1BE2420C2EB00B8E285 /* InfomationDataStoreImplement.swift */; };
+		EF5BB1C22420C44000B8E285 /* InfomationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1C12420C44000B8E285 /* InfomationCodable.swift */; };
+		EF5BB1C82421CC6500B8E285 /* InfomationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1C72421CC6500B8E285 /* InfomationViewModel.swift */; };
+		EF5BB1CA2422207300B8E285 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = EF5BB1C92422207300B8E285 /* loading.json */; };
+		EF5BB1D22422226B00B8E285 /* UIViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1D12422226B00B8E285 /* UIViewCustom.swift */; };
+		EF5BB1D5242311C200B8E285 /* InfomationTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1D3242311C200B8E285 /* InfomationTableViewHeaderCell.swift */; };
+		EF5BB1D6242311C200B8E285 /* InfomationTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BB1D4242311C200B8E285 /* InfomationTableViewHeaderCell.xib */; };
+		EF5BB1D9242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1D7242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift */; };
+		EF5BB1DA242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BB1D8242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib */; };
+		EF5BB1DD2423120900B8E285 /* InfomationTableViewWeeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1DB2423120900B8E285 /* InfomationTableViewWeeklyCell.swift */; };
+		EF5BB1DE2423120900B8E285 /* InfomationTableViewWeeklyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5BB1DC2423120900B8E285 /* InfomationTableViewWeeklyCell.xib */; };
+		EF5BB1E2242364CE00B8E285 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF5BB1E4242364CE00B8E285 /* Localizable.strings */; };
+		EF5BB1E82423650D00B8E285 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BB1E72423650D00B8E285 /* String+.swift */; };
+		EF5F22B624246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22B424246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift */; };
+		EF5F22B724246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F22B524246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib */; };
+		EF5F22BA2428647600A717A2 /* InfomationTableViewSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22B82428647600A717A2 /* InfomationTableViewSectionHeaderCell.swift */; };
+		EF5F22BB2428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F22B92428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib */; };
+		EF5F22BE242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22BC242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift */; };
+		EF5F22BF242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F22BD242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib */; };
+		EF5F22C12428BE9400A717A2 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22C02428BE9400A717A2 /* Double+.swift */; };
+		EF5F22C32429ACED00A717A2 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22C22429ACED00A717A2 /* UIImage+.swift */; };
+		EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */; };
+		EF9E7AEB242DE3D40024BD0F /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */; };
+		EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */; };
+		EF9E7AF12432EC2D0024BD0F /* MatchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AEF2432EC2D0024BD0F /* MatchHistoryTableViewCell.swift */; };
+		EF9E7AF22432EC2D0024BD0F /* MatchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9E7AF02432EC2D0024BD0F /* MatchHistoryTableViewCell.xib */; };
+		EF9E7AFF2433471A0024BD0F /* MatchHistoryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */; };
+		EF9E7B0F243465EF0024BD0F /* MatchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B0E243465EF0024BD0F /* MatchHistoryViewModel.swift */; };
+		EF9E7B1724346AA60024BD0F /* MatchHistoryDataStoreImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1624346AA60024BD0F /* MatchHistoryDataStoreImplement.swift */; };
+		EF9E7B1924346B220024BD0F /* MatchHistoryRepositoryImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */; };
+		EF9E7B1B24346B320024BD0F /* MatchHistoryUseCaseImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */; };
+		EF9E7B1D24358E3A0024BD0F /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF5BB1A8242077DE00B8E285 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF5BB1A7242077DE00B8E285 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A472A5C2D0973BC560BBDA4 /* Pods-WarzoneSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarzoneSearch.debug.xcconfig"; path = "Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		8F44096B3C64635C28D02BA1 /* Pods_WarzoneSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarzoneSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07508E454E34E54D71A8D42 /* Pods-WarzoneSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarzoneSearch.release.xcconfig"; path = "Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch.release.xcconfig"; sourceTree = "<group>"; };
+		EF5BAB712420691600B8E285 /* WZ.search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZ.search.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5BAB742420691600B8E285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF5BAB7E2420691600B8E285 /* WarzoneSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WarzoneSearch.xcdatamodel; sourceTree = "<group>"; };
+		EF5BAB802420691D00B8E285 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF5BAB832420691D00B8E285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF5BAB852420691D00B8E285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5BAB8D24206A5300B8E285 /* AppComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponents.swift; sourceTree = "<group>"; };
+		EF5BAB9224206A8600B8E285 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		EF5BAB9324206A8600B8E285 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		EF5BAB9424206A8600B8E285 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		EF5BAB9524206A8600B8E285 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		EF5BABA524206B6B00B8E285 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		EF5BABB424206D6600B8E285 /* LoggedInSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSearchRouter.swift; sourceTree = "<group>"; };
+		EF5BABB524206D6600B8E285 /* LoggedInSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSearchViewController.swift; sourceTree = "<group>"; };
+		EF5BABB624206D6600B8E285 /* LoggedInSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSearchBuilder.swift; sourceTree = "<group>"; };
+		EF5BABB724206D6600B8E285 /* LoggedInSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSearchInteractor.swift; sourceTree = "<group>"; };
+		EF5BABB824206D6600B8E285 /* LoggedInSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoggedInSearchViewController.xib; sourceTree = "<group>"; };
+		EF5BABBE24206D7300B8E285 /* LoggedOutSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutSearchRouter.swift; sourceTree = "<group>"; };
+		EF5BABBF24206D7300B8E285 /* LoggedOutSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutSearchViewController.swift; sourceTree = "<group>"; };
+		EF5BABC024206D7300B8E285 /* LoggedOutSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutSearchBuilder.swift; sourceTree = "<group>"; };
+		EF5BABC124206D7300B8E285 /* LoggedOutSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutSearchInteractor.swift; sourceTree = "<group>"; };
+		EF5BABC224206D7300B8E285 /* LoggedOutSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoggedOutSearchViewController.xib; sourceTree = "<group>"; };
+		EF5BABC824206DFB00B8E285 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		EF5BABD92420749E00B8E285 /* UserUseCaseImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCaseImplement.swift; sourceTree = "<group>"; };
+		EF5BABDB242074AC00B8E285 /* UserRepositoryImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImplement.swift; sourceTree = "<group>"; };
+		EF5BABDD242074BA00B8E285 /* UserDataStoreImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStoreImplement.swift; sourceTree = "<group>"; };
+		EF5BB1A5242077DE00B8E285 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5BB1AA2420990500B8E285 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EF5BB1AF2420A00100B8E285 /* UserStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStream.swift; sourceTree = "<group>"; };
+		EF5BB1BA2420C2CE00B8E285 /* InfomationUseCaseImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationUseCaseImplement.swift; sourceTree = "<group>"; };
+		EF5BB1BC2420C2DD00B8E285 /* InfomationRepositoryImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationRepositoryImplement.swift; sourceTree = "<group>"; };
+		EF5BB1BE2420C2EB00B8E285 /* InfomationDataStoreImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationDataStoreImplement.swift; sourceTree = "<group>"; };
+		EF5BB1C12420C44000B8E285 /* InfomationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationCodable.swift; sourceTree = "<group>"; };
+		EF5BB1C72421CC6500B8E285 /* InfomationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewModel.swift; sourceTree = "<group>"; };
+		EF5BB1C92422207300B8E285 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		EF5BB1D12422226B00B8E285 /* UIViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCustom.swift; sourceTree = "<group>"; };
+		EF5BB1D3242311C200B8E285 /* InfomationTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		EF5BB1D4242311C200B8E285 /* InfomationTableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationTableViewHeaderCell.xib; sourceTree = "<group>"; };
+		EF5BB1D7242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewLifetimeCell.swift; sourceTree = "<group>"; };
+		EF5BB1D8242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationTableViewLifetimeCell.xib; sourceTree = "<group>"; };
+		EF5BB1DB2423120900B8E285 /* InfomationTableViewWeeklyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewWeeklyCell.swift; sourceTree = "<group>"; };
+		EF5BB1DC2423120900B8E285 /* InfomationTableViewWeeklyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationTableViewWeeklyCell.xib; sourceTree = "<group>"; };
+		EF5BB1E3242364CE00B8E285 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF5BB1E5242364F200B8E285 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF5BB1E6242364F200B8E285 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF5BB1E72423650D00B8E285 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		EF5F22B424246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationCollectionViewWeeklyCell.swift; sourceTree = "<group>"; };
+		EF5F22B524246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationCollectionViewWeeklyCell.xib; sourceTree = "<group>"; };
+		EF5F22B82428647600A717A2 /* InfomationTableViewSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewSectionHeaderCell.swift; sourceTree = "<group>"; };
+		EF5F22B92428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationTableViewSectionHeaderCell.xib; sourceTree = "<group>"; };
+		EF5F22BC242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationCollectionViewLifeTimeCell.swift; sourceTree = "<group>"; };
+		EF5F22BD242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationCollectionViewLifeTimeCell.xib; sourceTree = "<group>"; };
+		EF5F22C02428BE9400A717A2 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		EF5F22C22429ACED00A717A2 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		EF9E7AEF2432EC2D0024BD0F /* MatchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		EF9E7AF02432EC2D0024BD0F /* MatchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryCodable.swift; sourceTree = "<group>"; };
+		EF9E7B0E243465EF0024BD0F /* MatchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewModel.swift; sourceTree = "<group>"; };
+		EF9E7B1624346AA60024BD0F /* MatchHistoryDataStoreImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDataStoreImplement.swift; sourceTree = "<group>"; };
+		EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryRepositoryImplement.swift; sourceTree = "<group>"; };
+		EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryUseCaseImplement.swift; sourceTree = "<group>"; };
+		EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5BAB6E2420691600B8E285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5BB1A6242077DE00B8E285 /* Domain.framework in Frameworks */,
+				868AE36580FBBA6F8C3E6CB5 /* Pods_WarzoneSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95B1E9640911CCF2902CB92A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A472A5C2D0973BC560BBDA4 /* Pods-WarzoneSearch.debug.xcconfig */,
+				C07508E454E34E54D71A8D42 /* Pods-WarzoneSearch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1AF33EE21C071CB1822CFCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1A5242077DE00B8E285 /* Domain.framework */,
+				8F44096B3C64635C28D02BA1 /* Pods_WarzoneSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF5BAB682420691600B8E285 = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB732420691600B8E285 /* WarzoneSearch */,
+				EF5BAB722420691600B8E285 /* Products */,
+				95B1E9640911CCF2902CB92A /* Pods */,
+				C1AF33EE21C071CB1822CFCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5BAB722420691600B8E285 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB712420691600B8E285 /* WZ.search.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5BAB732420691600B8E285 /* WarzoneSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB8B24206A2600B8E285 /* Resources */,
+				EF5BAB9E24206B2500B8E285 /* Util */,
+				EF5BAB8C24206A3A00B8E285 /* AppStart */,
+				EF5BABD42420745100B8E285 /* Domain Implement */,
+				EF5BAB9C24206A9F00B8E285 /* Data */,
+				EF5BAB8F24206A6600B8E285 /* Presentations */,
+			);
+			path = WarzoneSearch;
+			sourceTree = "<group>";
+		};
+		EF5BAB8B24206A2600B8E285 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1DF2423648D00B8E285 /* Localized */,
+				EF5BABA024206B4600B8E285 /* Lottie */,
+				EF5BAB852420691D00B8E285 /* Info.plist */,
+				EF5BAB802420691D00B8E285 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF5BAB8C24206A3A00B8E285 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB822420691D00B8E285 /* LaunchScreen.storyboard */,
+				EF5BAB742420691600B8E285 /* AppDelegate.swift */,
+				EF5BAB8D24206A5300B8E285 /* AppComponents.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		EF5BAB8F24206A6600B8E285 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB9024206A7000B8E285 /* RIBs */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		EF5BAB9024206A7000B8E285 /* RIBs */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB9124206A7500B8E285 /* Root */,
+				EF5BABB324206D1200B8E285 /* LoggedOutSearch */,
+				EF5BABB224206D0E00B8E285 /* LoggedInSearch */,
+			);
+			path = RIBs;
+			sourceTree = "<group>";
+		};
+		EF5BAB9124206A7500B8E285 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F22C4242B28D400A717A2 /* BaseViewController */,
+				EF5BB1A9242098F500B8E285 /* ViewModel */,
+				EF5BAB9224206A8600B8E285 /* RootRouter.swift */,
+				EF5BAB9524206A8600B8E285 /* RootInteractor.swift */,
+				EF5BAB9424206A8600B8E285 /* RootBuilder.swift */,
+				EF5BAB9324206A8600B8E285 /* RootViewController.swift */,
+				EF5BABC824206DFB00B8E285 /* RootViewController.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EF5BAB9C24206A9F00B8E285 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1C02420C42000B8E285 /* Codable */,
+				EF5BAB9D24206AA700B8E285 /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EF5BAB9D24206AA700B8E285 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BAB7D2420691600B8E285 /* WarzoneSearch.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EF5BAB9E24206B2500B8E285 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1D02422225600B8E285 /* Extensions */,
+				EF5BAB9F24206B2B00B8E285 /* View */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EF5BAB9F24206B2B00B8E285 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BABA524206B6B00B8E285 /* IndicatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF5BABA024206B4600B8E285 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1C92422207300B8E285 /* loading.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		EF5BABB224206D0E00B8E285 /* LoggedInSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1CB242221F300B8E285 /* View */,
+				EF5BB1C62421CC5300B8E285 /* ViewModel */,
+				EF5BABB424206D6600B8E285 /* LoggedInSearchRouter.swift */,
+				EF5BABB724206D6600B8E285 /* LoggedInSearchInteractor.swift */,
+				EF5BABB624206D6600B8E285 /* LoggedInSearchBuilder.swift */,
+				EF5BABB524206D6600B8E285 /* LoggedInSearchViewController.swift */,
+				EF5BABB824206D6600B8E285 /* LoggedInSearchViewController.xib */,
+			);
+			path = LoggedInSearch;
+			sourceTree = "<group>";
+		};
+		EF5BABB324206D1200B8E285 /* LoggedOutSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7AE8242DE3C50024BD0F /* View */,
+				EF5BABBE24206D7300B8E285 /* LoggedOutSearchRouter.swift */,
+				EF5BABC124206D7300B8E285 /* LoggedOutSearchInteractor.swift */,
+				EF5BABC024206D7300B8E285 /* LoggedOutSearchBuilder.swift */,
+				EF5BABBF24206D7300B8E285 /* LoggedOutSearchViewController.swift */,
+				EF5BABC224206D7300B8E285 /* LoggedOutSearchViewController.xib */,
+			);
+			path = LoggedOutSearch;
+			sourceTree = "<group>";
+		};
+		EF5BABD42420745100B8E285 /* Domain Implement */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BABD52420745C00B8E285 /* DataStore Implement */,
+				EF5BABD82420747E00B8E285 /* Repository Implement */,
+				EF5BABD72420746F00B8E285 /* UseCase Implement */,
+			);
+			path = "Domain Implement";
+			sourceTree = "<group>";
+		};
+		EF5BABD52420745C00B8E285 /* DataStore Implement */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BABDD242074BA00B8E285 /* UserDataStoreImplement.swift */,
+				EF5BB1BE2420C2EB00B8E285 /* InfomationDataStoreImplement.swift */,
+				EF9E7B1624346AA60024BD0F /* MatchHistoryDataStoreImplement.swift */,
+			);
+			path = "DataStore Implement";
+			sourceTree = "<group>";
+		};
+		EF5BABD72420746F00B8E285 /* UseCase Implement */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BABD92420749E00B8E285 /* UserUseCaseImplement.swift */,
+				EF5BB1BA2420C2CE00B8E285 /* InfomationUseCaseImplement.swift */,
+				EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */,
+			);
+			path = "UseCase Implement";
+			sourceTree = "<group>";
+		};
+		EF5BABD82420747E00B8E285 /* Repository Implement */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BABDB242074AC00B8E285 /* UserRepositoryImplement.swift */,
+				EF5BB1BC2420C2DD00B8E285 /* InfomationRepositoryImplement.swift */,
+				EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */,
+			);
+			path = "Repository Implement";
+			sourceTree = "<group>";
+		};
+		EF5BB1A9242098F500B8E285 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1AA2420990500B8E285 /* UserViewModel.swift */,
+				EF5BB1AF2420A00100B8E285 /* UserStream.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF5BB1C02420C42000B8E285 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1C12420C44000B8E285 /* InfomationCodable.swift */,
+				EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		EF5BB1C62421CC5300B8E285 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1C72421CC6500B8E285 /* InfomationViewModel.swift */,
+				EF9E7B0E243465EF0024BD0F /* MatchHistoryViewModel.swift */,
+				EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF5BB1CB242221F300B8E285 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7AED2432EBC50024BD0F /* Infomation */,
+				EF9E7AEE2432EBD00024BD0F /* Match History */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF5BB1D02422225600B8E285 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1D12422226B00B8E285 /* UIViewCustom.swift */,
+				EF5BB1E72423650D00B8E285 /* String+.swift */,
+				EF5F22C02428BE9400A717A2 /* Double+.swift */,
+				EF5F22C22429ACED00A717A2 /* UIImage+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF5BB1DF2423648D00B8E285 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1E4242364CE00B8E285 /* Localizable.strings */,
+			);
+			path = Localized;
+			sourceTree = "<group>";
+		};
+		EF5F22C4242B28D400A717A2 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		EF9E7AE8242DE3C50024BD0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */,
+				EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF9E7AED2432EBC50024BD0F /* Infomation */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BB1D3242311C200B8E285 /* InfomationTableViewHeaderCell.swift */,
+				EF5BB1D4242311C200B8E285 /* InfomationTableViewHeaderCell.xib */,
+				EF5F22B82428647600A717A2 /* InfomationTableViewSectionHeaderCell.swift */,
+				EF5F22B92428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib */,
+				EF5BB1D7242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift */,
+				EF5BB1D8242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib */,
+				EF5F22BC242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift */,
+				EF5F22BD242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib */,
+				EF5BB1DB2423120900B8E285 /* InfomationTableViewWeeklyCell.swift */,
+				EF5BB1DC2423120900B8E285 /* InfomationTableViewWeeklyCell.xib */,
+				EF5F22B424246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift */,
+				EF5F22B524246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib */,
+			);
+			path = Infomation;
+			sourceTree = "<group>";
+		};
+		EF9E7AEE2432EBD00024BD0F /* Match History */ = {
+			isa = PBXGroup;
+			children = (
+				EF9E7AEF2432EC2D0024BD0F /* MatchHistoryTableViewCell.swift */,
+				EF9E7AF02432EC2D0024BD0F /* MatchHistoryTableViewCell.xib */,
+			);
+			path = "Match History";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF5BAB702420691600B8E285 /* WarzoneSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5BAB882420691D00B8E285 /* Build configuration list for PBXNativeTarget "WarzoneSearch" */;
+			buildPhases = (
+				8A0B07A5907E22E08186D487 /* [CP] Check Pods Manifest.lock */,
+				EF5BAB6D2420691600B8E285 /* Sources */,
+				EF5BAB6E2420691600B8E285 /* Frameworks */,
+				EF5BAB6F2420691600B8E285 /* Resources */,
+				57E362DB00BE82F0C1835ECB /* [CP] Embed Pods Frameworks */,
+				EF5BB1A8242077DE00B8E285 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WarzoneSearch;
+			productName = WarzoneSearch;
+			productReference = EF5BAB712420691600B8E285 /* WZ.search.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF5BAB692420691600B8E285 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = GilwanRyu;
+				TargetAttributes = {
+					EF5BAB702420691600B8E285 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EF5BAB6C2420691600B8E285 /* Build configuration list for PBXProject "WarzoneSearch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ko,
+			);
+			mainGroup = EF5BAB682420691600B8E285;
+			productRefGroup = EF5BAB722420691600B8E285 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5BAB702420691600B8E285 /* WarzoneSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5BAB6F2420691600B8E285 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */,
+				EF5BB1DE2423120900B8E285 /* InfomationTableViewWeeklyCell.xib in Resources */,
+				EF5BB1E2242364CE00B8E285 /* Localizable.strings in Resources */,
+				EF9E7AF22432EC2D0024BD0F /* MatchHistoryTableViewCell.xib in Resources */,
+				EF5BAB842420691D00B8E285 /* LaunchScreen.storyboard in Resources */,
+				EF5BB1DA242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib in Resources */,
+				EF5BB1CA2422207300B8E285 /* loading.json in Resources */,
+				EF5F22BB2428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib in Resources */,
+				EF5BABC924206DFB00B8E285 /* RootViewController.xib in Resources */,
+				EF5F22B724246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib in Resources */,
+				EF5BAB812420691D00B8E285 /* Assets.xcassets in Resources */,
+				EF5BB1D6242311C200B8E285 /* InfomationTableViewHeaderCell.xib in Resources */,
+				EF5BABC724206D7300B8E285 /* LoggedOutSearchViewController.xib in Resources */,
+				EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */,
+				EF5F22BF242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57E362DB00BE82F0C1835ECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A0B07A5907E22E08186D487 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WarzoneSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5BAB6D2420691600B8E285 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5BB1B02420A00100B8E285 /* UserStream.swift in Sources */,
+				EF5BB1D22422226B00B8E285 /* UIViewCustom.swift in Sources */,
+				EF9E7B1724346AA60024BD0F /* MatchHistoryDataStoreImplement.swift in Sources */,
+				EF5BABDA2420749E00B8E285 /* UserUseCaseImplement.swift in Sources */,
+				EF5BAB9824206A8600B8E285 /* RootViewController.swift in Sources */,
+				EF5BABC424206D7300B8E285 /* LoggedOutSearchViewController.swift in Sources */,
+				EF9E7B0F243465EF0024BD0F /* MatchHistoryViewModel.swift in Sources */,
+				EF5BABC324206D7300B8E285 /* LoggedOutSearchRouter.swift in Sources */,
+				EF5BAB9724206A8600B8E285 /* RootRouter.swift in Sources */,
+				EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */,
+				EF5BB1DD2423120900B8E285 /* InfomationTableViewWeeklyCell.swift in Sources */,
+				EF5BABB924206D6600B8E285 /* LoggedInSearchRouter.swift in Sources */,
+				EF5BB1BB2420C2CE00B8E285 /* InfomationUseCaseImplement.swift in Sources */,
+				EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */,
+				EF5BABC624206D7300B8E285 /* LoggedOutSearchInteractor.swift in Sources */,
+				EF9E7B1B24346B320024BD0F /* MatchHistoryUseCaseImplement.swift in Sources */,
+				EF5BB1C82421CC6500B8E285 /* InfomationViewModel.swift in Sources */,
+				EF5BAB9A24206A8600B8E285 /* RootInteractor.swift in Sources */,
+				EF5BAB8E24206A5300B8E285 /* AppComponents.swift in Sources */,
+				EF5F22B624246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift in Sources */,
+				EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */,
+				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
+				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
+				EF5BB1D5242311C200B8E285 /* InfomationTableViewHeaderCell.swift in Sources */,
+				EF9E7AF12432EC2D0024BD0F /* MatchHistoryTableViewCell.swift in Sources */,
+				EF5BABBC24206D6600B8E285 /* LoggedInSearchInteractor.swift in Sources */,
+				EF5BABBB24206D6600B8E285 /* LoggedInSearchBuilder.swift in Sources */,
+				EF5BABBA24206D6600B8E285 /* LoggedInSearchViewController.swift in Sources */,
+				EF5F22BE242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift in Sources */,
+				EF5BABDE242074BA00B8E285 /* UserDataStoreImplement.swift in Sources */,
+				EF5BB1BF2420C2EB00B8E285 /* InfomationDataStoreImplement.swift in Sources */,
+				EF5BB1E82423650D00B8E285 /* String+.swift in Sources */,
+				EF5BB1C22420C44000B8E285 /* InfomationCodable.swift in Sources */,
+				EF5BB1D9242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift in Sources */,
+				EF5F22C12428BE9400A717A2 /* Double+.swift in Sources */,
+				EF9E7AFF2433471A0024BD0F /* MatchHistoryCodable.swift in Sources */,
+				EF5F22BA2428647600A717A2 /* InfomationTableViewSectionHeaderCell.swift in Sources */,
+				EF5BABA624206B6B00B8E285 /* IndicatorView.swift in Sources */,
+				EF5BAB9924206A8600B8E285 /* RootBuilder.swift in Sources */,
+				EF9E7AEB242DE3D40024BD0F /* SearchHistoryTableViewCell.swift in Sources */,
+				EF5F22C32429ACED00A717A2 /* UIImage+.swift in Sources */,
+				EF9E7B1D24358E3A0024BD0F /* MatchViewModel.swift in Sources */,
+				EF5BB1AB2420990500B8E285 /* UserViewModel.swift in Sources */,
+				EF9E7B1924346B220024BD0F /* MatchHistoryRepositoryImplement.swift in Sources */,
+				EF5BABC524206D7300B8E285 /* LoggedOutSearchBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF5BAB822420691D00B8E285 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5BAB832420691D00B8E285 /* Base */,
+				EF5BB1E5242364F200B8E285 /* ko */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF5BB1E4242364CE00B8E285 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5BB1E3242364CE00B8E285 /* en */,
+				EF5BB1E6242364F200B8E285 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5BAB862420691D00B8E285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF5BAB872420691D00B8E285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5BAB892420691D00B8E285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A472A5C2D0973BC560BBDA4 /* Pods-WarzoneSearch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = QPVS7TPGTF;
+				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
+				PRODUCT_NAME = WZ.search;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EF5BAB8A2420691D00B8E285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C07508E454E34E54D71A8D42 /* Pods-WarzoneSearch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = QPVS7TPGTF;
+				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
+				PRODUCT_NAME = WZ.search;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5BAB6C2420691600B8E285 /* Build configuration list for PBXProject "WarzoneSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5BAB862420691D00B8E285 /* Debug */,
+				EF5BAB872420691D00B8E285 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5BAB882420691D00B8E285 /* Build configuration list for PBXNativeTarget "WarzoneSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5BAB892420691D00B8E285 /* Debug */,
+				EF5BAB8A2420691D00B8E285 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF5BAB7D2420691600B8E285 /* WarzoneSearch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF5BAB7E2420691600B8E285 /* WarzoneSearch.xcdatamodel */,
+			);
+			currentVersion = EF5BAB7E2420691600B8E285 /* WarzoneSearch.xcdatamodel */;
+			path = WarzoneSearch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF5BAB692420691600B8E285 /* Project object */;
+}
