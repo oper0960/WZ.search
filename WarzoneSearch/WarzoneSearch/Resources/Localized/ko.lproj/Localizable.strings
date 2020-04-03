@@ -48,6 +48,8 @@
 "remainderxp" = "필요 경험치";
 "gainedxp" = "획득 경험치";
 
+"mapName" = "맵";
+"clanTag" = "클랜";
 "placement" = "순위";
 "playerCount" = "참여 인원";
 "score/min" = "분당 획득 점수";

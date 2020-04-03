@@ -13,18 +13,19 @@ public protocol MatchHistoryViewable {
 }
 
 public protocol MatchViewable {
-    var modeName: String { get }//
-    var mapName: String { get }//
+    var modeName: String { get }
+    var mapName: String { get }
     var playerCount: String { get }
     var teamCount: String { get }
     var mapImageUrl: String { get }
-    var platform: UIImage { get }//
-    var clanTag: String { get }//
-    var kills: String { get }//
-    var kdRatio: String { get }//
-    var score: String { get }//
+    var timestamp: String { get }
+    var platform: UIImage { get }
+    var clanTag: String { get }
+    var kills: String { get }
+    var kdRatio: String { get }
+    var score: String { get }
     var timePlayed: String { get }
-    var headshots: String { get }//
+    var headshots: String { get }
     var executions: String { get }
     var assists: String { get }
     var percentTimeMoving: String { get }
@@ -32,7 +33,7 @@ public protocol MatchViewable {
     var scorePerMinute: String { get }
     var damageDone: String { get }
     var distanceTraveled: String { get }
-    var deaths: String { get }//
+    var deaths: String { get }
     var damageTaken: String { get }
     var medalXp: String { get }
     var matchXp: String { get }

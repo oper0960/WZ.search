@@ -48,6 +48,8 @@
 "remainderxp" = "Remainder XP";
 "gainedxp" = "Gained XP";
 
+"mapName" = "Map";
+"clanTag" = "Clan";
 "placement" = "Placement";
 "playerCount" = "PlayerCount";
 "score/min" = "Score/min";
