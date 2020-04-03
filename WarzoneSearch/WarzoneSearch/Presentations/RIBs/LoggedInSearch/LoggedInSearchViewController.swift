@@ -79,19 +79,26 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
             array.append(.header)
             
             guard infomation.lifetimePlunder != nil || infomation.lifetimeBattleRoyal != nil || infomation.lifetimeAllBattleRoyal != nil else {
+                guard let matchs = self.matchs else { return array }
+                guard matchs.matchs.count > 0 else {
+                    return array
+                }
                 array.append(.history)
                 return array
             }
             array.append(.lifetime)
             
             guard infomation.weeklyPlunder != nil || infomation.weeklyBattleRoyal != nil || infomation.weeklyAllBattleRoyal != nil else {
+                guard let matchs = self.matchs else { return array }
+                guard matchs.matchs.count > 0 else {
+                    return array
+                }
                 array.append(.history)
                 return array
             }
             array.append(.weekly)
             
             guard let matchs = self.matchs else { return array }
-            
             guard matchs.matchs.count > 0 else {
                 return array
             }

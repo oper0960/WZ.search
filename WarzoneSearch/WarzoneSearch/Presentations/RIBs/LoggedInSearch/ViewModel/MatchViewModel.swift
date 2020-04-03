@@ -93,8 +93,8 @@ class MatchViewModel: MatchViewable {
             return #imageLiteral(resourceName: "BattleNet")
         case "psn":
             return #imageLiteral(resourceName: "Psn")
-        case "atvi":
-            return #imageLiteral(resourceName: "Steam")
+        case "xbl":
+            return #imageLiteral(resourceName: "Xbox")
         default:
             return UIImage()
         }

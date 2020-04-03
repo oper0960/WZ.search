@@ -35,7 +35,10 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                 print(JSON(data))
                 
                 let decodableJson = try JSONDecoder().decode(MatchHistoryCodable.self, from: data)
-                return MatchHistoryViewModel(matchHistoryData: decodableJson.data!)
+                
+                guard let data = decodableJson.data else { return MatchHistoryViewModel() }
+                
+                return MatchHistoryViewModel(matchHistoryData: data)
         }
     }
 }

@@ -66,7 +66,7 @@
 "selectedplatform" = "플랫폼 선택";
 "enterpsn" = "PSN 온라인 ID 입력";
 "enterbattlenet" = "배틀태그 입력";
-"entersteam" = "스팀 ID 입력";
+"enterxbox" = "Xbox ID 입력";
 
 "not_select_platform_title" = "플랫폼 미선택";
 "not_select_platform_message" = "플랫폼을 선택해 주세요.";

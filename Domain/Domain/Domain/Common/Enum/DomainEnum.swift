@@ -10,7 +10,7 @@ import UIKit
 
 public enum Platform {
     case psn
-    case steam
+    case xbl
     case battle
     case none
     
@@ -18,8 +18,8 @@ public enum Platform {
         switch self {
         case .battle:
             return "battle"
-        case .steam:
-            return "steam"
+        case .xbl:
+            return "xbl"
         case .psn:
             return "psn"
         case .none:
@@ -31,8 +31,8 @@ public enum Platform {
         switch self {
         case .battle:
             return "battlenet"
-        case .steam:
-            return "atvi"
+        case .xbl:
+            return "xbl"
         case .psn:
             return "psn"
         case .none:
@@ -44,8 +44,8 @@ public enum Platform {
         switch platform {
         case "psn":
             self = .psn
-        case "steam":
-            self = .steam
+        case "xbl":
+            self = .xbl
         case "battle":
             self = .battle
         default:

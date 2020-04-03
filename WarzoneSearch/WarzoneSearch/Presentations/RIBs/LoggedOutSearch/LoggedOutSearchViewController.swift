@@ -26,7 +26,7 @@ final class LoggedOutSearchViewController: BaseViewController {
     @IBOutlet weak var blurImageView: UIImageView!
     @IBOutlet weak var inputPopupView: UIViewCustom!
     @IBOutlet weak var psnButton: UIButtonCustom!
-    @IBOutlet weak var steamButton: UIButtonCustom!
+    @IBOutlet weak var xboxButton: UIButtonCustom!
     @IBOutlet weak var battleButton: UIButtonCustom!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var idTextField: UITextField!
@@ -102,13 +102,13 @@ final class LoggedOutSearchViewController: BaseViewController {
                 self.enableKeyboard(platform: self.platform)
             }).disposed(by: disposeBag)
         
-        steamButton
+        xboxButton
             .rx
             .controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                self.platformLabel.text = "STEAM"
-                self.platform = .steam
+                self.platformLabel.text = "XBOX"
+                self.platform = .xbl
                 self.enableKeyboard(platform: self.platform)
             }).disposed(by: disposeBag)
         
@@ -129,8 +129,8 @@ final class LoggedOutSearchViewController: BaseViewController {
             self.idTextField.placeholder = "enterpsn".localized
         case .battle:
             self.idTextField.placeholder = "enterbattlenet".localized
-        case .steam:
-            self.idTextField.placeholder = "entersteam".localized
+        case .xbl:
+            self.idTextField.placeholder = "enterxbox".localized
         case .none:
             return
         }
