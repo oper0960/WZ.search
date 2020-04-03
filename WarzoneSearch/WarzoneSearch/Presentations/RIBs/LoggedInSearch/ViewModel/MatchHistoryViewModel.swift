@@ -11,15 +11,19 @@ import Domain
 
 class MatchHistoryViewModel: MatchHistoryViewable {
     
-    private var matchHistoryData: MatchHistoryData
+    private var matchHistoryData: MatchHistoryData?
     
     init(matchHistoryData: MatchHistoryData) {
         self.matchHistoryData = matchHistoryData
     }
     
+    init() {
+        
+    }
+    
     var matchs: [MatchViewable] {
         
-        guard let matchs = matchHistoryData.matches else { return [] }
+        guard let matchs = matchHistoryData?.matches else { return [] }
         
         var array = [MatchViewModel]()
         

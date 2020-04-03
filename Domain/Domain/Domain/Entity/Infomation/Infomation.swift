@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Infomation ViewModel
 public protocol InfomationViewable {
-    var platform: UIImage { get }                               // 플랫폼 (PSN, Steam, BattleNet)
+    var platform: UIImage { get }                               // 플랫폼 (PSN, Xbox, BattleNet)
     var userName: String? { get }                               // 유저 닉네임
     var level: String { get }                                   // 현재 레벨
     var levelXpRemainder: String { get }                        // 다음 레벨업에 필요한 경험치

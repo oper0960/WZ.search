@@ -32,8 +32,8 @@ class SearchHistoryTableViewCell: UITableViewCell {
             platformLabel.text = "BATTLENET"
         case .psn:
             platformLabel.text = "PSN"
-        case .steam:
-            platformLabel.text = "STEAM"
+        case .xbl:
+            platformLabel.text = "XBOX"
         case .none:
             platformLabel.text = ""
         }

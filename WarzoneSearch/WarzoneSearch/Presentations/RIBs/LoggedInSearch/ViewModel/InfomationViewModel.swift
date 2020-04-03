@@ -29,8 +29,8 @@ class InfomationViewModel: InfomationViewable {
             return #imageLiteral(resourceName: "Psn")
         case .battle:
             return #imageLiteral(resourceName: "BattleNet")
-        case .steam:
-            return #imageLiteral(resourceName: "Steam")
+        case .xbl:
+            return #imageLiteral(resourceName: "Xbox")
         case .none:
             return UIImage()
         }

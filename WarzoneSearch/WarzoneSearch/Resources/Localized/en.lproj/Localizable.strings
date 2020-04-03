@@ -66,7 +66,7 @@
 "selectedplatform" = "Select Platform";
 "enterpsn" = "Enter PSN Online ID";
 "enterbattlenet" = "Enter BattleTag";
-"entersteam" = "Enter Steam ID";
+"enterxbox" = "Enter Xbox Online ID";
 
 "not_select_platform_title" = "Not Selected Platform";
 "not_select_platform_message" = "Choose Your Platform.";
