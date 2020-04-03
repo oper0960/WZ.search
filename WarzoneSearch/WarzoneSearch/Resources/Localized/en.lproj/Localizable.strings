@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WarzoneSearch
+
+  Created by Gilwan Ryu on 2020/03/19.
+  Copyright © 2020 GilwanRyu. All rights reserved.
+*/
+
+"done" = "Done";
+"go" = "Go";
+
+// 단위
+"minute" = "Minute";
+"hour" = "Hour";
+"second" = "Second";
+"scores" = "Score";
+"kills" = "Kills";
+"count" = "Times";
+"meters" = "Meters";
+"dollar" = "$";
+
+// 전체, 일주일
+"lifetime" = "Lifetime Record";
+"weekly" = "Weekly Record";
+"matchHistory" = "Match History";
+
+// 타입
+"all" = "All";
+"battle" = "Battle Royal";
+"plunder" = "Plunder";
+"Plunder" = "Plunder";
+"Battle Royale" = "Battle Royal";
+"Battle Royale Solos" = "Battle Royale Solos";
+"Blood Money" = "Blood Money";
+
+// LifeTime, Weekly Preperty
+"K/D" = "K/D";
+"wins" = "Wins";
+"score" = "Score";
+"timeplayed" = "TimePlayed";
+"kill" = "Kills";
+"death" = "Deaths";
+"damage" = "Damage";
+"top5" = "Top 5";
+"top10" = "Top 10";
+"top25" = "Top 25";
+"totalxp" = "Total XP";
+"remainderxp" = "Remainder XP";
+"gainedxp" = "Gained XP";
+
+"placement" = "Placement";
+"playerCount" = "PlayerCount";
+"score/min" = "Score/min";
+"assists" = "Assists";
+"headshots" = "Headshots";
+"damageDone" = "Damage Done";
+"damageTaken" = "Damage Taken";
+"damage/min" = "Damage/min";
+"executions" = "Executions";
+"gulagKill" = "Gulag Kills";
+"gulagDeath" = "Gulag Deaths";
+"movingTimePer" = "Moving Percentage";
+
+"selectedplatform" = "Select Platform";
+"enterpsn" = "Enter PSN Online ID";
+"enterbattlenet" = "Enter BattleTag";
+"entersteam" = "Enter Steam ID";
+
+"not_select_platform_title" = "Not Selected Platform";
+"not_select_platform_message" = "Choose Your Platform.";
+"empty_id_title" = "Empty ID";
+"empty_id_message" = "Enter Your ID.";
+"not_account_title" = "No Account";
+"not_account_message" = "Re Enter Your ID.";

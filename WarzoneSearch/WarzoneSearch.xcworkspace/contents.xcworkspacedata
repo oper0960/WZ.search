@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "CoreDataModel">
+      <Group
+         location = "container:"
+         name = "User">
+         <FileRef
+            location = "group:WarzoneSearch/Data/CoreData/User/User+CoreDataClass.swift">
+         </FileRef>
+         <FileRef
+            location = "group:WarzoneSearch/Data/CoreData/User/User+CoreDataProperties.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:../Domain/Domain/Domain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WarzoneSearch.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+target 'WarzoneSearch' do
+  pod 'RIBs', :path => 'RIBsLib'
+  pod 'RxCocoa', '~> 5.0.0'
+  pod 'RxSwift', '~> 5.0.0'
+  pod 'SnapKit'
+  pod 'RxAlamofire'
+  pod 'Alamofire', '~> 4.8'
+  pod 'lottie-ios'
+  pod 'Kingfisher'
+  pod 'SwiftyJSON'
+end
+
+target 'Domain' do
+  use_frameworks!
+  project '../Domain/Domain/Domain.xcodeproj'
+  pod 'RxCocoa', '~> 5.0.0'
+  pod 'RxSwift', '~> 5.0.0'
+  pod 'RxAlamofire'
+  pod 'SwiftyJSON'
+end
