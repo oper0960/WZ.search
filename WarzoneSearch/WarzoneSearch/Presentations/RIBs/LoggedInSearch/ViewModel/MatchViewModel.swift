@@ -53,6 +53,18 @@ class MatchViewModel: MatchViewable {
         self.match = match
     }
     
+    var timestamp: String {
+        guard let timestamp = match.metadata?.timestamp else { return "" }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let convertDate = dateFormatter.date(from: timestamp)
+        
+        let stringFormatter = DateFormatter()
+        stringFormatter.locale = Locale(identifier: "ko-KR")
+        stringFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return stringFormatter.string(from: convertDate!)
+    }
     
     var modeName: String {
         return (match.metadata?.modeName ?? "").localized

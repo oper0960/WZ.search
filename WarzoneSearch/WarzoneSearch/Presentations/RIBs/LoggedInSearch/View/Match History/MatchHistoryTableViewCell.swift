@@ -12,10 +12,10 @@ import Domain
 class MatchHistoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var modeLabel: UILabel!
-    @IBOutlet weak var mapNameLabel: UILabel!
-    @IBOutlet weak var clanTagLabel: UILabel!
     
     // Title
+    @IBOutlet weak var mapNameTitleLabel: UILabel!
+    @IBOutlet weak var clanTitleLabel: UILabel!
     @IBOutlet weak var placementTitleLabel: UILabel!
     @IBOutlet weak var playerCountTitleLabel: UILabel!
     @IBOutlet weak var scoreTitleLabel: UILabel!
@@ -36,6 +36,9 @@ class MatchHistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var plunderTitleLabel: UILabel!
     
     // Data
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var mapNameLabel: UILabel!
+    @IBOutlet weak var clanTagLabel: UILabel!
     @IBOutlet weak var placementLabel: UILabel!
     @IBOutlet weak var playerCountLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -67,6 +70,8 @@ class MatchHistoryTableViewCell: UITableViewCell {
     }
     
     func setTitle() {
+        mapNameTitleLabel.text = "mapName".localized
+        clanTitleLabel.text = "clanTag".localized
         placementTitleLabel.text = "placement".localized
         playerCountTitleLabel.text = "playerCount".localized
         scoreTitleLabel.text = "score".localized
@@ -88,6 +93,7 @@ class MatchHistoryTableViewCell: UITableViewCell {
     }
     
     func bind(match: MatchViewable) {
+        timestampLabel.text = match.timestamp
         modeLabel.text = match.modeName
         mapNameLabel.text = match.mapName
         clanTagLabel.text = match.clanTag

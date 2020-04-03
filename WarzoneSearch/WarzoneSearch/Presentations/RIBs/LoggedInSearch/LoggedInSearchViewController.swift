@@ -174,7 +174,7 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
         case .lifetime, .weekly:
             return 320
         case .history:
-            return 650
+            return 700
         }
     }
     
