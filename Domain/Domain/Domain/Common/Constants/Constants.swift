@@ -16,6 +16,7 @@ public struct Constants {
     }
     
     public struct MatchHistory {
+        public static let profile = "https://api.tracker.gg/api/v2/warzone/standard/profile/platform/id"
         public static let matchHistory = "https://api.tracker.gg/api/v1/warzone/matches/platform/id?type=wz&next=null"
     }
 }
