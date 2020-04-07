@@ -24,6 +24,10 @@ extension AboutComponent: OpenSourceDependency {
     }
 }
 
+extension AboutComponent: SettingDependency {
+    
+}
+
 // MARK: - Builder
 
 protocol AboutBuildable: Buildable {
@@ -40,8 +44,9 @@ final class AboutBuilder: Builder<AboutDependency>, AboutBuildable {
         let component = AboutComponent(dependency: dependency)
         let viewController = AboutViewController(navigation: component.navigation)
         let interactor = AboutInteractor(presenter: viewController)
-        let openSourceBuiler = OpenSourceBuilder(dependency: component)
+        let settingBuilder = SettingBuilder(dependency: component)
+        let openSourceBuilder = OpenSourceBuilder(dependency: component)
         interactor.listener = listener
-        return AboutRouter(interactor: interactor, viewController: viewController, openSourceBuilder: openSourceBuiler)
+        return AboutRouter(interactor: interactor, viewController: viewController, openSourceBuilder: openSourceBuilder, settingBuilder: settingBuilder)
     }
 }

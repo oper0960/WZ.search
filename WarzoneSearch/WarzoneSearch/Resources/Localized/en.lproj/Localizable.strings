@@ -10,9 +10,11 @@
 "go" = "Go";
 
 "About" = "About";
+"Setting" = "Setting";
 "OpenSource License" = "OpenSource License";
 "Feedback" = "Feedback";
 "Version" = "Version";
+"LatestAutoSearch" = "Latest Account Auto Search";
 
 // 단위
 "minute" = "Minute";

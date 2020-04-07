@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        setUserDefault()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
@@ -72,6 +74,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+}
+
+extension AppDelegate {
+    func setUserDefault() {
+        if userDefault.object(forKey: UserSettings.latestAccountAutoSearch) == nil {
+            userDefault.set(true, forKey: UserSettings.latestAccountAutoSearch)
         }
     }
 }

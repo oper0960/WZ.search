@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol AboutInteractable: Interactable, OpenSourceListener {
+protocol AboutInteractable: Interactable, OpenSourceListener, SettingListener {
     var router: AboutRouting? { get set }
     var listener: AboutListener? { get set }
 }
@@ -23,15 +23,18 @@ final class AboutRouter: ViewableRouter<AboutInteractable, AboutViewControllable
     // TODO: Constructor inject child builder protocols to allow building children.
     init(interactor: AboutInteractable,
          viewController: AboutViewControllable,
-         openSourceBuilder: OpenSourceBuildable) {
+         openSourceBuilder: OpenSourceBuildable,
+         settingBuilder: SettingBuildable) {
         
         self.openSourceBuilder = openSourceBuilder
+        self.settingBuilder = settingBuilder
         
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
     private let openSourceBuilder: OpenSourceBuildable
+    private let settingBuilder: SettingBuildable
     private var currentRouter: ViewableRouting?
 }
 
@@ -44,6 +47,12 @@ extension AboutRouter: AboutRouting {
             }
         }
         switch menu {
+        case .option:
+            let setting = settingBuilder.build(withListener: interactor)
+            currentRouter = setting
+            viewController.push(viewController: setting.viewControllable) {
+                self.attachChild(setting)
+            }
         case .opensource:
             let openSource = openSourceBuilder.build(withListener: interactor)
             currentRouter = openSource
@@ -54,6 +63,7 @@ extension AboutRouter: AboutRouting {
             break
         case .feedback:
             viewController.presentFeedback()
+            
         }
     }
 }
