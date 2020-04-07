@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoggedOutSearchViewController">
             <connections>
+                <outlet property="aboutButton" destination="4B7-a1-BGh" id="a6s-rG-mHq"/>
                 <outlet property="backImageView" destination="euP-ZU-OxY" id="5eT-DE-qHr"/>
                 <outlet property="backView" destination="UV4-nD-6to" id="shT-oh-Lnu"/>
                 <outlet property="battleButton" destination="f3K-WY-Syp" id="B0T-Tg-m1O"/>
@@ -180,6 +181,14 @@
                         <constraint firstItem="Njo-1R-vpH" firstAttribute="centerX" secondItem="731-8d-4dY" secondAttribute="centerX" id="usx-Zw-a21"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B7-a1-BGh">
+                    <rect key="frame" x="368" y="60" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Bxr-LW-5TZ"/>
+                        <constraint firstAttribute="height" constant="30" id="fwM-mf-qKP"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="gear"/>
+                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xit-tF-mhF">
                     <rect key="frame" x="24" y="742" width="366" height="120"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,6 +202,8 @@
                 <constraint firstAttribute="bottom" secondItem="UV4-nD-6to" secondAttribute="bottom" id="4wA-VT-2U5"/>
                 <constraint firstItem="BbS-Vo-JJW" firstAttribute="trailing" secondItem="UV4-nD-6to" secondAttribute="trailing" id="Nlf-jB-Bep"/>
                 <constraint firstItem="BbS-Vo-JJW" firstAttribute="bottom" secondItem="xit-tF-mhF" secondAttribute="bottom" id="T7V-1J-zde"/>
+                <constraint firstItem="4B7-a1-BGh" firstAttribute="top" secondItem="BbS-Vo-JJW" secondAttribute="top" constant="16" id="aYN-CN-wfe"/>
+                <constraint firstItem="BbS-Vo-JJW" firstAttribute="trailing" secondItem="4B7-a1-BGh" secondAttribute="trailing" constant="16" id="eES-Qb-fk0"/>
                 <constraint firstItem="xit-tF-mhF" firstAttribute="leading" secondItem="BbS-Vo-JJW" secondAttribute="leading" constant="24" id="h25-BZ-TAl"/>
                 <constraint firstItem="BbS-Vo-JJW" firstAttribute="trailing" secondItem="xit-tF-mhF" secondAttribute="trailing" constant="24" id="hTH-MT-bVT"/>
                 <constraint firstItem="UV4-nD-6to" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pDc-9v-VME"/>
@@ -206,6 +217,7 @@
         <image name="AppLogo" width="75" height="75"/>
         <image name="LoggedOutBackground" width="138" height="298.66665649414062"/>
         <image name="battleNetButtonImage" width="125" height="16.666666030883789"/>
+        <image name="gear" width="25" height="25"/>
         <image name="psnButtonImage" width="125" height="16.666666030883789"/>
         <image name="xboxButtonImage" width="125" height="16.666666030883789"/>
     </resources>

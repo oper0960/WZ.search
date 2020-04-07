@@ -21,6 +21,7 @@ final class LoggedOutSearchViewController: BaseViewController {
     
     weak var listener: LoggedOutSearchPresentableListener?
     
+    @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var blurImageView: UIImageView!
@@ -46,6 +47,10 @@ final class LoggedOutSearchViewController: BaseViewController {
         super.viewDidLoad()
         setup()
         setTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func keyboardWillChange(_ notification: Notification, keyboardSize: CGRect) {
@@ -214,11 +219,19 @@ extension LoggedOutSearchViewController: LoggedOutSearchPresentable {
         }
     }
     
+    var onClickAboutButton: ControlEvent<()> {
+        return aboutButton.rx.controlEvent(.touchUpInside)
+    }
+    
     func setSearchHistory(users: [UserViewable]) {
         self.users = users
     }
 }
 
 extension LoggedOutSearchViewController: LoggedOutSearchViewControllable {
-    
+    func present(modelPresentation: UIModalPresentationStyle, viewController: UIViewController, complete: @escaping (() -> (Void))) {
+        let presentingView = viewController
+        presentingView.modalPresentationStyle = modelPresentation
+        present(presentingView, animated: true, completion: complete)
+    }
 }

@@ -11,6 +11,7 @@ target 'WarzoneSearch' do
   pod 'lottie-ios'
   pod 'Kingfisher'
   pod 'SwiftyJSON'
+  pod 'Firebase/Analytics'
 end
 
 target 'Domain' do
