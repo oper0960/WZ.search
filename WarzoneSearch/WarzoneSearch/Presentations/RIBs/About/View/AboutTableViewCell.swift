@@ -37,6 +37,10 @@ class AboutTableViewCell: UITableViewCell {
     func bind(menu: SettingMenu) {
         
         switch menu {
+        case .option:
+            titleLabel.text = "Setting".localized
+            rightArrowImageView.isHidden = false
+            subTitleLabel.isHidden = true
         case .opensource:
             titleLabel.text = "OpenSource License".localized
             rightArrowImageView.isHidden = false

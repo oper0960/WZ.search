@@ -13,7 +13,7 @@ import UIKit
 import MessageUI
 
 enum SettingMenu {
-    case opensource, version, feedback
+    case opensource, version, feedback, option
 }
 
 protocol AboutPresentableListener: class {
@@ -40,6 +40,7 @@ final class AboutViewController: UIViewController {
     
     private var menuArray: [SettingMenu] = {
         var array = [SettingMenu]()
+        array.append(.option)
         array.append(.opensource)
         array.append(.feedback)
         array.append(.version)
@@ -65,10 +66,6 @@ extension AboutViewController: UIAdaptivePresentationControllerDelegate {
         aboutTableView.dataSource = self
     }
     
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        listener?.detechAbout()
-    }
-    
     private func setRx() {
         aboutTableView.rx
             .itemSelected
@@ -83,6 +80,10 @@ extension AboutViewController: UIAdaptivePresentationControllerDelegate {
         mailVC.mailComposeDelegate = self
         mailVC.setToRecipients(["oper0960@gmail.com"])
         return mailVC
+    }
+    
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        listener?.detechAbout()
     }
 }
 

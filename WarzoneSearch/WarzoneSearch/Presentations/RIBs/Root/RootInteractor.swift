@@ -40,12 +40,16 @@ final class RootInteractor: PresentableInteractor<RootPresentable> {
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        getLastLoggedInId()
+        
+        if userDefault.bool(forKey: UserSettings.latestAccountAutoSearch) {
+            getLastLoggedInId()
+        } else {
+            router?.routeLoggedOut()
+        }
     }
 
     override func willResignActive() {
         super.willResignActive()
-        
     }
     
     private let userUseCase: UserUseCase

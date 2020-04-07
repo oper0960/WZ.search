@@ -10,9 +10,11 @@
 "go" = "시작";
 
 "About" = "더보기";
+"Setting" = "설정";
 "OpenSource License" = "오픈소스 라이센스";
 "Feedback" = "문의 및 건의";
 "Version" = "버전";
+"LatestAutoSearch" = "마지막 계정 자동 검색";
 
 // 단위
 "minute" = "분";
