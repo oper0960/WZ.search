@@ -59,6 +59,35 @@
 		EF5F22BF242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F22BD242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib */; };
 		EF5F22C12428BE9400A717A2 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22C02428BE9400A717A2 /* Double+.swift */; };
 		EF5F22C32429ACED00A717A2 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F22C22429ACED00A717A2 /* UIImage+.swift */; };
+		EF5FAEFB243C138C0087186F /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAEF3243C138C0087186F /* AboutRouter.swift */; };
+		EF5FAEFC243C138C0087186F /* AboutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAEF4243C138C0087186F /* AboutBuilder.swift */; };
+		EF5FAEFD243C138C0087186F /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAEF5243C138C0087186F /* AboutInteractor.swift */; };
+		EF5FAEFE243C138C0087186F /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAEF7243C138C0087186F /* AboutTableViewCell.xib */; };
+		EF5FAEFF243C138C0087186F /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAEF8243C138C0087186F /* AboutTableViewCell.swift */; };
+		EF5FAF00243C138C0087186F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAEF9243C138C0087186F /* AboutViewController.xib */; };
+		EF5FAF01243C138C0087186F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAEFA243C138C0087186F /* AboutViewController.swift */; };
+		EF5FAF17243C13C30087186F /* OpenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF04243C13C30087186F /* OpenSource.swift */; };
+		EF5FAF18243C13C30087186F /* OpenSourceStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF05243C13C30087186F /* OpenSourceStream.swift */; };
+		EF5FAF19243C13C30087186F /* OpenSourceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF06243C13C30087186F /* OpenSourceInteractor.swift */; };
+		EF5FAF1A243C13C30087186F /* OpenSourceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF07243C13C30087186F /* OpenSourceRouter.swift */; };
+		EF5FAF1B243C13C30087186F /* OpenSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF08243C13C30087186F /* OpenSourceBuilder.swift */; };
+		EF5FAF1C243C13C30087186F /* MIT.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF0A243C13C30087186F /* MIT.txt */; };
+		EF5FAF1D243C13C30087186F /* Apache2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF0B243C13C30087186F /* Apache2.0.txt */; };
+		EF5FAF1E243C13C30087186F /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF0C243C13C30087186F /* OpenSourceViewController.swift */; };
+		EF5FAF1F243C13C30087186F /* OpenSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF0D243C13C30087186F /* OpenSourceViewController.xib */; };
+		EF5FAF20243C13C30087186F /* OpenSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF0F243C13C30087186F /* OpenSourceCell.swift */; };
+		EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF10243C13C30087186F /* OpenSourceCell.xib */; };
+		EF5FAF22243C13C30087186F /* LicenseTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF12243C13C30087186F /* LicenseTextBuilder.swift */; };
+		EF5FAF23243C13C30087186F /* LicenseTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF13243C13C30087186F /* LicenseTextViewController.swift */; };
+		EF5FAF24243C13C30087186F /* LicenseTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF14243C13C30087186F /* LicenseTextViewController.xib */; };
+		EF5FAF25243C13C30087186F /* LicenseTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF15243C13C30087186F /* LicenseTextInteractor.swift */; };
+		EF5FAF26243C13C30087186F /* LicenseTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF16243C13C30087186F /* LicenseTextRouter.swift */; };
+		EF5FAF2C243C13EC0087186F /* LeaderboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF27243C13EC0087186F /* LeaderboardRouter.swift */; };
+		EF5FAF2D243C13EC0087186F /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF28243C13EC0087186F /* LeaderboardViewController.swift */; };
+		EF5FAF2E243C13EC0087186F /* LeaderboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF29243C13EC0087186F /* LeaderboardBuilder.swift */; };
+		EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */; };
+		EF5FAF30243C13EC0087186F /* LeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */; };
+		EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF31243C23280087186F /* UINavigationController+.swift */; };
 		EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */; };
 		EF9E7AEB242DE3D40024BD0F /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */; };
 		EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */; };
@@ -70,6 +99,7 @@
 		EF9E7B1924346B220024BD0F /* MatchHistoryRepositoryImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */; };
 		EF9E7B1B24346B320024BD0F /* MatchHistoryUseCaseImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */; };
 		EF9E7B1D24358E3A0024BD0F /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */; };
+		EFC5BFA7243C4AA700070F2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFA6243C4AA700070F2B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,6 +174,35 @@
 		EF5F22BD242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfomationCollectionViewLifeTimeCell.xib; sourceTree = "<group>"; };
 		EF5F22C02428BE9400A717A2 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		EF5F22C22429ACED00A717A2 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		EF5FAEF3243C138C0087186F /* AboutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		EF5FAEF4243C138C0087186F /* AboutBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutBuilder.swift; sourceTree = "<group>"; };
+		EF5FAEF5243C138C0087186F /* AboutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		EF5FAEF7243C138C0087186F /* AboutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
+		EF5FAEF8243C138C0087186F /* AboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
+		EF5FAEF9243C138C0087186F /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		EF5FAEFA243C138C0087186F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EF5FAF04243C13C30087186F /* OpenSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSource.swift; sourceTree = "<group>"; };
+		EF5FAF05243C13C30087186F /* OpenSourceStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceStream.swift; sourceTree = "<group>"; };
+		EF5FAF06243C13C30087186F /* OpenSourceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceInteractor.swift; sourceTree = "<group>"; };
+		EF5FAF07243C13C30087186F /* OpenSourceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceRouter.swift; sourceTree = "<group>"; };
+		EF5FAF08243C13C30087186F /* OpenSourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceBuilder.swift; sourceTree = "<group>"; };
+		EF5FAF0A243C13C30087186F /* MIT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MIT.txt; sourceTree = "<group>"; };
+		EF5FAF0B243C13C30087186F /* Apache2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Apache2.0.txt; sourceTree = "<group>"; };
+		EF5FAF0C243C13C30087186F /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceViewController.swift; sourceTree = "<group>"; };
+		EF5FAF0D243C13C30087186F /* OpenSourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenSourceViewController.xib; sourceTree = "<group>"; };
+		EF5FAF0F243C13C30087186F /* OpenSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSourceCell.swift; sourceTree = "<group>"; };
+		EF5FAF10243C13C30087186F /* OpenSourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenSourceCell.xib; sourceTree = "<group>"; };
+		EF5FAF12243C13C30087186F /* LicenseTextBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTextBuilder.swift; sourceTree = "<group>"; };
+		EF5FAF13243C13C30087186F /* LicenseTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTextViewController.swift; sourceTree = "<group>"; };
+		EF5FAF14243C13C30087186F /* LicenseTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LicenseTextViewController.xib; sourceTree = "<group>"; };
+		EF5FAF15243C13C30087186F /* LicenseTextInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTextInteractor.swift; sourceTree = "<group>"; };
+		EF5FAF16243C13C30087186F /* LicenseTextRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTextRouter.swift; sourceTree = "<group>"; };
+		EF5FAF27243C13EC0087186F /* LeaderboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRouter.swift; sourceTree = "<group>"; };
+		EF5FAF28243C13EC0087186F /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		EF5FAF29243C13EC0087186F /* LeaderboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardBuilder.swift; sourceTree = "<group>"; };
+		EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInteractor.swift; sourceTree = "<group>"; };
+		EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderboardViewController.xib; sourceTree = "<group>"; };
+		EF5FAF31243C23280087186F /* UINavigationController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -155,6 +214,7 @@
 		EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryRepositoryImplement.swift; sourceTree = "<group>"; };
 		EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryUseCaseImplement.swift; sourceTree = "<group>"; };
 		EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		EFC5BFA6243C4AA700070F2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +271,6 @@
 			children = (
 				EF5BAB8B24206A2600B8E285 /* Resources */,
 				EF5BAB9E24206B2500B8E285 /* Util */,
-				EF5BAB8C24206A3A00B8E285 /* AppStart */,
 				EF5BABD42420745100B8E285 /* Domain Implement */,
 				EF5BAB9C24206A9F00B8E285 /* Data */,
 				EF5BAB8F24206A6600B8E285 /* Presentations */,
@@ -225,6 +284,7 @@
 				EF5BB1DF2423648D00B8E285 /* Localized */,
 				EF5BABA024206B4600B8E285 /* Lottie */,
 				EF5BAB852420691D00B8E285 /* Info.plist */,
+				EFC5BFA6243C4AA700070F2B /* GoogleService-Info.plist */,
 				EF5BAB802420691D00B8E285 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -234,8 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				EF5BAB822420691D00B8E285 /* LaunchScreen.storyboard */,
-				EF5BAB742420691600B8E285 /* AppDelegate.swift */,
 				EF5BAB8D24206A5300B8E285 /* AppComponents.swift */,
+				EF5BAB742420691600B8E285 /* AppDelegate.swift */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -251,9 +311,14 @@
 		EF5BAB9024206A7000B8E285 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				EF5BAB8C24206A3A00B8E285 /* AppStart */,
 				EF5BAB9124206A7500B8E285 /* Root */,
 				EF5BABB324206D1200B8E285 /* LoggedOutSearch */,
 				EF5BABB224206D0E00B8E285 /* LoggedInSearch */,
+				EF5FAEF1243B33A20087186F /* Leaderboard */,
+				EF5FAEF2243C138C0087186F /* About */,
+				EF5FAF02243C13C30087186F /* OpenSource */,
+				EF5FAF11243C13C30087186F /* LicenseText */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -421,6 +486,7 @@
 		EF5BB1D02422225600B8E285 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF5FAF31243C23280087186F /* UINavigationController+.swift */,
 				EF5BB1D12422226B00B8E285 /* UIViewCustom.swift */,
 				EF5BB1E72423650D00B8E285 /* String+.swift */,
 				EF5F22C02428BE9400A717A2 /* Double+.swift */,
@@ -443,6 +509,94 @@
 				EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		EF5FAEF1243B33A20087186F /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF27243C13EC0087186F /* LeaderboardRouter.swift */,
+				EF5FAF28243C13EC0087186F /* LeaderboardViewController.swift */,
+				EF5FAF29243C13EC0087186F /* LeaderboardBuilder.swift */,
+				EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */,
+				EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		EF5FAEF2243C138C0087186F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAEF6243C138C0087186F /* View */,
+				EF5FAEF3243C138C0087186F /* AboutRouter.swift */,
+				EF5FAEF5243C138C0087186F /* AboutInteractor.swift */,
+				EF5FAEF4243C138C0087186F /* AboutBuilder.swift */,
+				EF5FAEFA243C138C0087186F /* AboutViewController.swift */,
+				EF5FAEF9243C138C0087186F /* AboutViewController.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		EF5FAEF6243C138C0087186F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAEF8243C138C0087186F /* AboutTableViewCell.swift */,
+				EF5FAEF7243C138C0087186F /* AboutTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF5FAF02243C13C30087186F /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF0E243C13C30087186F /* View */,
+				EF5FAF03243C13C30087186F /* ViewModel */,
+				EF5FAF09243C13C30087186F /* OpenSourceText */,
+				EF5FAF07243C13C30087186F /* OpenSourceRouter.swift */,
+				EF5FAF06243C13C30087186F /* OpenSourceInteractor.swift */,
+				EF5FAF08243C13C30087186F /* OpenSourceBuilder.swift */,
+				EF5FAF0C243C13C30087186F /* OpenSourceViewController.swift */,
+				EF5FAF0D243C13C30087186F /* OpenSourceViewController.xib */,
+			);
+			path = OpenSource;
+			sourceTree = "<group>";
+		};
+		EF5FAF03243C13C30087186F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF04243C13C30087186F /* OpenSource.swift */,
+				EF5FAF05243C13C30087186F /* OpenSourceStream.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF5FAF09243C13C30087186F /* OpenSourceText */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF0A243C13C30087186F /* MIT.txt */,
+				EF5FAF0B243C13C30087186F /* Apache2.0.txt */,
+			);
+			path = OpenSourceText;
+			sourceTree = "<group>";
+		};
+		EF5FAF0E243C13C30087186F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF0F243C13C30087186F /* OpenSourceCell.swift */,
+				EF5FAF10243C13C30087186F /* OpenSourceCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF5FAF11243C13C30087186F /* LicenseText */ = {
+			isa = PBXGroup;
+			children = (
+				EF5FAF16243C13C30087186F /* LicenseTextRouter.swift */,
+				EF5FAF15243C13C30087186F /* LicenseTextInteractor.swift */,
+				EF5FAF12243C13C30087186F /* LicenseTextBuilder.swift */,
+				EF5FAF13243C13C30087186F /* LicenseTextViewController.swift */,
+				EF5FAF14243C13C30087186F /* LicenseTextViewController.xib */,
+			);
+			path = LicenseText;
 			sourceTree = "<group>";
 		};
 		EF9E7AE8242DE3C50024BD0F /* View */ = {
@@ -544,19 +698,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */,
 				EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */,
+				EF5FAF1D243C13C30087186F /* Apache2.0.txt in Resources */,
 				EF5BB1DE2423120900B8E285 /* InfomationTableViewWeeklyCell.xib in Resources */,
 				EF5BB1E2242364CE00B8E285 /* Localizable.strings in Resources */,
+				EF5FAF1C243C13C30087186F /* MIT.txt in Resources */,
 				EF9E7AF22432EC2D0024BD0F /* MatchHistoryTableViewCell.xib in Resources */,
 				EF5BAB842420691D00B8E285 /* LaunchScreen.storyboard in Resources */,
+				EF5FAF1F243C13C30087186F /* OpenSourceViewController.xib in Resources */,
+				EF5FAEFE243C138C0087186F /* AboutTableViewCell.xib in Resources */,
 				EF5BB1DA242311FC00B8E285 /* InfomationTableViewLifetimeCell.xib in Resources */,
+				EF5FAF24243C13C30087186F /* LicenseTextViewController.xib in Resources */,
 				EF5BB1CA2422207300B8E285 /* loading.json in Resources */,
 				EF5F22BB2428647600A717A2 /* InfomationTableViewSectionHeaderCell.xib in Resources */,
 				EF5BABC924206DFB00B8E285 /* RootViewController.xib in Resources */,
 				EF5F22B724246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.xib in Resources */,
+				EF5FAF30243C13EC0087186F /* LeaderboardViewController.xib in Resources */,
+				EFC5BFA7243C4AA700070F2B /* GoogleService-Info.plist in Resources */,
 				EF5BAB812420691D00B8E285 /* Assets.xcassets in Resources */,
 				EF5BB1D6242311C200B8E285 /* InfomationTableViewHeaderCell.xib in Resources */,
 				EF5BABC724206D7300B8E285 /* LoggedOutSearchViewController.xib in Resources */,
+				EF5FAF00243C138C0087186F /* AboutViewController.xib in Resources */,
 				EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */,
 				EF5F22BF242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.xib in Resources */,
 			);
@@ -612,25 +775,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5BB1B02420A00100B8E285 /* UserStream.swift in Sources */,
+				EF5FAF1A243C13C30087186F /* OpenSourceRouter.swift in Sources */,
+				EF5FAF2C243C13EC0087186F /* LeaderboardRouter.swift in Sources */,
 				EF5BB1D22422226B00B8E285 /* UIViewCustom.swift in Sources */,
+				EF5FAF20243C13C30087186F /* OpenSourceCell.swift in Sources */,
 				EF9E7B1724346AA60024BD0F /* MatchHistoryDataStoreImplement.swift in Sources */,
 				EF5BABDA2420749E00B8E285 /* UserUseCaseImplement.swift in Sources */,
 				EF5BAB9824206A8600B8E285 /* RootViewController.swift in Sources */,
 				EF5BABC424206D7300B8E285 /* LoggedOutSearchViewController.swift in Sources */,
+				EF5FAEFD243C138C0087186F /* AboutInteractor.swift in Sources */,
 				EF9E7B0F243465EF0024BD0F /* MatchHistoryViewModel.swift in Sources */,
+				EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */,
+				EF5FAF22243C13C30087186F /* LicenseTextBuilder.swift in Sources */,
 				EF5BABC324206D7300B8E285 /* LoggedOutSearchRouter.swift in Sources */,
 				EF5BAB9724206A8600B8E285 /* RootRouter.swift in Sources */,
+				EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */,
 				EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */,
+				EF5FAF2E243C13EC0087186F /* LeaderboardBuilder.swift in Sources */,
 				EF5BB1DD2423120900B8E285 /* InfomationTableViewWeeklyCell.swift in Sources */,
 				EF5BABB924206D6600B8E285 /* LoggedInSearchRouter.swift in Sources */,
 				EF5BB1BB2420C2CE00B8E285 /* InfomationUseCaseImplement.swift in Sources */,
 				EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */,
+				EF5FAF1B243C13C30087186F /* OpenSourceBuilder.swift in Sources */,
 				EF5BABC624206D7300B8E285 /* LoggedOutSearchInteractor.swift in Sources */,
+				EF5FAF18243C13C30087186F /* OpenSourceStream.swift in Sources */,
 				EF9E7B1B24346B320024BD0F /* MatchHistoryUseCaseImplement.swift in Sources */,
 				EF5BB1C82421CC6500B8E285 /* InfomationViewModel.swift in Sources */,
+				EF5FAF01243C138C0087186F /* AboutViewController.swift in Sources */,
 				EF5BAB9A24206A8600B8E285 /* RootInteractor.swift in Sources */,
+				EF5FAF25243C13C30087186F /* LicenseTextInteractor.swift in Sources */,
 				EF5BAB8E24206A5300B8E285 /* AppComponents.swift in Sources */,
+				EF5FAF23243C13C30087186F /* LicenseTextViewController.swift in Sources */,
 				EF5F22B624246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift in Sources */,
+				EF5FAEFB243C138C0087186F /* AboutRouter.swift in Sources */,
 				EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */,
 				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
 				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
@@ -640,10 +817,16 @@
 				EF5BABBB24206D6600B8E285 /* LoggedInSearchBuilder.swift in Sources */,
 				EF5BABBA24206D6600B8E285 /* LoggedInSearchViewController.swift in Sources */,
 				EF5F22BE242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift in Sources */,
+				EF5FAF1E243C13C30087186F /* OpenSourceViewController.swift in Sources */,
 				EF5BABDE242074BA00B8E285 /* UserDataStoreImplement.swift in Sources */,
 				EF5BB1BF2420C2EB00B8E285 /* InfomationDataStoreImplement.swift in Sources */,
+				EF5FAEFC243C138C0087186F /* AboutBuilder.swift in Sources */,
 				EF5BB1E82423650D00B8E285 /* String+.swift in Sources */,
+				EF5FAF17243C13C30087186F /* OpenSource.swift in Sources */,
 				EF5BB1C22420C44000B8E285 /* InfomationCodable.swift in Sources */,
+				EF5FAEFF243C138C0087186F /* AboutTableViewCell.swift in Sources */,
+				EF5FAF26243C13C30087186F /* LicenseTextRouter.swift in Sources */,
+				EF5FAF2D243C13EC0087186F /* LeaderboardViewController.swift in Sources */,
 				EF5BB1D9242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift in Sources */,
 				EF5F22C12428BE9400A717A2 /* Double+.swift in Sources */,
 				EF9E7AFF2433471A0024BD0F /* MatchHistoryCodable.swift in Sources */,
@@ -653,6 +836,7 @@
 				EF9E7AEB242DE3D40024BD0F /* SearchHistoryTableViewCell.swift in Sources */,
 				EF5F22C32429ACED00A717A2 /* UIImage+.swift in Sources */,
 				EF9E7B1D24358E3A0024BD0F /* MatchViewModel.swift in Sources */,
+				EF5FAF19243C13C30087186F /* OpenSourceInteractor.swift in Sources */,
 				EF5BB1AB2420990500B8E285 /* UserViewModel.swift in Sources */,
 				EF9E7B1924346B220024BD0F /* MatchHistoryRepositoryImplement.swift in Sources */,
 				EF5BABC524206D7300B8E285 /* LoggedOutSearchBuilder.swift in Sources */,

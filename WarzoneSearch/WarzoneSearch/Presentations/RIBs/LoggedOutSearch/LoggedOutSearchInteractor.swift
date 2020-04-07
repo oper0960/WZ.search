@@ -13,6 +13,8 @@ import Domain
 
 protocol LoggedOutSearchRouting: ViewableRouting {
     // TODO: 해당 RIB Router 를 통해 Sub-tree 를 관리하기 위해 구현
+    func routeAbout()
+    func detechAbout()
 }
 
 protocol LoggedOutSearchPresentable: Presentable {
@@ -21,6 +23,7 @@ protocol LoggedOutSearchPresentable: Presentable {
     
     // From VC
     var onClickSearchButton: Observable<(Platform,String)> { get }
+    var onClickAboutButton: ControlEvent<()> { get }
     
     // To VC
     func setSearchHistory(users: [UserViewable])
@@ -71,6 +74,13 @@ extension LoggedOutSearchInteractor {
                 self.userStream.updateUser(platform: user.0, id: user.1)
                 self.listener?.completeLoggedIn()
             }).disposed(by: disposeBag)
+        
+        presenter
+            .onClickAboutButton
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.router?.routeAbout()
+            }).disposed(by: disposeBag)
     }
     
     func getSearchHistory() {
@@ -84,7 +94,9 @@ extension LoggedOutSearchInteractor {
 }
 
 extension LoggedOutSearchInteractor: LoggedOutSearchInteractable {
-    
+    func detechAbout() {
+        router?.detechAbout()
+    }
 }
 
 extension LoggedOutSearchInteractor: LoggedOutSearchPresentableListener {

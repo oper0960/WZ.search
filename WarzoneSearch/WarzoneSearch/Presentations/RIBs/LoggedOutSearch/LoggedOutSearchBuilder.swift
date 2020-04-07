@@ -11,6 +11,7 @@ import Domain
 
 protocol LoggedOutSearchDependency: Dependency {
     var userStream: UserStream { get }
+    var navigation: UINavigationController { get }
 }
 
 final class LoggedOutSearchComponent: Component<LoggedOutSearchDependency> {
@@ -21,6 +22,12 @@ final class LoggedOutSearchComponent: Component<LoggedOutSearchDependency> {
     fileprivate var userUseCase: UserUseCase = {
         return UserUseCaseImplement(userRepository: UserRepositoryImplement(dataStore: UserDataStoreImplement()))
     }()
+}
+
+extension LoggedOutSearchComponent: AboutDependency {
+    var navigation: UINavigationController {
+        return dependency.navigation
+    }
 }
 
 // MARK: - Builder
@@ -39,6 +46,7 @@ final class LoggedOutSearchBuilder: Builder<LoggedOutSearchDependency>, LoggedOu
         let viewController = LoggedOutSearchViewController()
         let interactor = LoggedOutSearchInteractor(presenter: viewController, userStream: component.userStream, userUseCase: component.userUseCase)
         interactor.listener = listener
-        return LoggedOutSearchRouter(interactor: interactor, viewController: viewController)
+        let aboutBuilder = AboutBuilder(dependency: component)
+        return LoggedOutSearchRouter(interactor: interactor, viewController: viewController, aboutBuilder: aboutBuilder, navigation: component.navigation)
     }
 }

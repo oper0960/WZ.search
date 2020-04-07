@@ -10,7 +10,7 @@ import RIBs
 import Domain
 
 protocol RootDependency: Dependency {
-    
+     var navigation: UINavigationController { get }
 }
 
 final class RootComponent: Component<RootDependency> {
@@ -20,6 +20,10 @@ final class RootComponent: Component<RootDependency> {
 }
 
 extension RootComponent: LoggedInSearchDependency, LoggedOutSearchDependency {
+    var navigation: UINavigationController {
+        return dependency.navigation
+    }
+    
     var userStream: UserStream {
         return shared { UserStreamImpl() }
     }

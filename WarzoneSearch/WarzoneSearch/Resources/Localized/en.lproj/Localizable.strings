@@ -9,6 +9,11 @@
 "done" = "Done";
 "go" = "Go";
 
+"About" = "About";
+"OpenSource License" = "OpenSource License";
+"Feedback" = "Feedback";
+"Version" = "Version";
+
 // 단위
 "minute" = "Minute";
 "hour" = "Hour";
@@ -74,3 +79,14 @@
 "empty_id_message" = "Enter Your ID.";
 "not_account_title" = "No Account";
 "not_account_message" = "Re Enter Your ID.";
+
+"not_mail_account_title" = "No account";
+"not_mail_account_message" = "Required add account to mail app.";
+"not_mail_account_done" = "Run mail app";
+"not_mail_account_cancel" = "Cancel";
+
+"send_mail_complete_title" = "Send complete";
+"send_mail_complete_message" = "Thanks for your opinion.";
+
+"send_mail_failed_title" = "Send failed";
+"send_mail_failed_message" = "Send it again later.";
