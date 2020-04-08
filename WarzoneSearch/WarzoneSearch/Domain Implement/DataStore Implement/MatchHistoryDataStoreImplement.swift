@@ -26,11 +26,12 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
         let replacingProfileid = replacingProfilePlatform.replacingOccurrences(of: "id", with: id.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
         
         let profileObservable = RxAlamofire.requestData(.get, URL(string: replacingProfileid)!,
-                                                        parameters: [:],
+                                                        parameters: nil,
                                                         encoding: URLEncoding(destination: .methodDependent),
-                                                        headers: [:])
-            .map { _ , data in
-                return JSON(data)
+                                                        headers: nil)
+            .map { data -> JSON in
+                print(JSON(data.1))
+                return JSON(data.1)
         }
         
         let urlString = Constants.MatchHistory.matchHistory
@@ -43,6 +44,7 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> MatchHistoryViewable in
+                print(JSON(data.1))
                 let decodableJson = try JSONDecoder().decode(MatchHistoryCodable.self, from: data.1)
                 
                 guard let data = decodableJson.data else { return MatchHistoryViewModel() }

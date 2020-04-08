@@ -21,6 +21,7 @@ final class LoggedOutSearchViewController: BaseViewController {
     
     weak var listener: LoggedOutSearchPresentableListener?
     
+    @IBOutlet weak var leaderBoardButton: UIButton!
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
@@ -199,6 +200,7 @@ extension LoggedOutSearchViewController: UITableViewDelegate, UITableViewDataSou
 }
 
 extension LoggedOutSearchViewController: LoggedOutSearchPresentable {
+   
     var onClickSearchButton: Observable<(Platform, String)> {
         return searchButton.rx.tap.filter { _ in
             
@@ -217,6 +219,10 @@ extension LoggedOutSearchViewController: LoggedOutSearchPresentable {
             guard let self = self else { return (.none, "") }
             return (self.platform, self.idTextField.text!)
         }
+    }
+    
+    var onClickLeaderBoardButton: ControlEvent<()> {
+        return leaderBoardButton.rx.controlEvent(.touchUpInside)
     }
     
     var onClickAboutButton: ControlEvent<()> {

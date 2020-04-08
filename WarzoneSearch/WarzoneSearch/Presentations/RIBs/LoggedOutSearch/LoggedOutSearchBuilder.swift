@@ -30,6 +30,10 @@ extension LoggedOutSearchComponent: AboutDependency {
     }
 }
 
+extension LoggedOutSearchComponent: LeaderboardDependency {
+    
+}
+
 // MARK: - Builder
 protocol LoggedOutSearchBuildable: Buildable {
     func build(withListener listener: LoggedOutSearchListener) -> LoggedOutSearchRouting
@@ -47,6 +51,7 @@ final class LoggedOutSearchBuilder: Builder<LoggedOutSearchDependency>, LoggedOu
         let interactor = LoggedOutSearchInteractor(presenter: viewController, userStream: component.userStream, userUseCase: component.userUseCase)
         interactor.listener = listener
         let aboutBuilder = AboutBuilder(dependency: component)
-        return LoggedOutSearchRouter(interactor: interactor, viewController: viewController, aboutBuilder: aboutBuilder, navigation: component.navigation)
+        let leaderBoardBuilder = LeaderboardBuilder(dependency: component)
+        return LoggedOutSearchRouter(interactor: interactor, viewController: viewController, aboutBuilder: aboutBuilder, leaderBoardBuilder: leaderBoardBuilder, navigation: component.navigation)
     }
 }

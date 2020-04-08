@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol LoggedOutSearchInteractable: Interactable, AboutListener {
+protocol LoggedOutSearchInteractable: Interactable, AboutListener, LeaderboardListener {
     var router: LoggedOutSearchRouting? { get set }
     var listener: LoggedOutSearchListener? { get set }
 }
@@ -23,8 +23,10 @@ final class LoggedOutSearchRouter: ViewableRouter<LoggedOutSearchInteractable, L
     init(interactor: LoggedOutSearchInteractable,
          viewController: LoggedOutSearchViewControllable,
          aboutBuilder: AboutBuildable,
+         leaderBoardBuilder: LeaderboardBuildable,
          navigation: UINavigationController) {
         
+        self.leaderBoardBuilder = leaderBoardBuilder
         self.aboutBuilder = aboutBuilder
         self.navigation = navigation
         
@@ -33,6 +35,7 @@ final class LoggedOutSearchRouter: ViewableRouter<LoggedOutSearchInteractable, L
     }
     
     private var aboutBuilder: AboutBuildable
+    private var leaderBoardBuilder: LeaderboardBuildable
     private var currentRouter: ViewableRouting?
     private var navigation: UINavigationController
 }
@@ -42,6 +45,20 @@ extension LoggedOutSearchRouter {
 }
 
 extension LoggedOutSearchRouter: LoggedOutSearchRouting {
+    
+    func routeLeaderBoard() {
+        if let current = currentRouter {
+            detachChild(current)
+        }
+        
+        let leaderBoard = leaderBoardBuilder.build(withListener: interactor)
+        currentRouter = leaderBoard
+        
+        viewController.present(modelPresentation: .automatic, viewController: leaderBoard.viewControllable.uiviewController, complete: {
+            self.attachChild(leaderBoard)
+        })
+    }
+    
     func detechAbout() {
         navigation.setViewControllers([], animated: false)
         

@@ -15,6 +15,7 @@ protocol LoggedOutSearchRouting: ViewableRouting {
     // TODO: 해당 RIB Router 를 통해 Sub-tree 를 관리하기 위해 구현
     func routeAbout()
     func detechAbout()
+    func routeLeaderBoard()
 }
 
 protocol LoggedOutSearchPresentable: Presentable {
@@ -24,6 +25,7 @@ protocol LoggedOutSearchPresentable: Presentable {
     // From VC
     var onClickSearchButton: Observable<(Platform,String)> { get }
     var onClickAboutButton: ControlEvent<()> { get }
+    var onClickLeaderBoardButton: ControlEvent<()> { get }
     
     // To VC
     func setSearchHistory(users: [UserViewable])
@@ -73,6 +75,13 @@ extension LoggedOutSearchInteractor {
                 guard let self = self else { return }
                 self.userStream.updateUser(platform: user.0, id: user.1)
                 self.listener?.completeLoggedIn()
+            }).disposed(by: disposeBag)
+        
+        presenter
+            .onClickLeaderBoardButton
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.router?.routeLeaderBoard()
             }).disposed(by: disposeBag)
         
         presenter
