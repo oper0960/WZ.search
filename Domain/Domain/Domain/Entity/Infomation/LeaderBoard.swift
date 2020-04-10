@@ -17,6 +17,6 @@ public protocol PlayerViewable {
     var id: String { get }
     var platform: UIImage { get }
     var avatarUrl: String { get }
-    var rank: Int { get }
-    var value: String { get }
+    var rank: String { get }
+    var matchesPlayedValue: String { get }
 }
