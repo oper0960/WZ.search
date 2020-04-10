@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeaderboardViewController">
             <connections>
+                <outlet property="filterCollectionView" destination="umu-y4-eYh" id="rH8-Tz-gcc"/>
+                <outlet property="leaderBoardTableView" destination="YWv-7l-r4J" id="tWo-RW-kVi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
                 <outletCollection property="platformButtons" destination="gUd-A7-0H8" collectionClass="NSMutableArray" id="IV9-kf-oS0"/>
                 <outletCollection property="platformButtons" destination="4Vh-tZ-yze" collectionClass="NSMutableArray" id="HXv-cu-gZj"/>
@@ -52,11 +54,35 @@
                         <constraint firstAttribute="height" constant="60" id="JOd-4R-2qr"/>
                     </constraints>
                 </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="umu-y4-eYh">
+                    <rect key="frame" x="0.0" y="60" width="375" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="QSr-h6-ZbF"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hqk-wH-3wi">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWv-7l-r4J">
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="YWv-7l-r4J" firstAttribute="top" secondItem="umu-y4-eYh" secondAttribute="bottom" id="20L-j9-F2u"/>
+                <constraint firstItem="umu-y4-eYh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9Tn-FF-bi1"/>
                 <constraint firstItem="8h2-1D-Khg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H5Z-WV-puB"/>
+                <constraint firstItem="YWv-7l-r4J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ISc-2h-rWo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YWv-7l-r4J" secondAttribute="trailing" id="hVV-2W-ye0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YWv-7l-r4J" secondAttribute="bottom" id="lqh-jN-QXL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8h2-1D-Khg" secondAttribute="trailing" id="o7V-Ts-imA"/>
+                <constraint firstItem="umu-y4-eYh" firstAttribute="top" secondItem="8h2-1D-Khg" secondAttribute="bottom" id="oTX-TL-NDb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="umu-y4-eYh" secondAttribute="trailing" id="sut-wV-AeM"/>
                 <constraint firstItem="8h2-1D-Khg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zn2-fj-E4K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

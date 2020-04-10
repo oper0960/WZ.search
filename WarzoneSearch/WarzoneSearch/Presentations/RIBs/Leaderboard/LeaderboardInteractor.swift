@@ -8,6 +8,7 @@
 
 import RIBs
 import RxSwift
+import Domain
 
 protocol LeaderboardRouting: ViewableRouting {
     // TODO: 해당 RIB Router 를 통해 Sub-tree 를 관리하기 위해 구현
@@ -27,7 +28,10 @@ final class LeaderboardInteractor: PresentableInteractor<LeaderboardPresentable>
     weak var router: LeaderboardRouting?
     weak var listener: LeaderboardListener?
 
-    override init(presenter: LeaderboardPresentable) {
+    init(presenter: LeaderboardPresentable, leaderBoardUseCase: LeaderBoardUseCase) {
+        
+        self.leaderBoardUseCase = leaderBoardUseCase
+        
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -41,6 +45,8 @@ final class LeaderboardInteractor: PresentableInteractor<LeaderboardPresentable>
         super.willResignActive()
         
     }
+    private var leaderBoardUseCase: LeaderBoardUseCase
+    private var disposeBag = DisposeBag()
 }
 
 extension LeaderboardInteractor: LeaderboardInteractable {
@@ -48,5 +54,13 @@ extension LeaderboardInteractor: LeaderboardInteractable {
 }
 
 extension LeaderboardInteractor: LeaderboardPresentableListener {
-    
+    func getLeaderBoard(platform: Platform, filter: SearchFilter) {
+        leaderBoardUseCase
+            .getLeaderBoard(platform: platform, filter: filter)
+            .subscribe(onNext: { list in
+                
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
+    }
 }

@@ -108,6 +108,16 @@
 		EFC5BFB6243C571500070F2B /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFB4243C571500070F2B /* SettingTableViewCell.swift */; };
 		EFC5BFB7243C571500070F2B /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFB5243C571500070F2B /* SettingTableViewCell.xib */; };
 		EFC5BFB9243C5C7F00070F2B /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFB8243C5C7F00070F2B /* UserDefault+.swift */; };
+		EFC5BFBE243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFBC243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.swift */; };
+		EFC5BFBF243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFBD243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib */; };
+		EFC5BFC2243EF80A00070F2B /* LeaderBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFC0243EF80A00070F2B /* LeaderBoardTableViewCell.swift */; };
+		EFC5BFC3243EF80A00070F2B /* LeaderBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFC1243EF80A00070F2B /* LeaderBoardTableViewCell.xib */; };
+		EFC5BFCE243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFCD243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift */; };
+		EFC5BFD0243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFCF243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift */; };
+		EFC5BFD2243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD1243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift */; };
+		EFC5BFD4243F216E00070F2B /* LeaderBoardCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */; };
+		EFC5BFD7243F261900070F2B /* LeaderBoardVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD6243F261900070F2B /* LeaderBoardVIewModel.swift */; };
+		EFC5BFD9243F2A0800070F2B /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD8243F2A0800070F2B /* PlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -231,6 +241,16 @@
 		EFC5BFB4243C571500070F2B /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		EFC5BFB5243C571500070F2B /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		EFC5BFB8243C5C7F00070F2B /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
+		EFC5BFBC243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFC5BFBD243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderBoardFilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFC5BFC0243EF80A00070F2B /* LeaderBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewCell.swift; sourceTree = "<group>"; };
+		EFC5BFC1243EF80A00070F2B /* LeaderBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderBoardTableViewCell.xib; sourceTree = "<group>"; };
+		EFC5BFCD243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardDataStoreImplement.swift; sourceTree = "<group>"; };
+		EFC5BFCF243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardRepositoryImplement.swift; sourceTree = "<group>"; };
+		EFC5BFD1243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardUseCaseImplement.swift; sourceTree = "<group>"; };
+		EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCodable.swift; sourceTree = "<group>"; };
+		EFC5BFD6243F261900070F2B /* LeaderBoardVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVIewModel.swift; sourceTree = "<group>"; };
+		EFC5BFD8243F2A0800070F2B /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +459,7 @@
 				EF5BABDD242074BA00B8E285 /* UserDataStoreImplement.swift */,
 				EF5BB1BE2420C2EB00B8E285 /* InfomationDataStoreImplement.swift */,
 				EF9E7B1624346AA60024BD0F /* MatchHistoryDataStoreImplement.swift */,
+				EFC5BFCD243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift */,
 			);
 			path = "DataStore Implement";
 			sourceTree = "<group>";
@@ -449,6 +470,7 @@
 				EF5BABD92420749E00B8E285 /* UserUseCaseImplement.swift */,
 				EF5BB1BA2420C2CE00B8E285 /* InfomationUseCaseImplement.swift */,
 				EF9E7B1A24346B320024BD0F /* MatchHistoryUseCaseImplement.swift */,
+				EFC5BFD1243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift */,
 			);
 			path = "UseCase Implement";
 			sourceTree = "<group>";
@@ -459,6 +481,7 @@
 				EF5BABDB242074AC00B8E285 /* UserRepositoryImplement.swift */,
 				EF5BB1BC2420C2DD00B8E285 /* InfomationRepositoryImplement.swift */,
 				EF9E7B1824346B220024BD0F /* MatchHistoryRepositoryImplement.swift */,
+				EFC5BFCF243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift */,
 			);
 			path = "Repository Implement";
 			sourceTree = "<group>";
@@ -477,6 +500,7 @@
 			children = (
 				EF5BB1C12420C44000B8E285 /* InfomationCodable.swift */,
 				EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */,
+				EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -532,10 +556,12 @@
 		EF5FAEF1243B33A20087186F /* Leaderboard */ = {
 			isa = PBXGroup;
 			children = (
+				EFC5BFBB243EC78400070F2B /* View */,
+				EFC5BFD5243F24E500070F2B /* ViewModel */,
 				EF5FAF27243C13EC0087186F /* LeaderboardRouter.swift */,
-				EF5FAF28243C13EC0087186F /* LeaderboardViewController.swift */,
-				EF5FAF29243C13EC0087186F /* LeaderboardBuilder.swift */,
 				EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */,
+				EF5FAF29243C13EC0087186F /* LeaderboardBuilder.swift */,
+				EF5FAF28243C13EC0087186F /* LeaderboardViewController.swift */,
 				EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */,
 			);
 			path = Leaderboard;
@@ -676,6 +702,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EFC5BFBB243EC78400070F2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFC5BFBC243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.swift */,
+				EFC5BFBD243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib */,
+				EFC5BFC0243EF80A00070F2B /* LeaderBoardTableViewCell.swift */,
+				EFC5BFC1243EF80A00070F2B /* LeaderBoardTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFC5BFD5243F24E500070F2B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFC5BFD6243F261900070F2B /* LeaderBoardVIewModel.swift */,
+				EFC5BFD8243F2A0800070F2B /* PlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -742,6 +788,7 @@
 				EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */,
 				EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */,
 				EF5FAF1D243C13C30087186F /* Apache2.0.txt in Resources */,
+				EFC5BFBF243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib in Resources */,
 				EF5BB1DE2423120900B8E285 /* InfomationTableViewWeeklyCell.xib in Resources */,
 				EF5BB1E2242364CE00B8E285 /* Localizable.strings in Resources */,
 				EF5FAF1C243C13C30087186F /* MIT.txt in Resources */,
@@ -758,6 +805,7 @@
 				EF5FAF30243C13EC0087186F /* LeaderboardViewController.xib in Resources */,
 				EFC5BFA7243C4AA700070F2B /* GoogleService-Info.plist in Resources */,
 				EF5BAB812420691D00B8E285 /* Assets.xcassets in Resources */,
+				EFC5BFC3243EF80A00070F2B /* LeaderBoardTableViewCell.xib in Resources */,
 				EF5BB1D6242311C200B8E285 /* InfomationTableViewHeaderCell.xib in Resources */,
 				EF5BABC724206D7300B8E285 /* LoggedOutSearchViewController.xib in Resources */,
 				EFC5BFB2243C569500070F2B /* SettingViewController.xib in Resources */,
@@ -830,6 +878,7 @@
 				EF5FAEFD243C138C0087186F /* AboutInteractor.swift in Sources */,
 				EFC5BFB6243C571500070F2B /* SettingTableViewCell.swift in Sources */,
 				EF9E7B0F243465EF0024BD0F /* MatchHistoryViewModel.swift in Sources */,
+				EFC5BFD4243F216E00070F2B /* LeaderBoardCodable.swift in Sources */,
 				EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */,
 				EF5FAF22243C13C30087186F /* LicenseTextBuilder.swift in Sources */,
 				EF5BABC324206D7300B8E285 /* LoggedOutSearchRouter.swift in Sources */,
@@ -837,6 +886,7 @@
 				EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */,
 				EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */,
 				EF5FAF2E243C13EC0087186F /* LeaderboardBuilder.swift in Sources */,
+				EFC5BFC2243EF80A00070F2B /* LeaderBoardTableViewCell.swift in Sources */,
 				EF5BB1DD2423120900B8E285 /* InfomationTableViewWeeklyCell.swift in Sources */,
 				EF5BABB924206D6600B8E285 /* LoggedInSearchRouter.swift in Sources */,
 				EF5BB1BB2420C2CE00B8E285 /* InfomationUseCaseImplement.swift in Sources */,
@@ -844,15 +894,20 @@
 				EF5FAF1B243C13C30087186F /* OpenSourceBuilder.swift in Sources */,
 				EF5BABC624206D7300B8E285 /* LoggedOutSearchInteractor.swift in Sources */,
 				EF5FAF18243C13C30087186F /* OpenSourceStream.swift in Sources */,
+				EFC5BFBE243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.swift in Sources */,
 				EF9E7B1B24346B320024BD0F /* MatchHistoryUseCaseImplement.swift in Sources */,
 				EF5BB1C82421CC6500B8E285 /* InfomationViewModel.swift in Sources */,
 				EF5FAF01243C138C0087186F /* AboutViewController.swift in Sources */,
 				EF5BAB9A24206A8600B8E285 /* RootInteractor.swift in Sources */,
 				EF5FAF25243C13C30087186F /* LicenseTextInteractor.swift in Sources */,
+				EFC5BFD0243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift in Sources */,
 				EF5BAB8E24206A5300B8E285 /* AppComponents.swift in Sources */,
 				EF5FAF23243C13C30087186F /* LicenseTextViewController.swift in Sources */,
 				EF5F22B624246EEB00A717A2 /* InfomationCollectionViewWeeklyCell.swift in Sources */,
+				EFC5BFCE243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift in Sources */,
+				EFC5BFD9243F2A0800070F2B /* PlayerViewModel.swift in Sources */,
 				EF5FAEFB243C138C0087186F /* AboutRouter.swift in Sources */,
+				EFC5BFD2243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift in Sources */,
 				EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */,
 				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
 				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
@@ -870,6 +925,7 @@
 				EF5BB1E82423650D00B8E285 /* String+.swift in Sources */,
 				EF5FAF17243C13C30087186F /* OpenSource.swift in Sources */,
 				EF5BB1C22420C44000B8E285 /* InfomationCodable.swift in Sources */,
+				EFC5BFD7243F261900070F2B /* LeaderBoardVIewModel.swift in Sources */,
 				EF5FAEFF243C138C0087186F /* AboutTableViewCell.swift in Sources */,
 				EF5FAF26243C13C30087186F /* LicenseTextRouter.swift in Sources */,
 				EF5FAF2D243C13EC0087186F /* LeaderboardViewController.swift in Sources */,

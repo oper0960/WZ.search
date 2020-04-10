@@ -28,10 +28,6 @@ class InfomationDataStoreImplement: InfomationDataStore {
                                        encoding: URLEncoding(destination: .methodDependent),
                                        headers: [:])
             .map { _ , data in
-                
-                
-//                print(JSON(data))
-                
                 let decodableJson = try JSONDecoder().decode(InfomationCodable.self, from: data)
                 return InfomationViewModel(infomation: decodableJson.infomation)
         }

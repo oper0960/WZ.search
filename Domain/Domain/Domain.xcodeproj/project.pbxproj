@@ -24,6 +24,10 @@
 		EF9E7B11243469D00024BD0F /* MatchHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B10243469D00024BD0F /* MatchHistoryDataStore.swift */; };
 		EF9E7B13243469E00024BD0F /* MatchHistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B12243469E00024BD0F /* MatchHistoryRepository.swift */; };
 		EF9E7B15243469F20024BD0F /* MatchHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B14243469F20024BD0F /* MatchHistoryUseCase.swift */; };
+		EFC5BFC5243EFBE600070F2B /* LeaderBoardDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFC4243EFBE600070F2B /* LeaderBoardDataStore.swift */; };
+		EFC5BFC7243EFFC400070F2B /* LeaderBoardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFC6243EFFC400070F2B /* LeaderBoardRepository.swift */; };
+		EFC5BFCA243EFFD700070F2B /* LeaderBoardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFC9243EFFD700070F2B /* LeaderBoardUseCase.swift */; };
+		EFC5BFCC243F002000070F2B /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFCB243F002000070F2B /* LeaderBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		EF9E7B10243469D00024BD0F /* MatchHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDataStore.swift; sourceTree = "<group>"; };
 		EF9E7B12243469E00024BD0F /* MatchHistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryRepository.swift; sourceTree = "<group>"; };
 		EF9E7B14243469F20024BD0F /* MatchHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryUseCase.swift; sourceTree = "<group>"; };
+		EFC5BFC4243EFBE600070F2B /* LeaderBoardDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardDataStore.swift; sourceTree = "<group>"; };
+		EFC5BFC6243EFFC400070F2B /* LeaderBoardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardRepository.swift; sourceTree = "<group>"; };
+		EFC5BFC9243EFFD700070F2B /* LeaderBoardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardUseCase.swift; sourceTree = "<group>"; };
+		EFC5BFCB243F002000070F2B /* LeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
 		F1771F5C4CE4A87DE2354EB8 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,7 @@
 			children = (
 				EF5BB1B22420C18500B8E285 /* Infomation.swift */,
 				EF9E7B00243463FB0024BD0F /* MatchHistory.swift */,
+				EFC5BFCB243F002000070F2B /* LeaderBoard.swift */,
 			);
 			path = Infomation;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 				EF5CCDCE240E25B500E9B4E3 /* UserUseCase.swift */,
 				EF5BB1B82420C20500B8E285 /* InfomationUseCase.swift */,
 				EF9E7B14243469F20024BD0F /* MatchHistoryUseCase.swift */,
+				EFC5BFC9243EFFD700070F2B /* LeaderBoardUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 				EF5CCDD0240E25C100E9B4E3 /* UserRepository.swift */,
 				EF5BB1B62420C1DD00B8E285 /* InfomationRepository.swift */,
 				EF9E7B12243469E00024BD0F /* MatchHistoryRepository.swift */,
+				EFC5BFC6243EFFC400070F2B /* LeaderBoardRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 				EF5CCDD2240E25CC00E9B4E3 /* UserDataStore.swift */,
 				EF5BB1B42420C1AD00B8E285 /* InfomationDataStore.swift */,
 				EF9E7B10243469D00024BD0F /* MatchHistoryDataStore.swift */,
+				EFC5BFC4243EFBE600070F2B /* LeaderBoardDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -308,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5CCDD1240E25C100E9B4E3 /* UserRepository.swift in Sources */,
+				EFC5BFC5243EFBE600070F2B /* LeaderBoardDataStore.swift in Sources */,
+				EFC5BFCC243F002000070F2B /* LeaderBoard.swift in Sources */,
 				EF9E7B15243469F20024BD0F /* MatchHistoryUseCase.swift in Sources */,
 				EF5BB1C52421BE7F00B8E285 /* DomainEnum.swift in Sources */,
 				EF5CCDCC240E1B6D00E9B4E3 /* Constants.swift in Sources */,
@@ -319,6 +333,8 @@
 				EF9E7B13243469E00024BD0F /* MatchHistoryRepository.swift in Sources */,
 				EF9E7B01243463FC0024BD0F /* MatchHistory.swift in Sources */,
 				EF9E7B11243469D00024BD0F /* MatchHistoryDataStore.swift in Sources */,
+				EFC5BFCA243EFFD700070F2B /* LeaderBoardUseCase.swift in Sources */,
+				EFC5BFC7243EFFC400070F2B /* LeaderBoardRepository.swift in Sources */,
 				EF5BB1B72420C1DD00B8E285 /* InfomationRepository.swift in Sources */,
 				EF5BB1B52420C1AD00B8E285 /* InfomationDataStore.swift in Sources */,
 				EF5BB1B92420C20500B8E285 /* InfomationUseCase.swift in Sources */,

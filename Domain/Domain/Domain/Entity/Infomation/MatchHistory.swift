@@ -53,5 +53,4 @@ public protocol MatchViewable {
     var objectiveLastStandKill: String { get }
     var placement: String { get }
     var plunder: String { get }
-    
 }

@@ -7,6 +7,7 @@
 //
 
 import RIBs
+import Domain
 
 protocol LeaderboardDependency: Dependency {
     // TODO: 부모 RIB에서 해당 RIB으로 전달 받아야할 데이터를 구현
@@ -14,6 +15,9 @@ protocol LeaderboardDependency: Dependency {
 
 final class LeaderboardComponent: Component<LeaderboardDependency> {
     // TODO: 해당 RIB에서만 사용되는 Dependency를 fileprivate 으로 선언
+    fileprivate var leaderBoardUseCase: LeaderBoardUseCase = {
+        return LeaderBoardUseCaseImplement(leaderBoardRepository: LeaderBoardRepositoryImplement(dataStore: LeaderBoardDataStoreImplement()))
+    }()
 }
 
 // MARK: - Builder
@@ -30,7 +34,7 @@ final class LeaderboardBuilder: Builder<LeaderboardDependency>, LeaderboardBuild
     func build(withListener listener: LeaderboardListener) -> LeaderboardRouting {
         let component = LeaderboardComponent(dependency: dependency)
         let viewController = LeaderboardViewController()
-        let interactor = LeaderboardInteractor(presenter: viewController)
+        let interactor = LeaderboardInteractor(presenter: viewController, leaderBoardUseCase: component.leaderBoardUseCase)
         interactor.listener = listener
         return LeaderboardRouter(interactor: interactor, viewController: viewController)
     }
