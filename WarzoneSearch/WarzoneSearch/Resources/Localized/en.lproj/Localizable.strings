@@ -8,6 +8,8 @@
 
 "done" = "Done";
 "go" = "Go";
+"cancel" = "Cancel";
+"routeProfile" = "Move to Profile";
 
 "About" = "About";
 "Setting" = "Setting";
@@ -54,6 +56,15 @@
 "totalxp" = "Total XP";
 "remainderxp" = "Remainder XP";
 "gainedxp" = "Gained XP";
+"down" = "Downs";
+"revive" = "Revives";
+"cash" = "Cash";
+"contract" = "Contract";
+"totalmatches" = "TotalMatches";
+"winpercent" = "Win %";
+"score/game" = "Score/game";
+"averagelife" = "Avg. Life";
+"level" = "Level";
 
 "mapName" = "Map";
 "clanTag" = "Clan";

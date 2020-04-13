@@ -8,6 +8,8 @@
 
 "done" = "완료";
 "go" = "시작";
+"cancel" = "취소";
+"routeProfile" = "프로필 보기";
 
 "About" = "더보기";
 "Setting" = "설정";
@@ -54,6 +56,15 @@
 "totalxp" = "총 획득 경험치";
 "remainderxp" = "필요 경험치";
 "gainedxp" = "획득 경험치";
+"down" = "기절";
+"revive" = "부활";
+"cash" = "약탈금";
+"contract" = "계약";
+"totalmatches" = "총 경기수";
+"winpercent" = "승률";
+"score/game" = "1경기당 획득 점수";
+"averagelife" = "평균 생존 시간";
+"level" = "레벨";
 
 "mapName" = "맵";
 "clanTag" = "클랜";

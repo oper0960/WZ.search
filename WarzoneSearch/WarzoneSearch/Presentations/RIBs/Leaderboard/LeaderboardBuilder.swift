@@ -10,7 +10,7 @@ import RIBs
 import Domain
 
 protocol LeaderboardDependency: Dependency {
-    // TODO: 부모 RIB에서 해당 RIB으로 전달 받아야할 데이터를 구현
+    var userStream: UserStream { get }
 }
 
 final class LeaderboardComponent: Component<LeaderboardDependency> {
@@ -18,6 +18,10 @@ final class LeaderboardComponent: Component<LeaderboardDependency> {
     fileprivate var leaderBoardUseCase: LeaderBoardUseCase = {
         return LeaderBoardUseCaseImplement(leaderBoardRepository: LeaderBoardRepositoryImplement(dataStore: LeaderBoardDataStoreImplement()))
     }()
+    
+    var userStream: UserStream {
+        return dependency.userStream
+    }
 }
 
 // MARK: - Builder

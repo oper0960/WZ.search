@@ -118,6 +118,9 @@
 		EFC5BFD4243F216E00070F2B /* LeaderBoardCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */; };
 		EFC5BFD7243F261900070F2B /* LeaderBoardVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD6243F261900070F2B /* LeaderBoardVIewModel.swift */; };
 		EFC5BFD9243F2A0800070F2B /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFD8243F2A0800070F2B /* PlayerViewModel.swift */; };
+		EFC5BFDB2440728C00070F2B /* loadingTrophy.json in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFDA2440728C00070F2B /* loadingTrophy.json */; };
+		EFC5BFDE244407DF00070F2B /* AboutAdMobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5BFDC244407DF00070F2B /* AboutAdMobTableViewCell.swift */; };
+		EFC5BFDF244407DF00070F2B /* AboutAdMobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC5BFDD244407DF00070F2B /* AboutAdMobTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -251,6 +254,9 @@
 		EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCodable.swift; sourceTree = "<group>"; };
 		EFC5BFD6243F261900070F2B /* LeaderBoardVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVIewModel.swift; sourceTree = "<group>"; };
 		EFC5BFD8243F2A0800070F2B /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		EFC5BFDA2440728C00070F2B /* loadingTrophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingTrophy.json; sourceTree = "<group>"; };
+		EFC5BFDC244407DF00070F2B /* AboutAdMobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAdMobTableViewCell.swift; sourceTree = "<group>"; };
+		EFC5BFDD244407DF00070F2B /* AboutAdMobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutAdMobTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +417,7 @@
 		EF5BABA024206B4600B8E285 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				EFC5BFDA2440728C00070F2B /* loadingTrophy.json */,
 				EF5BB1C92422207300B8E285 /* loading.json */,
 			);
 			path = Lottie;
@@ -585,6 +592,8 @@
 			children = (
 				EF5FAEF8243C138C0087186F /* AboutTableViewCell.swift */,
 				EF5FAEF7243C138C0087186F /* AboutTableViewCell.xib */,
+				EFC5BFDC244407DF00070F2B /* AboutAdMobTableViewCell.swift */,
+				EFC5BFDD244407DF00070F2B /* AboutAdMobTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -784,8 +793,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC5BFDB2440728C00070F2B /* loadingTrophy.json in Resources */,
 				EFC5BFB7243C571500070F2B /* SettingTableViewCell.xib in Resources */,
 				EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */,
+				EFC5BFDF244407DF00070F2B /* AboutAdMobTableViewCell.xib in Resources */,
 				EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */,
 				EF5FAF1D243C13C30087186F /* Apache2.0.txt in Resources */,
 				EFC5BFBF243EC79E00070F2B /* LeaderBoardFilterCollectionViewCell.xib in Resources */,
@@ -887,6 +898,7 @@
 				EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */,
 				EF5FAF2E243C13EC0087186F /* LeaderboardBuilder.swift in Sources */,
 				EFC5BFC2243EF80A00070F2B /* LeaderBoardTableViewCell.swift in Sources */,
+				EFC5BFDE244407DF00070F2B /* AboutAdMobTableViewCell.swift in Sources */,
 				EF5BB1DD2423120900B8E285 /* InfomationTableViewWeeklyCell.swift in Sources */,
 				EF5BABB924206D6600B8E285 /* LoggedInSearchRouter.swift in Sources */,
 				EF5BB1BB2420C2CE00B8E285 /* InfomationUseCaseImplement.swift in Sources */,
@@ -1096,11 +1108,13 @@
 				CURRENT_PROJECT_VERSION = 2004070;
 				DEVELOPMENT_TEAM = QPVS7TPGTF;
 				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
 				PRODUCT_NAME = WZ.search;
 				SWIFT_VERSION = 5.0;
@@ -1117,11 +1131,13 @@
 				CURRENT_PROJECT_VERSION = 2004070;
 				DEVELOPMENT_TEAM = QPVS7TPGTF;
 				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
 				PRODUCT_NAME = WZ.search;
 				SWIFT_VERSION = 5.0;

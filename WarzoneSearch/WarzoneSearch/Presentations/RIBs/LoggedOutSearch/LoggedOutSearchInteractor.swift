@@ -14,8 +14,8 @@ import Domain
 protocol LoggedOutSearchRouting: ViewableRouting {
     // TODO: 해당 RIB Router 를 통해 Sub-tree 를 관리하기 위해 구현
     func routeAbout()
-    func detechAbout()
     func routeLeaderBoard()
+    func detechRouter()
 }
 
 protocol LoggedOutSearchPresentable: Presentable {
@@ -103,8 +103,17 @@ extension LoggedOutSearchInteractor {
 }
 
 extension LoggedOutSearchInteractor: LoggedOutSearchInteractable {
+    func detachLeaderBoard() {
+        router?.detechRouter()
+    }
+    
     func detechAbout() {
-        router?.detechAbout()
+        router?.detechRouter()
+    }
+    
+    func searchLeaderBoardPlayer(platform: Platform, id: String) {
+        userStream.updateUser(platform: platform, id: id)
+        listener?.completeLoggedIn()
     }
 }
 

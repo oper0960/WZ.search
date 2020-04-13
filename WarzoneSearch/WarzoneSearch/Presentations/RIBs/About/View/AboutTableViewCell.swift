@@ -54,6 +54,8 @@ class AboutTableViewCell: UITableViewCell {
             subTitleLabel.text = version
             rightArrowImageView.isHidden = true
             subTitleLabel.isHidden = false
+        case .admob:
+            break
         }
     }
 }

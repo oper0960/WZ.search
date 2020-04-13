@@ -30,7 +30,7 @@ struct LeaderBoardMetadata: Codable {
 struct Item: Codable {
     let id: String?
     let owner: Owner?
-    let value: Int?
+    let value: Double?
     let displayValue: String?
     let rank: Int?
     let percentile: Int?

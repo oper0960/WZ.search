@@ -28,7 +28,7 @@ final class SettingBuilder: Builder<SettingDependency>, SettingBuildable {
     }
 
     func build(withListener listener: SettingListener) -> SettingRouting {
-        let component = SettingComponent(dependency: dependency)
+        let _ = SettingComponent(dependency: dependency)
         let viewController = SettingViewController()
         let interactor = SettingInteractor(presenter: viewController)
         interactor.listener = listener

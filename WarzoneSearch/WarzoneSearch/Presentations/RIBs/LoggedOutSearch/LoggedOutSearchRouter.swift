@@ -59,14 +59,6 @@ extension LoggedOutSearchRouter: LoggedOutSearchRouting {
         })
     }
     
-    func detechAbout() {
-        navigation.setViewControllers([], animated: false)
-        
-        if let current = currentRouter {
-            self.detachChild(current)
-        }
-    }
-    
     func routeAbout() {
         if let current = currentRouter {
             detachChild(current)
@@ -80,5 +72,13 @@ extension LoggedOutSearchRouter: LoggedOutSearchRouting {
         viewController.present(modelPresentation: .automatic, viewController: self.navigation, complete: {
             self.attachChild(about)
         })
+    }
+    
+    func detechRouter() {
+        navigation.setViewControllers([], animated: false)
+        
+        if let current = currentRouter {
+            self.detachChild(current)
+        }
     }
 }

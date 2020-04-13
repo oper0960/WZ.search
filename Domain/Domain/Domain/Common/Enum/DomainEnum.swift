@@ -59,7 +59,7 @@ public enum Platform {
             self = .psn
         case "xbl":
             self = .xbl
-        case "battle":
+        case "battle", "battlenet":
             self = .battle
         default:
             self = .none
@@ -82,45 +82,45 @@ public enum SearchFilter {
     public var displayName: String {
         switch self {
         case .kills:
-            return "Kills"
+            return "kill"
         case .deaths:
-            return "Deaths"
+            return "death"
         case .downs:
-            return "Downs"
+            return "down"
         case .revives:
-            return "Revives"
+            return "revive"
         case .kdRatio:
             return "K/D"
         case .timePlayed:
-            return "TimePlayed"
+            return "timeplayed"
         case .score:
-            return "Score"
+            return "score"
         case .scorePerMinute:
-            return "Score/min"
+            return "score/min"
         case .cash:
-            return "Cash"
+            return "cash"
         case .contracts:
-            return "Contract"
+            return "contract"
         case .wins:
-            return "Wins"
+            return "wins"
         case .top5:
-            return "Top 5"
+            return "top5"
         case .top10:
-            return "Top 10"
+            return "top10"
         case .top25:
-            return "Top 25"
+            return "top25"
         case .totalMatches:
-            return "TotalMatches"
+            return "totalmatches"
         case .winPercent:
-            return "WinPercent"
+            return "winpercent"
         case .scorePerGame:
-            return "Score/game"
+            return "score/game"
         case .averageLife:
-            return "Avg. Life"
+            return "averagelife"
         case .level:
-            return "Level"
+            return "level"
         case .totalXp:
-            return "TotalXP"
+            return "totalxp"
         }
     }
     
@@ -155,17 +155,17 @@ public enum SearchFilter {
         case .top25:
             return "top25"
         case .totalMatches:
-            return "totalmatches"
+            return "gamesplayed"
         case .winPercent:
-            return "winpercent"
+            return "WlRatio"
         case .scorePerGame:
             return "scorepergame"
         case .averageLife:
-            return "avglife"
+            return "averagelife"
         case .level:
             return "level"
         case .totalXp:
-            return "totalxp"
+            return "LevelXpTotal"
         }
     }
 }

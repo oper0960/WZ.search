@@ -11,3 +11,7 @@ import UIKit
 enum CoreDataFetchError: Error {
     case notContext
 }
+
+enum RxError: Error {
+    
+}

@@ -12,6 +12,7 @@ target 'WarzoneSearch' do
   pod 'Kingfisher'
   pod 'SwiftyJSON'
   pod 'Firebase/Analytics'
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'Domain' do

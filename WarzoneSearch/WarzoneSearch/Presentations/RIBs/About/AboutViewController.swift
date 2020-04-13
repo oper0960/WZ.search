@@ -11,9 +11,10 @@ import RxSwift
 import RxCocoa
 import UIKit
 import MessageUI
+import GoogleMobileAds
 
 enum SettingMenu {
-    case opensource, version, feedback, option
+    case opensource, version, feedback, option, admob
 }
 
 protocol AboutPresentableListener: class {
@@ -44,6 +45,7 @@ final class AboutViewController: UIViewController {
         array.append(.opensource)
         array.append(.feedback)
         array.append(.version)
+        array.append(.admob)
         return array
     }()
     
@@ -62,6 +64,7 @@ extension AboutViewController: UIAdaptivePresentationControllerDelegate {
     private func setTableView() {
         self.navigation.presentationController?.delegate = self
         aboutTableView.register(UINib(nibName: "AboutTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingCell")
+        aboutTableView.register(UINib(nibName: "AboutAdMobTableViewCell", bundle: nil), forCellReuseIdentifier: "AdMobCell")
         aboutTableView.delegate = self
         aboutTableView.dataSource = self
     }
@@ -163,12 +166,31 @@ extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        switch menuArray[indexPath.row] {
+        case .admob:
+            return 250
+        default:
+            return 60
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let settingCell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! AboutTableViewCell
-        settingCell.bind(menu: menuArray[indexPath.row])
-        return settingCell
+        
+        switch menuArray[indexPath.row] {
+        case .admob:
+            let admobCell = tableView.dequeueReusableCell(withIdentifier: "AdMobCell", for: indexPath) as! AboutAdMobTableViewCell
+            #if DEBUG
+            admobCell.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+            #else
+            admobCell.bannerView.adUnitID = "ca-app-pub-9335296893721653/3508432499"
+            #endif
+            admobCell.bannerView.rootViewController = self
+            admobCell.bannerView.load(GADRequest())
+            return admobCell
+        default:
+            let settingCell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! AboutTableViewCell
+            settingCell.bind(menu: menuArray[indexPath.row])
+            return settingCell
+        }
     }
 }

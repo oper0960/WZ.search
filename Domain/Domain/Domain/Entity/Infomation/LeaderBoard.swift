@@ -16,7 +16,10 @@ public protocol LeaderBoardViewable {
 public protocol PlayerViewable {
     var id: String { get }
     var platform: UIImage { get }
-    var avatarUrl: String { get }
+    var platformString: String { get }
+    var avatarUrl: URL? { get }
     var rank: String { get }
+    var rankingValue: String { get }
+    var matchesPlayedTitle: String { get }
     var matchesPlayedValue: String { get }
 }

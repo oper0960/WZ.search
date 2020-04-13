@@ -59,7 +59,7 @@ extension AboutRouter: AboutRouting {
             viewController.push(viewController: openSource.viewControllable) {
                 self.attachChild(openSource)
             }
-        case .version:
+        case .version, .admob:
             break
         case .feedback:
             viewController.presentFeedback()

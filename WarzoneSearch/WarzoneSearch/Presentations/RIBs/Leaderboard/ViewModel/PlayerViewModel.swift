@@ -29,22 +29,38 @@ class PlayerViewModel: PlayerViewable {
         guard let platform = leaderBoardItem?.owner?.metadata?.platformSlug else { return UIImage() }
         switch platform {
         case "battlenet":
-            return #imageLiteral(resourceName: "BattleNet")
+            return #imageLiteral(resourceName: "battle-disable")
         case "psn":
-            return #imageLiteral(resourceName: "Psn")
+            return #imageLiteral(resourceName: "psn-disable")
         case "xbl":
-            return #imageLiteral(resourceName: "Xbox")
+            return #imageLiteral(resourceName: "xbox-disable")
         default:
-            return UIImage()
+            return #imageLiteral(resourceName: "atvi-disable")
         }
     }
     
-    var avatarUrl: String {
-        return leaderBoardItem?.owner?.metadata?.avatarUrl ?? ""
+    var platformString: String {
+        guard let platformSlug = leaderBoardItem?.owner?.metadata?.platformSlug else { return "" }
+        let platform = Platform(platform: platformSlug)
+        return platform.name
+    }
+    
+    var avatarUrl: URL? {
+        guard let urlString = leaderBoardItem?.owner?.metadata?.avatarUrl else { return nil }
+        
+        return URL(string: urlString) ?? nil
     }
     
     var rank: String {
-        return leaderBoardItem?.rank?.description ?? "0"
+        return "Rank \(leaderBoardItem?.rank?.description ?? "0")"
+    }
+    
+    var rankingValue: String {
+        return leaderBoardItem?.displayValue ?? ""
+    }
+    
+    var matchesPlayedTitle: String {
+        return leaderBoardItem?.owner?.stats?.first?.metadata?.name ?? ""
     }
     
     var matchesPlayedValue: String {

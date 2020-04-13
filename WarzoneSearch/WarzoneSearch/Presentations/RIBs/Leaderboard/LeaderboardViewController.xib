@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeaderboardViewController">
             <connections>
+                <outlet property="admobView" destination="4ba-7c-tSI" id="NU4-Yn-ExF"/>
+                <outlet property="admobViewHeight" destination="kme-GK-SJa" id="c5v-Zf-eID"/>
                 <outlet property="filterCollectionView" destination="umu-y4-eYh" id="rH8-Tz-gcc"/>
                 <outlet property="leaderBoardTableView" destination="YWv-7l-r4J" id="tWo-RW-kVi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jYO-eb-xeE"/>
@@ -67,26 +69,37 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWv-7l-r4J">
-                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-7c-tSI">
+                    <rect key="frame" x="0.0" y="98" width="375" height="0.0"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="kme-GK-SJa"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWv-7l-r4J">
+                    <rect key="frame" x="0.0" y="98" width="375" height="569"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="YWv-7l-r4J" firstAttribute="top" secondItem="umu-y4-eYh" secondAttribute="bottom" id="20L-j9-F2u"/>
                 <constraint firstItem="umu-y4-eYh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9Tn-FF-bi1"/>
                 <constraint firstItem="8h2-1D-Khg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H5Z-WV-puB"/>
                 <constraint firstItem="YWv-7l-r4J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ISc-2h-rWo"/>
+                <constraint firstItem="YWv-7l-r4J" firstAttribute="top" secondItem="4ba-7c-tSI" secondAttribute="bottom" id="bFK-Vp-cYI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YWv-7l-r4J" secondAttribute="trailing" id="hVV-2W-ye0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YWv-7l-r4J" secondAttribute="bottom" id="lqh-jN-QXL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8h2-1D-Khg" secondAttribute="trailing" id="o7V-Ts-imA"/>
                 <constraint firstItem="umu-y4-eYh" firstAttribute="top" secondItem="8h2-1D-Khg" secondAttribute="bottom" id="oTX-TL-NDb"/>
+                <constraint firstItem="4ba-7c-tSI" firstAttribute="top" secondItem="umu-y4-eYh" secondAttribute="bottom" constant="8" id="ohX-1B-xj4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4ba-7c-tSI" secondAttribute="trailing" id="omd-o6-OYg"/>
+                <constraint firstItem="4ba-7c-tSI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qfR-5c-RYf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="umu-y4-eYh" secondAttribute="trailing" id="sut-wV-AeM"/>
                 <constraint firstItem="8h2-1D-Khg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zn2-fj-E4K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
         </view>
     </objects>
     <resources>

@@ -15,7 +15,7 @@ class IndicatorView {
     private var animationView = AnimationView()
     
     enum IndicatorType {
-        case launch, loading
+        case launch, loading, leaderBoard
     }
     
     init(type: IndicatorType) {
@@ -31,12 +31,16 @@ class IndicatorView {
             animationView = AnimationView(name: "loading")
         case .loading:
             animationView = AnimationView(name: "loading")
+        case .leaderBoard:
+            animationView = AnimationView(name: "loadingTrophy")
         }
         
         animationView.contentMode = .scaleAspectFill
         animationView.tag = 999
         
         view.addSubview(animationView)
+        view.bringSubviewToFront(animationView)
+        
         animationView.snp.makeConstraints {
             $0.center.equalTo(view.snp.center)
             switch type {
@@ -44,6 +48,9 @@ class IndicatorView {
                 $0.height.equalTo(100)
                 $0.width.equalTo(100)
             case .loading:
+                $0.height.equalTo(100)
+                $0.width.equalTo(100)
+            case .leaderBoard:
                 $0.height.equalTo(100)
                 $0.width.equalTo(100)
             }
