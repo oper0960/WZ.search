@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoggedInSearchViewController">
             <connections>
+                <outlet property="admobView" destination="DSY-ip-XBX" id="3Hv-Gd-1yy"/>
                 <outlet property="backgroundImageView" destination="qeO-Wh-K54" id="SZb-UK-DvZ"/>
                 <outlet property="closeButton" destination="8iM-LI-nnL" id="nh7-cN-rqd"/>
                 <outlet property="infomationTableView" destination="7zk-C0-LoX" id="CbJ-SA-XMz"/>
@@ -28,11 +29,18 @@
                     <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zk-C0-LoX">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="-44" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-LI-nnL" customClass="UIButtonCustom" customModule="WarzoneSearch" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSY-ip-XBX">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="doB-8a-OQb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-LI-nnL" customClass="UIButtonCustom" customModule="WZ_search" customModuleProvider="target">
                     <rect key="frame" x="358" y="52" width="40" height="40"/>
                     <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -51,21 +59,24 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="qeO-Wh-K54" secondAttribute="trailing" id="9JM-22-QTa"/>
                 <constraint firstItem="qeO-Wh-K54" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CZP-A5-Nle"/>
+                <constraint firstItem="DSY-ip-XBX" firstAttribute="top" secondItem="7zk-C0-LoX" secondAttribute="bottom" id="E2R-IE-Jln"/>
                 <constraint firstItem="Kp5-19-Y5p" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="-50" id="F6X-Or-6XI"/>
                 <constraint firstItem="7zk-C0-LoX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fab-0G-4rO"/>
                 <constraint firstItem="7zk-C0-LoX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IxU-Vg-xU6"/>
                 <constraint firstAttribute="bottom" secondItem="Kp5-19-Y5p" secondAttribute="bottom" id="LbH-H2-QhB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7zk-C0-LoX" secondAttribute="trailing" id="R3s-08-fUe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DSY-ip-XBX" secondAttribute="trailing" id="X63-Vf-Noj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kp5-19-Y5p" secondAttribute="trailing" constant="-50" id="cfH-Ov-n5S"/>
                 <constraint firstItem="Kp5-19-Y5p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="crK-ic-Owi"/>
                 <constraint firstItem="qeO-Wh-K54" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gle-VC-FvQ"/>
                 <constraint firstItem="8iM-LI-nnL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="k5T-EE-sOB"/>
                 <constraint firstAttribute="bottom" secondItem="qeO-Wh-K54" secondAttribute="bottom" id="lA1-9s-Nza"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8iM-LI-nnL" secondAttribute="trailing" constant="16" id="rJJ-o6-aAR"/>
-                <constraint firstAttribute="bottom" secondItem="7zk-C0-LoX" secondAttribute="bottom" id="veM-8p-ySJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DSY-ip-XBX" secondAttribute="bottom" id="rSh-fN-Okb"/>
+                <constraint firstItem="DSY-ip-XBX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="shj-lJ-ngy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="130" y="153"/>
+            <point key="canvasLocation" x="128.98550724637681" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>

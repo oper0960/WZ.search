@@ -323,7 +323,7 @@ struct WeeklyMode: Codable {
     let brAll: WeeklyBrAllMode?
 
     private enum CodingKeys: String, CodingKey {
-        case brDmz = "br_dmz_38"
+        case brDmz = "br_89"
         case br25 = "br_25"
         case br87 = "br_87"
         case brAll = "br_all"

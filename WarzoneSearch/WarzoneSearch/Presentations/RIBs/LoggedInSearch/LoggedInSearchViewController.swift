@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 import UIKit
 import Domain
+import GoogleMobileAds
+import SnapKit
 
 protocol LoggedInSearchPresentableListener: class {
     // TODO: Business Logic의 수행을 위해 Interactor로 호출할 메소드, 프로퍼티를 구현
@@ -30,6 +32,7 @@ final class LoggedInSearchViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var infomationTableView: UITableView!
     @IBOutlet weak var closeButton: UIButtonCustom!
+    @IBOutlet weak var admobView: UIView!
     
     private let indicator = IndicatorView(type: .loading)
     private var infomation: InfomationViewable?
@@ -37,7 +40,7 @@ final class LoggedInSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setAdmob()
         setTableView()
     }
     
@@ -48,8 +51,26 @@ final class LoggedInSearchViewController: UIViewController {
 
 // MARK: - Setup
 extension LoggedInSearchViewController {
-    func setup() {
+    func setAdmob() {
         
+        var bannerView: GADBannerView!
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        admobView.addSubview(bannerView)
+        bannerView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+
+        #if DEBUG
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+        bannerView.adUnitID = "ca-app-pub-9335296893721653/3508432499"
+        #endif
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.load(GADRequest())
     }
     
     private func setTableView() {
@@ -228,5 +249,39 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
         case .history:
             print("history")
         }
+    }
+}
+
+extension LoggedInSearchViewController: GADBannerViewDelegate {
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
     }
 }

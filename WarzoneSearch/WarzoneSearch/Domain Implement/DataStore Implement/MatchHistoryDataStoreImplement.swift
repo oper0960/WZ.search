@@ -30,7 +30,7 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> JSON in
-                print(JSON(data.1))
+//                print(JSON(data.1))
                 return JSON(data.1)
         }
         

@@ -103,3 +103,6 @@
 
 "send_mail_failed_title" = "전송 실패";
 "send_mail_failed_message" = "잠시후에 다시 시도해주세요.";
+
+"atvi_coming_title" = "준비중입니다.";
+"atvi_coming_message" = "다른 플랫폼의 게이머를 선택해주세요.";

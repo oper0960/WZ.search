@@ -103,3 +103,6 @@
 
 "send_mail_failed_title" = "Send failed";
 "send_mail_failed_message" = "Send it again later.";
+
+"atvi_coming_title" = "Coming Soon";
+"atvi_coming_message" = "Choose other platform player.";
