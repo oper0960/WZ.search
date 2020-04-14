@@ -37,12 +37,12 @@ class InfomationTableViewHeaderCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func bind(infomation: InfomationViewable) {
-        userNameLabel.text = infomation.userName
-        levelLabel.text = "Lv.\(infomation.level)"
+    func bind(infomation: NewInfomationViewable, index: Int) {
+        userNameLabel.text = infomation.userId
+        levelLabel.text = "Lv.\(infomation.segments[index].level)"
         platformImageView.image = infomation.platform
-        totalXPLabel.text = infomation.totalXp
-        remainderXPLabel.text = infomation.levelXpRemainder
-        gainedXPLabel.text = infomation.levelXpGained
+        totalXPLabel.text = infomation.segments[index].levelXpTotal
+//        remainderXPLabel.text = infomation.levelXpRemainder
+//        gainedXPLabel.text = infomation.levelXpGained
     }
 }

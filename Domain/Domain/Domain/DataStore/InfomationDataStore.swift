@@ -11,4 +11,5 @@ import RxSwift
 
 public protocol InfomationDataStore {
     func getUserInfomation(platform: Platform, id: String) -> Observable<InfomationViewable>
+    func getUserNewInfomation(platform: Platform, id: String) -> Observable<NewInfomationViewable>
 }

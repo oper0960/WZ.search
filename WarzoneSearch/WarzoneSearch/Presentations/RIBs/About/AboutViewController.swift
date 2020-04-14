@@ -179,11 +179,7 @@ extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
         switch menuArray[indexPath.row] {
         case .admob:
             let admobCell = tableView.dequeueReusableCell(withIdentifier: "AdMobCell", for: indexPath) as! AboutAdMobTableViewCell
-            #if DEBUG
-            admobCell.bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-            #else
             admobCell.bannerView.adUnitID = "ca-app-pub-9335296893721653/3508432499"
-            #endif
             admobCell.bannerView.rootViewController = self
             admobCell.bannerView.load(GADRequest())
             return admobCell

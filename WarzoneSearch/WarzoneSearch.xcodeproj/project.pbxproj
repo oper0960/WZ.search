@@ -88,6 +88,8 @@
 		EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */; };
 		EF5FAF30243C13EC0087186F /* LeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */; };
 		EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF31243C23280087186F /* UINavigationController+.swift */; };
+		EF7395D32445591200FCD0A3 /* newInfomationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D22445591200FCD0A3 /* newInfomationCodable.swift */; };
+		EF7395D524455FCD00FCD0A3 /* NewInfomationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D424455FCD00FCD0A3 /* NewInfomationViewModel.swift */; };
 		EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */; };
 		EF9E7AEB242DE3D40024BD0F /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */; };
 		EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */; };
@@ -224,6 +226,8 @@
 		EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInteractor.swift; sourceTree = "<group>"; };
 		EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderboardViewController.xib; sourceTree = "<group>"; };
 		EF5FAF31243C23280087186F /* UINavigationController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		EF7395D22445591200FCD0A3 /* newInfomationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newInfomationCodable.swift; sourceTree = "<group>"; };
+		EF7395D424455FCD00FCD0A3 /* NewInfomationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfomationViewModel.swift; sourceTree = "<group>"; };
 		EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF9E7AE9242DE3D40024BD0F /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		EF9E7AEA242DE3D40024BD0F /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -506,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5BB1C12420C44000B8E285 /* InfomationCodable.swift */,
+				EF7395D22445591200FCD0A3 /* newInfomationCodable.swift */,
 				EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */,
 				EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */,
 			);
@@ -518,6 +523,7 @@
 				EF5BB1C72421CC6500B8E285 /* InfomationViewModel.swift */,
 				EF9E7B0E243465EF0024BD0F /* MatchHistoryViewModel.swift */,
 				EF9E7B1C24358E3A0024BD0F /* MatchViewModel.swift */,
+				EF7395D424455FCD00FCD0A3 /* NewInfomationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -923,7 +929,9 @@
 				EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */,
 				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
 				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
+				EF7395D524455FCD00FCD0A3 /* NewInfomationViewModel.swift in Sources */,
 				EF5BB1D5242311C200B8E285 /* InfomationTableViewHeaderCell.swift in Sources */,
+				EF7395D32445591200FCD0A3 /* newInfomationCodable.swift in Sources */,
 				EFC5BFAF243C569500070F2B /* SettingViewController.swift in Sources */,
 				EF9E7AF12432EC2D0024BD0F /* MatchHistoryTableViewCell.swift in Sources */,
 				EF5BABBC24206D6600B8E285 /* LoggedInSearchInteractor.swift in Sources */,

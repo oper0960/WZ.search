@@ -89,12 +89,7 @@ extension LeaderboardViewController: UIAdaptivePresentationControllerDelegate {
             $0.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
-
-        #if DEBUG
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        #else
         bannerView.adUnitID = "ca-app-pub-9335296893721653/3508432499"
-        #endif
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.load(GADRequest())

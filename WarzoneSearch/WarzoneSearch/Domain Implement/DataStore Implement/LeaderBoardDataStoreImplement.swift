@@ -27,7 +27,7 @@ class LeaderBoardDataStoreImplement: LeaderBoardDataStore {
                                        headers: [:])
 //            .timeout(10, scheduler: MainScheduler.instance)
             .map { _ , data in
-                print(JSON(data))
+//                print(JSON(data))
                 
                 let decodableJson = try JSONDecoder().decode(LeaderBoardCodable.self, from: data)
                 
