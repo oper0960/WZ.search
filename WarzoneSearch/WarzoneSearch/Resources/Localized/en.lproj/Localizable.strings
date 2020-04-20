@@ -32,6 +32,7 @@
 "lifetime" = "Lifetime Record";
 "weekly" = "Weekly Record";
 "matchHistory" = "Match History";
+"profile" = "Profile";
 
 // 타입
 "all" = "All";
@@ -41,12 +42,23 @@
 "Battle Royale" = "Battle Royal";
 "Battle Royale Solos" = "Battle Royale Solos";
 "Blood Money" = "Blood Money";
+"BR Quads" = "Battle Royale Quads";
+"BR Trios" = "Battle Royale Trios";
+"BR Duos" = "Battle Royale Duos";
+"BR Solos" = "Battle Royale Solos";
+
+"Plunder Quads" = "Plunder Quads";
+"Plunder Trios" = "Plunder Trios";
+"Plunder Duos" = "Plunder Duos";
+"Plunder Solos" = "Plunder Solos";
 
 // LifeTime, Weekly Preperty
 "K/D" = "K/D";
 "wins" = "Wins";
 "score" = "Score";
 "timeplayed" = "TimePlayed";
+"gameplayed" = "GamePlayed";
+"levelprogress" = "Level Progess";
 "kill" = "Kills";
 "death" = "Deaths";
 "damage" = "Damage";

@@ -22,7 +22,7 @@ protocol LoggedInSearchPresentableListener: class {
 final class LoggedInSearchViewController: UIViewController {
     
     enum SectionType {
-        case header, br, dmz, history
+        case header, battleRoyal, plunder, history
     }
     
     private var menuArray: [SectionType] = []
@@ -35,7 +35,7 @@ final class LoggedInSearchViewController: UIViewController {
     @IBOutlet weak var admobView: UIView!
     
     private let indicator = IndicatorView(type: .loading)
-    private var infomation: NewInfomationViewable?
+    private var infomation: InfomationViewable?
     private var matchs: MatchHistoryViewable?
     
     override func viewDidLoad() {
@@ -72,7 +72,6 @@ extension LoggedInSearchViewController {
         infomationTableView.register(UINib(nibName: "InfomationTableViewHeaderCell", bundle: nil), forCellReuseIdentifier: "HeaderCell")
         infomationTableView.register(UINib(nibName: "InfomationTableViewSectionHeaderCell", bundle: nil), forCellReuseIdentifier: "SectionHeader")
         infomationTableView.register(UINib(nibName: "InfomationTableViewLifetimeCell", bundle: nil), forCellReuseIdentifier: "LifetimeCell")
-        infomationTableView.register(UINib(nibName: "InfomationTableViewWeeklyCell", bundle: nil), forCellReuseIdentifier: "WeeklyCell")
         infomationTableView.register(UINib(nibName: "MatchHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoryCell")
         infomationTableView.delegate = self
         infomationTableView.dataSource = self
@@ -86,16 +85,14 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
         return closeButton.rx.controlEvent(.touchUpInside)
     }
     
-    func setNewInfomation(infomation: NewInfomationViewable, matchs: MatchHistoryViewable? = nil) {
+    func setInfomation(infomation: InfomationViewable, matchs: MatchHistoryViewable? = nil) {
         self.infomation = infomation
         self.matchs = matchs
         
-        print("adsfkldsj")
-        
          menuArray = {
+            
             var array = [SectionType]()
             guard let infomation = self.infomation else { return array }
-            
             
             for segment in infomation.segments {
                 if segment.modeName == "Lifetime" {
@@ -103,17 +100,18 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
                 }
                 
                 if segment.modeName == "Battle Royale" {
-                    array.append(.br)
+                    array.append(.battleRoyal)
                 }
                 
                 if segment.modeName == "Plunder" {
-                    array.append(.dmz)
+                    array.append(.plunder)
                 }
-                
-                guard let matchs = self.matchs, matchs.matchs.count > 0 else { return array }
-                
-                array.append(.history)
             }
+            
+            guard let matchs = self.matchs, matchs.matchs.count > 0 else { return array }
+            
+            array.append(.history)
+            
             return array
         }()
         self.infomationTableView.reloadData()
@@ -150,9 +148,9 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch menuArray[section] {
-        case .header:
-            return 0
-        case .br, .dmz, .history:
+//        case .header:
+//            return 0
+        case .header, .battleRoyal, .plunder, .history:
             return 60
         }
     }
@@ -162,11 +160,11 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
         
         switch menuArray[section] {
         case .header:
-            return nil
-        case .br:
-            headerCell.bind(title: "lifetime".localized)
-        case .dmz:
-            headerCell.bind(title: "weekly".localized)
+            headerCell.bind(title: "profile".localized)
+        case .battleRoyal:
+            headerCell.bind(title: "battle".localized)
+        case .plunder:
+            headerCell.bind(title: "plunder".localized)
         case .history:
             headerCell.bind(title: "matchHistory".localized)
         }
@@ -176,7 +174,7 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch menuArray[section] {
-        case .header, .br, .dmz:
+        case .header, .battleRoyal, .plunder:
             return 1
         case .history:
             guard let matchs = self.matchs?.matchs else { return 0 }
@@ -187,8 +185,8 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch menuArray[indexPath.section] {
         case .header:
-            return 200
-        case .br, .dmz:
+            return 700
+        case .battleRoyal, .plunder:
             return 320
         case .history:
             return 700
@@ -205,22 +203,22 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
             headerCell.bind(infomation: infomation, index: indexPath.row)
             
             return headerCell
-        case .br:
-            let lifetimeCell = tableView.dequeueReusableCell(withIdentifier: "LifetimeCell", for: indexPath) as! InfomationTableViewLifetimeCell
+        case .battleRoyal:
+            let brCell = tableView.dequeueReusableCell(withIdentifier: "LifetimeCell", for: indexPath) as! InfomationTableViewLifetimeCell
             
-            guard let infomation = infomation else { return lifetimeCell }
+            guard let infomation = infomation else { return brCell }
             
-//            lifetimeCell.infomation = infomation
+            brCell.segment = infomation.segments[indexPath.section]
             
-            return lifetimeCell
-        case .dmz:
-            let weeklyCell = tableView.dequeueReusableCell(withIdentifier: "WeeklyCell", for: indexPath) as! InfomationTableViewWeeklyCell
+            return brCell
+        case .plunder:
+            let brCell = tableView.dequeueReusableCell(withIdentifier: "LifetimeCell", for: indexPath) as! InfomationTableViewLifetimeCell
             
-            guard let infomation = infomation else { return weeklyCell }
+            guard let infomation = infomation else { return brCell }
             
-//            weeklyCell.infomation = infomation
+            brCell.segment = infomation.segments[indexPath.section]
             
-            return weeklyCell
+            return brCell
         case .history:
             let historyCell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! MatchHistoryTableViewCell
             guard let matchs = self.matchs?.matchs else { return historyCell }

@@ -11,5 +11,4 @@ import RxSwift
 
 public protocol InfomationRepository {
     func getUserInfomation(platform: Platform, id: String) -> Observable<InfomationViewable>
-    func getUserNewInfomation(platform: Platform, id: String) -> Observable<NewInfomationViewable>
 }

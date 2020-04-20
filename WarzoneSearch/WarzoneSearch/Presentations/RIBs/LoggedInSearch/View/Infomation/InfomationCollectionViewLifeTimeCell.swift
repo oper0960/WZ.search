@@ -38,13 +38,13 @@ class InfomationCollectionViewLifeTimeCell: UICollectionViewCell {
         top10TitleLabel.text = "top10".localized
     }
     
-    func bind(title: String, lifetime: LifetimeViewable) {
+    func bind(title: String, segment: SegmentViewable) {
         titleLabel.text = title
-        winsLabel.text = lifetime.wins
-        top5Label.text = lifetime.topFive
-        top10Label.text = lifetime.topTen
-        kdRatioLabel.text = lifetime.kdRatio
-        scoreLabel.text = lifetime.score
-        timePlayedLabel.text = lifetime.timePlayed
+        winsLabel.text = segment.wins
+        top5Label.text = segment.topFive
+        top10Label.text = segment.topTen
+        kdRatioLabel.text = segment.kdRatio
+        scoreLabel.text = segment.score
+        timePlayedLabel.text = segment.timePlayed
     }
 }

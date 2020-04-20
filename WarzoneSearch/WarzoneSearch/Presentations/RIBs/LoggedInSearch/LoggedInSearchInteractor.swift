@@ -22,7 +22,7 @@ protocol LoggedInSearchPresentable: Presentable {
     var onClickCloseButton: ControlEvent<()> { get }
     
 //    func setInfomation(infomation: InfomationViewable, matchs: MatchHistoryViewable?)
-    func setNewInfomation(infomation: NewInfomationViewable, matchs: MatchHistoryViewable?)
+    func setInfomation(infomation: InfomationViewable, matchs: MatchHistoryViewable?)
     func playLoading()
     func stopLoading()
     func showNotAccountAlert()
@@ -85,50 +85,29 @@ extension LoggedInSearchInteractor {
         
         presenter.playLoading()
         Observable.combineLatest(id, platform).subscribe { [weak self] user in
+
             guard let self = self else { return }
             guard let element = user.element else { return }
             
-            self.infomationUseCase.getUserNewInfomation(platform: element.1, id: element.0).subscribe(onNext: { [weak self] infomation in
+            self.infomationUseCase.getUserInfomation(platform: element.1, id: element.0).subscribe(onNext: { [weak self] infomation in
                 guard let self = self else { return }
 
-                print("1")
                 guard !infomation.userId.isEmpty else {
-                    print("2")
                     self.presenter.showNotAccountAlert()
                     return
                 }
-                print("3")
-
+                
                 self.userUseCase.saveUser(platform: element.1, id: element.0)
-                print("4                       ")
+                
                 self.matchHistoryUseCase.getUserMatchHistory(platform: element.1, id: element.0).subscribe(onNext: { [weak self] match in
                     guard let self = self else { return }
-                    self.presenter.setNewInfomation(infomation: infomation, matchs: match)
+                    self.presenter.setInfomation(infomation: infomation, matchs: match)
                     }, onError: { error in
-                        self.presenter.setNewInfomation(infomation: infomation, matchs: nil)
+                        self.presenter.setInfomation(infomation: infomation, matchs: nil)
                 }, onDisposed: {
                     self.presenter.stopLoading()
                 }).disposed(by: self.disposeBag)
             }).disposed(by: self.disposeBag)
-            
-//            self.infomationUseCase.getUserInfomation(platform: element.1, id: element.0).subscribe(onNext: { [weak self] infomation in
-//                guard let self = self else { return }
-//
-//                guard infomation.userName != nil else {
-//                    self.presenter.showNotAccountAlert()
-//                    return
-//                }
-//                self.userUseCase.saveUser(platform: element.1, id: element.0)
-//
-//                self.matchHistoryUseCase.getUserMatchHistory(platform: element.1, id: element.0).subscribe(onNext: { [weak self] match in
-//                    guard let self = self else { return }
-//                    self.presenter.setInfomation(infomation: infomation, matchs: match)
-//                    }, onError: { error in
-//                        self.presenter.setInfomation(infomation: infomation, matchs: nil)
-//                }, onDisposed: {
-//                    self.presenter.stopLoading()
-//                }).disposed(by: self.disposeBag)
-//            }).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
     }
 }

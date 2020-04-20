@@ -20,24 +20,6 @@ class InfomationDataStoreImplement: InfomationDataStore {
         
         let urlString = Constants.Infomation.infomation
         
-        let replacingPlatform = urlString.replacingOccurrences(of: "where", with: platform.name)
-        let replacingid = replacingPlatform.replacingOccurrences(of: "id", with: id.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
-        
-        return RxAlamofire.requestData(.get, URL(string: replacingid)!,
-                                       parameters: [:],
-                                       encoding: URLEncoding(destination: .methodDependent),
-                                       headers: [:])
-            .map { _ , data in
-                print(JSON(data))
-                let decodableJson = try JSONDecoder().decode(InfomationCodable.self, from: data)
-                return InfomationViewModel(infomation: decodableJson.infomation)
-        }
-    }
-    
-    func getUserNewInfomation(platform: Platform, id: String) -> Observable<NewInfomationViewable> {
-        
-        let urlString = Constants.Infomation.newInfomation
-        
         let replacingPlatform = urlString.replacingOccurrences(of: "platform", with: platform.matchHistoryName)
         let replacingid = replacingPlatform.replacingOccurrences(of: "id", with: id.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
         
@@ -46,9 +28,14 @@ class InfomationDataStoreImplement: InfomationDataStore {
                                        encoding: URLEncoding(destination: .methodDependent),
                                        headers: [:])
             .map { _ , data in
-//                print(JSON(data))
-                let decodableJson = try JSONDecoder().decode(NewInfomationCodable.self, from: data)
-                return NewInfomationViewModel(infomation: decodableJson.data)
+                //                print(JSON(data))
+                do {
+                    let decodableJson = try JSONDecoder().decode(InfomationCodable.self, from: data)
+                    return InfomationViewModel(infomation: decodableJson.data)
+                } catch {
+                    print(error)
+                }
+                return InfomationViewModel()
         }
     }
 }

@@ -11,9 +11,7 @@ import Foundation
 public struct Constants {
     
     public struct Infomation {
-        private static let baseUrl = "https://my.callofduty.com/api/papi-client"
-        public static let infomation = "\(baseUrl)/stats/cod/v1/title/mw/platform/where/gamer/id/profile/type/wz"
-        public static let newInfomation = "https://api.tracker.gg/api/v2/warzone/standard/profile/platform/id"
+        public static let infomation = "https://api.tracker.gg/api/v2/warzone/standard/profile/platform/id"
     }
     
     public struct MatchHistory {

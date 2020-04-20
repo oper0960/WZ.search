@@ -21,8 +21,4 @@ class InfomationRepositoryImplement: InfomationRepository {
     func getUserInfomation(platform: Platform, id: String) -> Observable<InfomationViewable> {
         return dataStore.getUserInfomation(platform: platform, id: id)
     }
-    
-    func getUserNewInfomation(platform: Platform, id: String) -> Observable<NewInfomationViewable> {
-        return dataStore.getUserNewInfomation(platform: platform, id: id)
-    }
 }

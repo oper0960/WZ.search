@@ -12,12 +12,12 @@ import Domain
 class InfomationTableViewLifetimeCell: UITableViewCell {
 
     enum LifeTimeType {
-        case all, battle, plunder
+        case all
     }
     
     @IBOutlet weak var lifeTimeCollectionView: UICollectionView!
     
-    var infomation: InfomationViewable = InfomationViewModel() {
+    var segment: SegmentViewable = SegmentViewModel() {
         didSet {
             lifeTimeCollectionView.reloadData()
         }
@@ -25,19 +25,7 @@ class InfomationTableViewLifetimeCell: UITableViewCell {
     
     private lazy var menu: [LifeTimeType] = {
         var arr = [LifeTimeType]()
-        
-        if infomation.lifetimeAllBattleRoyal != nil {
-            arr.append(.all)
-        }
-        
-        if infomation.lifetimeBattleRoyal != nil {
-            arr.append(.battle)
-        }
-        
-        if infomation.lifetimePlunder != nil {
-            arr.append(.plunder)
-        }
-        
+        arr.append(.all)
         return arr
     }()
     
@@ -51,8 +39,6 @@ class InfomationTableViewLifetimeCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
 
@@ -72,26 +58,12 @@ extension InfomationTableViewLifetimeCell: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (contentView.frame.width - 80), height: lifeTimeCollectionView.bounds.height)
+        return CGSize(width: (contentView.frame.width - 32), height: lifeTimeCollectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LifeTimeCell", for: indexPath) as! InfomationCollectionViewLifeTimeCell
-        
-        switch menu[indexPath.section] {
-        case .all:
-            if let all = infomation.lifetimeAllBattleRoyal {
-                cell.bind(title: "all".localized, lifetime: all)
-            }
-        case .battle:
-            if let battle = infomation.lifetimeBattleRoyal {
-                cell.bind(title: "battle".localized, lifetime: battle)
-            }
-        case .plunder:
-            if let plunder = infomation.lifetimePlunder {
-                cell.bind(title: "plunder".localized, lifetime: plunder)
-            }
-        }
+        cell.bind(title: "all".localized, segment: segment)
         return cell
     }
     

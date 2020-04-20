@@ -21,8 +21,4 @@ class InfomationUseCaseImplement: InfomationUseCase {
     func getUserInfomation(platform: Platform, id: String) -> Observable<InfomationViewable> {
         return infomationRepository.getUserInfomation(platform: platform, id: id)
     }
-    
-    func getUserNewInfomation(platform: Platform, id: String) -> Observable<NewInfomationViewable> {
-        return infomationRepository.getUserNewInfomation(platform: platform, id: id)
-    }
 }

@@ -1,5 +1,5 @@
 //
-//  newInfomationCodable.swift
+//  InfomationCodable.swift
 //  WarzoneSearch
 //
 //  Created by Gilwan Ryu on 2020/04/14.
@@ -7,13 +7,13 @@
 //
 
 import UIKit
-// MARK: - NewInfomationCodable
-struct NewInfomationCodable: Codable {
-    let data: NewInfomationData?
+// MARK: - InfomationCodable
+struct InfomationCodable: Codable {
+    let data: InfomationData?
 }
 
 // MARK: - DataClass
-struct NewInfomationData: Codable {
+struct InfomationData: Codable {
     let platformInfo: PlatformInfo?
     let userInfo: UserInfo?
     let segments: [NewSegment]?
@@ -35,7 +35,7 @@ struct UserInfo: Codable {
     let isPremium: Bool?
     let isVerified: Bool?
     let isInfluencer: Bool?
-    let countryCode: String
+    let countryCode: String?
     let customAvatarUrl: String?
     let customHeroUrl: String?
 }
@@ -73,7 +73,7 @@ struct Stats: Codable {
 // MARK: - AverageLife
 struct StatsDetail: Codable {
     let rank: Int?
-    let percentile: Int?
+    let percentile: Double?
     let displayName: String?
     let displayCategory: String?
     let category: String?

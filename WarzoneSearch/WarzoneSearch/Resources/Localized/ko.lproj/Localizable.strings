@@ -32,6 +32,7 @@
 "lifetime" = "전체 기록";
 "weekly" = "이번주 기록";
 "matchHistory" = "플레이 기록";
+"profile" = "프로필";
 
 // 타입
 "all" = "전체";
@@ -41,12 +42,22 @@
 "Battle Royale" = "배틀로얄";
 "Battle Royale Solos" = "배틀로얄 솔로";
 "Blood Money" = "약탈";
+"BR Quads" = "4인 배틀로얄";
+"BR Trios" = "3인 배틀로얄";
+"BR Duos" = "2인 배틀로얄";
+"BR Solos" = "솔로 배틀로얄";
+"Plunder Quads" = "4인 약탈";
+"Plunder Trios" = "3인 약탈";
+"Plunder Duos" = "2인 약탈";
+"Plunder Solos" = "솔로 약탈";
 
 // LifeTime, Weekly Preperty
 "K/D" = "K/D";
 "wins" = "승리";
 "score" = "점수";
 "timeplayed" = "플레이타임";
+"gameplayed" = "게임플레이";
+"levelprogress" = "현재 경험치 %";
 "kill" = "처치";
 "death" = "사망";
 "damage" = "데미지";
