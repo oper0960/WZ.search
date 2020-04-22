@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 import Domain
+import FirebaseCrashlytics
 
 protocol LoggedOutSearchPresentableListener: class {
     // TODO: Business Logic의 수행을 위해 Interactor로 호출할 메소드, 프로퍼티를 구현
@@ -48,6 +49,8 @@ final class LoggedOutSearchViewController: BaseViewController {
         super.viewDidLoad()
         setup()
         setTableView()
+        
+        Crashlytics.crashlytics().log("dasfkladjfdklafj")
     }
     
     override func viewWillAppear(_ animated: Bool) {
