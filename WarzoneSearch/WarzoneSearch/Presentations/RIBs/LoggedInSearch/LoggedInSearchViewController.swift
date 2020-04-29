@@ -17,6 +17,7 @@ import SnapKit
 protocol LoggedInSearchPresentableListener: class {
     // TODO: Business Logic의 수행을 위해 Interactor로 호출할 메소드, 프로퍼티를 구현
     func routeLoggedOut()
+    func searchMatchDetail(id: String)
 }
 
 final class LoggedInSearchViewController: UIViewController {
@@ -133,10 +134,21 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
         alert.addAction(done)
         present(alert, animated: true, completion: nil)
     }
+    
+    func showNotFoundIdAlert() {
+        let alert = UIAlertController(title: "not_found_matchid_title".localized, message: "not_found_matchid_message".localized, preferredStyle: .alert)
+        let done = UIAlertAction(title: "done".localized, style: .default, handler: nil)
+        alert.addAction(done)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension LoggedInSearchViewController: LoggedInSearchViewControllable {
-    
+    func present(modelPresentation: UIModalPresentationStyle, viewController: UIViewController, complete: @escaping (() -> (Void))) {
+        let presentingView = viewController
+        presentingView.modalPresentationStyle = modelPresentation
+        present(presentingView, animated: true, completion: complete)
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -148,8 +160,6 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch menuArray[section] {
-//        case .header:
-//            return 0
         case .header, .battleRoyal, .plunder, .history:
             return 60
         }
@@ -230,8 +240,23 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+        switch menuArray[indexPath.section] {
+        case .header, .battleRoyal, .plunder:
+            break
+        case .history:
+            guard let matchs = self.matchs?.matchs else { return }
+            
+            let matchHistory = matchs[indexPath.row]
+            
+            if let id = matchHistory.id {
+                listener?.searchMatchDetail(id: id)
+            } else {
+                let alert = UIAlertController(title: "not_found_matchid_title".localized, message: "not_found_matchid_message".localized, preferredStyle: .alert)
+                let done = UIAlertAction(title: "done".localized, style: .default, handler: nil)
+                alert.addAction(done)
+                present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }
 

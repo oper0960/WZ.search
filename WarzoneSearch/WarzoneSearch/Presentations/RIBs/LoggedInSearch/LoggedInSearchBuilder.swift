@@ -31,6 +31,10 @@ final class LoggedInSearchComponent: Component<LoggedInSearchDependency> {
     }()
 }
 
+extension LoggedInSearchComponent: MatchHistoryDetailDependency {
+    
+}
+
 // MARK: - Builder
 protocol LoggedInSearchBuildable: Buildable {
     func build(withListener listener: LoggedInSearchListener) -> LoggedInSearchRouting
@@ -47,6 +51,9 @@ final class LoggedInSearchBuilder: Builder<LoggedInSearchDependency>, LoggedInSe
         let viewController = LoggedInSearchViewController()
         let interactor = LoggedInSearchInteractor(presenter: viewController, userStream: component.userStream, matchHistoryUseCase: component.matchHistoryUseCase, infomationUseCase: component.infomationUseCase, userUseCase: component.userUseCase)
         interactor.listener = listener
-        return LoggedInSearchRouter(interactor: interactor, viewController: viewController)
+        
+        let historyDetailBuilder = MatchHistoryDetailBuilder(dependency: component)
+        
+        return LoggedInSearchRouter(interactor: interactor, viewController: viewController, historyDetailBuilder: historyDetailBuilder)
     }
 }

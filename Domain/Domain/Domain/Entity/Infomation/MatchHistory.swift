@@ -13,6 +13,7 @@ public protocol MatchHistoryViewable {
 }
 
 public protocol MatchViewable {
+    var id: String? { get }
     var modeName: String { get }
     var mapName: String { get }
     var playerCount: String { get }
@@ -53,4 +54,28 @@ public protocol MatchViewable {
     var objectiveLastStandKill: String { get }
     var placement: String { get }
     var plunder: String { get }
+}
+
+public protocol MatchHistoryDetailViewable {
+    
+    var modeName: String { get }
+    var mapName: String { get }
+    var timestamp: String { get }
+    var playerCount: String { get }
+    var teamCount: String { get }
+    var isSolo: Bool { get }
+    var mapImageUrl: URL? { get }
+    
+    var soloPlayers: [MatchPlayerViewable]? { get }
+    var teamPlayers: [MatchTeamViewable]? { get }
+}
+
+public protocol MatchTeamViewable {
+    var rank: Int { get set }
+    var team: [MatchPlayerViewable] { get set }
+}
+
+public protocol MatchPlayerViewable {
+    var userName: String { get }
+    var platform: UIImage { get }
 }

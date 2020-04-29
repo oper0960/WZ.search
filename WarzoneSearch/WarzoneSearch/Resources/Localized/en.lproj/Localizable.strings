@@ -118,3 +118,6 @@
 
 "atvi_coming_title" = "Coming Soon";
 "atvi_coming_message" = "Choose other platform player.";
+
+"not_found_matchid_title" = "Not found Match ID";
+"not_found_matchid_message" = "Choose other Match History.";

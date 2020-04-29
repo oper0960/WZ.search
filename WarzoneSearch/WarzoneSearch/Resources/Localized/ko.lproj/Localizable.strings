@@ -117,3 +117,6 @@
 
 "atvi_coming_title" = "준비중입니다.";
 "atvi_coming_message" = "다른 플랫폼의 게이머를 선택해주세요.";
+
+"not_found_matchid_title" = "매치 ID 없음";
+"not_found_matchid_message" = "다른 매치를 선택해주세요.";

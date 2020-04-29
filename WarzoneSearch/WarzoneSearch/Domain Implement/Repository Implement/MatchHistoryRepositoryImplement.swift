@@ -21,4 +21,8 @@ class MatchHistoryRepositoryImplement: MatchHistoryRepository {
     func getUserMatchHistory(platform: Platform, id: String) -> Observable<MatchHistoryViewable> {
         return dataStore.getUserMatchHistory(platform: platform, id: id)
     }
+    
+    func getUserMatchHistoryDetail(matchId: String) -> Observable<MatchHistoryDetailViewable> {
+        return dataStore.getUserMatchHistoryDetail(matchId: matchId)
+    }
 }

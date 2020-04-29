@@ -12,7 +12,7 @@ import RxCocoa
 import Domain
 
 protocol LoggedInSearchRouting: ViewableRouting {
-    // TODO: 해당 RIB Router 를 통해 Sub-tree 를 관리하기 위해 구현
+    func routeHistoryDetail(detailData: MatchHistoryDetailViewable)
 }
 
 protocol LoggedInSearchPresentable: Presentable {
@@ -21,11 +21,11 @@ protocol LoggedInSearchPresentable: Presentable {
     
     var onClickCloseButton: ControlEvent<()> { get }
     
-//    func setInfomation(infomation: InfomationViewable, matchs: MatchHistoryViewable?)
     func setInfomation(infomation: InfomationViewable, matchs: MatchHistoryViewable?)
     func playLoading()
     func stopLoading()
     func showNotAccountAlert()
+    func showNotFoundIdAlert()
 }
 
 protocol LoggedInSearchListener: class {
@@ -119,5 +119,17 @@ extension LoggedInSearchInteractor: LoggedInSearchInteractable {
 extension LoggedInSearchInteractor: LoggedInSearchPresentableListener {
     func routeLoggedOut() {
         listener?.closeInfomationView()
+    }
+    
+    func searchMatchDetail(id: String) {
+        presenter.playLoading()
+        matchHistoryUseCase.getUserMatchHistoryDetail(matchId: id).subscribe(onNext: { [weak self] detail in
+            guard let self = self else { return }
+            self.router?.routeHistoryDetail(detailData: detail)
+            }, onError: { error in
+                print(error)
+        }, onDisposed: {
+            self.presenter.stopLoading()
+        }).disposed(by: disposeBag)
     }
 }

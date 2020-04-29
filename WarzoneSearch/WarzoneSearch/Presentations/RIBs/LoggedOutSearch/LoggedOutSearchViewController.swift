@@ -49,8 +49,6 @@ final class LoggedOutSearchViewController: BaseViewController {
         super.viewDidLoad()
         setup()
         setTableView()
-        
-        Crashlytics.crashlytics().log("dasfkladjfdklafj")
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -11,4 +11,5 @@ import RxSwift
 
 public protocol MatchHistoryRepository {
     func getUserMatchHistory(platform: Platform, id: String) -> Observable<MatchHistoryViewable>
+    func getUserMatchHistoryDetail(matchId: String) -> Observable<MatchHistoryDetailViewable>
 }

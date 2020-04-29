@@ -82,6 +82,19 @@
 		EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */; };
 		EF5FAF30243C13EC0087186F /* LeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */; };
 		EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5FAF31243C23280087186F /* UINavigationController+.swift */; };
+		EF6FFD822456DE5C00E60D8F /* MatchHistoryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD7D2456DE5C00E60D8F /* MatchHistoryDetailRouter.swift */; };
+		EF6FFD832456DE5C00E60D8F /* MatchHistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD7E2456DE5C00E60D8F /* MatchHistoryDetailViewController.swift */; };
+		EF6FFD842456DE5C00E60D8F /* MatchHistoryDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD7F2456DE5C00E60D8F /* MatchHistoryDetailBuilder.swift */; };
+		EF6FFD852456DE5C00E60D8F /* MatchHistoryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD802456DE5C00E60D8F /* MatchHistoryDetailInteractor.swift */; };
+		EF6FFD862456DE5C00E60D8F /* MatchHistoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD812456DE5C00E60D8F /* MatchHistoryDetailViewController.xib */; };
+		EF6FFD882456E74000E60D8F /* MatchHistoryDetailCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD872456E74000E60D8F /* MatchHistoryDetailCodable.swift */; };
+		EF6FFD8B2456EAA400E60D8F /* MatchHisitoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD8A2456EAA400E60D8F /* MatchHisitoryDetailViewModel.swift */; };
+		EF6FFD8F24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD8D24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift */; };
+		EF6FFD9024591B5000E60D8F /* MatchTeamDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */; };
+		EF6FFD93245948F900E60D8F /* MatchSoloDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */; };
+		EF6FFD94245948F900E60D8F /* MatchSoloDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD92245948F900E60D8F /* MatchSoloDetailTableViewCell.xib */; };
+		EF6FFD9724595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */; };
+		EF6FFD9824595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */; };
 		EF7395D32445591200FCD0A3 /* NewInfomationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D22445591200FCD0A3 /* NewInfomationCodable.swift */; };
 		EF7395D524455FCD00FCD0A3 /* InfomationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D424455FCD00FCD0A3 /* InfomationViewModel.swift */; };
 		EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */; };
@@ -214,6 +227,19 @@
 		EF5FAF2A243C13EC0087186F /* LeaderboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardInteractor.swift; sourceTree = "<group>"; };
 		EF5FAF2B243C13EC0087186F /* LeaderboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderboardViewController.xib; sourceTree = "<group>"; };
 		EF5FAF31243C23280087186F /* UINavigationController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		EF6FFD7D2456DE5C00E60D8F /* MatchHistoryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDetailRouter.swift; sourceTree = "<group>"; };
+		EF6FFD7E2456DE5C00E60D8F /* MatchHistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDetailViewController.swift; sourceTree = "<group>"; };
+		EF6FFD7F2456DE5C00E60D8F /* MatchHistoryDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDetailBuilder.swift; sourceTree = "<group>"; };
+		EF6FFD802456DE5C00E60D8F /* MatchHistoryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDetailInteractor.swift; sourceTree = "<group>"; };
+		EF6FFD812456DE5C00E60D8F /* MatchHistoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryDetailViewController.xib; sourceTree = "<group>"; };
+		EF6FFD872456E74000E60D8F /* MatchHistoryDetailCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDetailCodable.swift; sourceTree = "<group>"; };
+		EF6FFD8A2456EAA400E60D8F /* MatchHisitoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHisitoryDetailViewModel.swift; sourceTree = "<group>"; };
+		EF6FFD8D24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTeamDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSoloDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EF6FFD92245948F900E60D8F /* MatchSoloDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSoloDetailTableViewCell.xib; sourceTree = "<group>"; };
+		EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTeamTableViewHeaderCell.xib; sourceTree = "<group>"; };
 		EF7395D22445591200FCD0A3 /* NewInfomationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfomationCodable.swift; sourceTree = "<group>"; };
 		EF7395D424455FCD00FCD0A3 /* InfomationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewModel.swift; sourceTree = "<group>"; };
 		EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +375,7 @@
 				EF5BAB9124206A7500B8E285 /* Root */,
 				EF5BABB324206D1200B8E285 /* LoggedOutSearch */,
 				EF5BABB224206D0E00B8E285 /* LoggedInSearch */,
+				EF6FFD7C2456DE3000E60D8F /* MatchHistoryDetail */,
 				EF5FAEF1243B33A20087186F /* Leaderboard */,
 				EF5FAEF2243C138C0087186F /* About */,
 				EFC5BFA8243C568600070F2B /* Setting */,
@@ -499,6 +526,7 @@
 			children = (
 				EF7395D22445591200FCD0A3 /* NewInfomationCodable.swift */,
 				EF9E7AFE2433471A0024BD0F /* MatchHistoryCodable.swift */,
+				EF6FFD872456E74000E60D8F /* MatchHistoryDetailCodable.swift */,
 				EFC5BFD3243F216E00070F2B /* LeaderBoardCodable.swift */,
 			);
 			path = Codable;
@@ -644,6 +672,41 @@
 			path = LicenseText;
 			sourceTree = "<group>";
 		};
+		EF6FFD7C2456DE3000E60D8F /* MatchHistoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EF6FFD8C24591B3400E60D8F /* View */,
+				EF6FFD892456EA9400E60D8F /* ViewModel */,
+				EF6FFD7D2456DE5C00E60D8F /* MatchHistoryDetailRouter.swift */,
+				EF6FFD802456DE5C00E60D8F /* MatchHistoryDetailInteractor.swift */,
+				EF6FFD7F2456DE5C00E60D8F /* MatchHistoryDetailBuilder.swift */,
+				EF6FFD7E2456DE5C00E60D8F /* MatchHistoryDetailViewController.swift */,
+				EF6FFD812456DE5C00E60D8F /* MatchHistoryDetailViewController.xib */,
+			);
+			path = MatchHistoryDetail;
+			sourceTree = "<group>";
+		};
+		EF6FFD892456EA9400E60D8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF6FFD8A2456EAA400E60D8F /* MatchHisitoryDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF6FFD8C24591B3400E60D8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */,
+				EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */,
+				EF6FFD8D24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift */,
+				EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */,
+				EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */,
+				EF6FFD92245948F900E60D8F /* MatchSoloDetailTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EF9E7AE8242DE3C50024BD0F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,9 +845,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6FFD9024591B5000E60D8F /* MatchTeamDetailTableViewCell.xib in Resources */,
 				EFC5BFDB2440728C00070F2B /* loadingTrophy.json in Resources */,
+				EF6FFD9824595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib in Resources */,
 				EFC5BFB7243C571500070F2B /* SettingTableViewCell.xib in Resources */,
 				EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */,
+				EF6FFD862456DE5C00E60D8F /* MatchHistoryDetailViewController.xib in Resources */,
 				EFC5BFDF244407DF00070F2B /* AboutAdMobTableViewCell.xib in Resources */,
 				EF5BABBD24206D6600B8E285 /* LoggedInSearchViewController.xib in Resources */,
 				EF5FAF1D243C13C30087186F /* Apache2.0.txt in Resources */,
@@ -806,6 +872,7 @@
 				EFC5BFC3243EF80A00070F2B /* LeaderBoardTableViewCell.xib in Resources */,
 				EF5BB1D6242311C200B8E285 /* InfomationTableViewHeaderCell.xib in Resources */,
 				EF5BABC724206D7300B8E285 /* LoggedOutSearchViewController.xib in Resources */,
+				EF6FFD94245948F900E60D8F /* MatchSoloDetailTableViewCell.xib in Resources */,
 				EFC5BFB2243C569500070F2B /* SettingViewController.xib in Resources */,
 				EF5FAF00243C138C0087186F /* AboutViewController.xib in Resources */,
 				EF9E7AEC242DE3D40024BD0F /* SearchHistoryTableViewCell.xib in Resources */,
@@ -895,9 +962,11 @@
 				EF9E7B0F243465EF0024BD0F /* MatchHistoryViewModel.swift in Sources */,
 				EFC5BFD4243F216E00070F2B /* LeaderBoardCodable.swift in Sources */,
 				EF5FAF32243C23280087186F /* UINavigationController+.swift in Sources */,
+				EF6FFD852456DE5C00E60D8F /* MatchHistoryDetailInteractor.swift in Sources */,
 				EF5FAF22243C13C30087186F /* LicenseTextBuilder.swift in Sources */,
 				EF5BABC324206D7300B8E285 /* LoggedOutSearchRouter.swift in Sources */,
 				EF5BAB9724206A8600B8E285 /* RootRouter.swift in Sources */,
+				EF6FFD842456DE5C00E60D8F /* MatchHistoryDetailBuilder.swift in Sources */,
 				EF5FAF2F243C13EC0087186F /* LeaderboardInteractor.swift in Sources */,
 				EF5BABDC242074AC00B8E285 /* UserRepositoryImplement.swift in Sources */,
 				EF5FAF2E243C13EC0087186F /* LeaderboardBuilder.swift in Sources */,
@@ -917,12 +986,16 @@
 				EFC5BFD0243F06CF00070F2B /* LeaderBoardRepositoryImplement.swift in Sources */,
 				EF5BAB8E24206A5300B8E285 /* AppComponents.swift in Sources */,
 				EF5FAF23243C13C30087186F /* LicenseTextViewController.swift in Sources */,
+				EF6FFD8B2456EAA400E60D8F /* MatchHisitoryDetailViewModel.swift in Sources */,
 				EFC5BFCE243F06BF00070F2B /* LeaderBoardDataStoreImplement.swift in Sources */,
 				EFC5BFD9243F2A0800070F2B /* PlayerViewModel.swift in Sources */,
 				EF5FAEFB243C138C0087186F /* AboutRouter.swift in Sources */,
 				EFC5BFD2243F06DD00070F2B /* LeaderBoardUseCaseImplement.swift in Sources */,
 				EF5BB1BD2420C2DD00B8E285 /* InfomationRepositoryImplement.swift in Sources */,
 				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
+				EF6FFD882456E74000E60D8F /* MatchHistoryDetailCodable.swift in Sources */,
+				EF6FFD822456DE5C00E60D8F /* MatchHistoryDetailRouter.swift in Sources */,
+				EF6FFD9724595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift in Sources */,
 				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
 				EF7395D524455FCD00FCD0A3 /* InfomationViewModel.swift in Sources */,
 				EF5BB1D5242311C200B8E285 /* InfomationTableViewHeaderCell.swift in Sources */,
@@ -933,6 +1006,7 @@
 				EF5BABBB24206D6600B8E285 /* LoggedInSearchBuilder.swift in Sources */,
 				EF5BABBA24206D6600B8E285 /* LoggedInSearchViewController.swift in Sources */,
 				EF5F22BE242889FF00A717A2 /* InfomationCollectionViewLifeTimeCell.swift in Sources */,
+				EF6FFD832456DE5C00E60D8F /* MatchHistoryDetailViewController.swift in Sources */,
 				EF5FAF1E243C13C30087186F /* OpenSourceViewController.swift in Sources */,
 				EF5BABDE242074BA00B8E285 /* UserDataStoreImplement.swift in Sources */,
 				EF5BB1BF2420C2EB00B8E285 /* InfomationDataStoreImplement.swift in Sources */,
@@ -941,8 +1015,10 @@
 				EF5FAF17243C13C30087186F /* OpenSource.swift in Sources */,
 				EFC5BFD7243F261900070F2B /* LeaderBoardVIewModel.swift in Sources */,
 				EF5FAEFF243C138C0087186F /* AboutTableViewCell.swift in Sources */,
+				EF6FFD8F24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift in Sources */,
 				EF5FAF26243C13C30087186F /* LicenseTextRouter.swift in Sources */,
 				EF5FAF2D243C13EC0087186F /* LeaderboardViewController.swift in Sources */,
+				EF6FFD93245948F900E60D8F /* MatchSoloDetailTableViewCell.swift in Sources */,
 				EF5BB1D9242311FC00B8E285 /* InfomationTableViewLifetimeCell.swift in Sources */,
 				EF5F22C12428BE9400A717A2 /* Double+.swift in Sources */,
 				EF9E7AFF2433471A0024BD0F /* MatchHistoryCodable.swift in Sources */,

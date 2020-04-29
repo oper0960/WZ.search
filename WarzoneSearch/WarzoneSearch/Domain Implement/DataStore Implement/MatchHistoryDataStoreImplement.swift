@@ -30,7 +30,6 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> JSON in
-//                print(JSON(data.1))
                 return JSON(data.1)
         }
         
@@ -44,7 +43,6 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> MatchHistoryViewable in
-                print(JSON(data.1))
                 let decodableJson = try JSONDecoder().decode(MatchHistoryCodable.self, from: data.1)
                 
                 guard let data = decodableJson.data else { return MatchHistoryViewModel() }
@@ -55,5 +53,28 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
         return profileObservable
             .filter{ profile in profile["data"]["platformInfo"]["platformUserHandle"].string != nil}
             .concatMap({ profile in historyObservable })
+    }
+    
+    // 매치 별 상세 데이터
+    func getUserMatchHistoryDetail(matchId: String) -> Observable<MatchHistoryDetailViewable> {
+        let detailUrlString = Constants.MatchHistory.matchHistoryDetail
+        
+        let replacingMatchId = detailUrlString.replacingOccurrences(of: "matchid", with: matchId)
+        
+        print(replacingMatchId)
+        
+        return RxAlamofire.requestData(.get, URL(string: replacingMatchId)!,
+                                                        parameters: nil,
+                                                        encoding: URLEncoding(destination: .methodDependent),
+                                                        headers: nil)
+            .map { data -> MatchHistoryDetailViewable in
+                do {
+                    let decodableJson = try JSONDecoder().decode(MatchHistoryDetailCodable.self, from: data.1)
+                    return MatchHisitoryDetailViewModel(matchHistoryData: decodableJson.data!)
+                } catch {
+                    print(error)
+                }
+                return MatchHisitoryDetailViewModel()
+        }
     }
 }

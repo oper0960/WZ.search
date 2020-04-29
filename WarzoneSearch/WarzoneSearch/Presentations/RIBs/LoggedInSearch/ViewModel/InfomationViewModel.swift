@@ -44,7 +44,6 @@ class InfomationViewModel: InfomationViewable {
         
         guard let urlString = infomation?.platformInfo?.avatarUrl else { return nil }
         
-        
         return URL(string: urlString)
     }
     

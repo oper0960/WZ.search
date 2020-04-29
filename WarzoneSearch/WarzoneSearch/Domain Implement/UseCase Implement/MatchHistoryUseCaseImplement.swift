@@ -21,4 +21,8 @@ class MatchHistoryUseCaseImplement: MatchHistoryUseCase {
     func getUserMatchHistory(platform: Platform, id: String) -> Observable<MatchHistoryViewable> {
         return matchHistoryRepository.getUserMatchHistory(platform: platform, id: id)
     }
+    
+    func getUserMatchHistoryDetail(matchId: String) -> Observable<MatchHistoryDetailViewable> {
+        return matchHistoryRepository.getUserMatchHistoryDetail(matchId: matchId)
+    }
 }

@@ -53,6 +53,10 @@ class MatchViewModel: MatchViewable {
         self.match = match
     }
     
+    var id: String? {
+        return match.attributes?.id
+    }
+    
     var timestamp: String {
         guard let timestamp = match.metadata?.timestamp else { return "" }
         

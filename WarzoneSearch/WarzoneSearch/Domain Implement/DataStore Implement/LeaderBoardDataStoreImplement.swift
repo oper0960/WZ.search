@@ -25,7 +25,6 @@ class LeaderBoardDataStoreImplement: LeaderBoardDataStore {
                                        parameters: [:],
                                        encoding: URLEncoding(destination: .methodDependent),
                                        headers: [:])
-//            .timeout(10, scheduler: MainScheduler.instance)
             .map { _ , data in
 //                print(JSON(data))
                 

@@ -50,7 +50,8 @@ struct MatchAttributes: Codable {
 struct MatchMetadata: Codable {
     let duration: Duration?
     let timestamp: String?
-    let playerCount, teamCount: Int?
+    let playerCount: Int?
+    let teamCount: Int?
     let mapName: String?
     let mapImageUrl: String?
     let modeName: String?
@@ -88,7 +89,8 @@ struct SegmentMetadata: Codable {
 
 // MARK: - Stat
 struct Stat: Codable {
-    let rank, percentile: Int?
+    let rank: Int?
+    let percentile: Int?
     let displayName: String?
     let displayCategory: String?
     let category: String?
