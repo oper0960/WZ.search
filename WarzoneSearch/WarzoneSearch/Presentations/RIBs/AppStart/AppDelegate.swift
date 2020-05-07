@@ -23,9 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         
         #else
+        
+        #endif
+        
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         FirebaseApp.configure()
-        #endif
          
         setUserDefault()
         
