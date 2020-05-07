@@ -91,6 +91,8 @@
 "gulagKill" = "굴라그 승리";
 "gulagDeath" = "굴라그 패배";
 "movingTimePer" = "이동 비율";
+"longestStreak" = "연속 처치";
+"distanceTraveled" = "이동 거리";
 
 "selectedplatform" = "플랫폼 선택";
 "enterpsn" = "PSN 온라인 ID 입력";

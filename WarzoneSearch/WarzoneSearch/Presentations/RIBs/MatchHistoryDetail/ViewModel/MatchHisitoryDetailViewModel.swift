@@ -86,27 +86,7 @@ class MatchHisitoryDetailViewModel: MatchHistoryDetailViewable {
         return PlayersType(mode: matchHistoryData?.metadata?.modeName ?? "") == .solo
     }
     
-    var soloPlayers: [MatchPlayerViewable]? {
-        
-        switch PlayersType(mode: matchHistoryData?.metadata?.modeName ?? "") {
-        case .solo:
-            guard let players = matchHistoryData?.segments else { return nil }
-            
-            var array = [MatchPlayerViewModel]()
-            
-            for player in players {
-                array.append(MatchPlayerViewModel(player: player))
-            }
-            
-            guard array.count > 0 else { return nil }
-            
-            return array
-        default:
-            return nil
-        }
-    }
-    
-    var teamPlayers: [MatchTeamViewable]? {
+    var players: [MatchTeamViewable]? {
         guard let players = matchHistoryData?.segments else { return nil }
         
         var teams = [MatchTeamViewable]()
@@ -134,6 +114,24 @@ class MatchHisitoryDetailViewModel: MatchHistoryDetailViewable {
 
 class MatchPlayerViewModel: MatchPlayerViewable {
     
+    enum StatsType: String {
+        case kills = "kills"
+        case kdRatio = "kdRatio"
+        case score = "score"
+        case timePlayed = "timePlayed"
+        case headshots = "headshots"
+        case executions = "executions"
+        case assists = "assists"
+        case percentTimeMoving = "percentTimeMoving"
+        case longestStreak = "longestStreak"
+        case scorePerMinute = "scorePerMinute"
+        case damageDone = "damageDone"
+        case distanceTraveled = "distanceTraveled"
+        case deaths = "deaths"
+        case damageTaken = "damageTaken"
+        case damageDonePerMinute = "damageDonePerMinute"
+    }
+    
     private var player: DetailSegment?
     
     init(player: DetailSegment) {
@@ -160,5 +158,170 @@ class MatchPlayerViewModel: MatchPlayerViewable {
         default:
             return UIImage()
         }
+    }
+    
+    var kills: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.kills.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var kdRatio: String {
+        guard let stats = player?.stats else { return "0.00" }
+        
+        for stat in stats {
+            if stat.key == StatsType.kdRatio.rawValue {
+                return stat.value.displayValue ?? "0.00"
+            }
+        }
+        return "0.00"
+    }
+    
+    var score: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.score.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var timePlayed: String {
+        guard let stats = player?.stats else { return "00m 00s" }
+        
+        for stat in stats {
+            if stat.key == StatsType.timePlayed.rawValue {
+                return stat.value.displayValue ?? "00m 00s"
+            }
+        }
+        return "00m 00s"
+    }
+    
+    var headshots: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.headshots.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var executions: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.executions.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var assists: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.assists.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var percentTimeMoving: String {
+        guard let stats = player?.stats else { return "0%" }
+        
+        for stat in stats {
+            if stat.key == StatsType.percentTimeMoving.rawValue {
+                return stat.value.displayValue ?? "0%"
+            }
+        }
+        return "0%"
+    }
+    
+    var longestStreak: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.longestStreak.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var scorePerMinute: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.scorePerMinute.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var damageDone: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.damageDone.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var distanceTraveled: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.distanceTraveled.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var deaths: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.deaths.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var damageTaken: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.damageTaken.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
+    }
+    
+    var damageDonePerMinute: String {
+        guard let stats = player?.stats else { return "0" }
+        
+        for stat in stats {
+            if stat.key == StatsType.damageDonePerMinute.rawValue {
+                return stat.value.displayValue ?? "0"
+            }
+        }
+        return "0"
     }
 }

@@ -92,6 +92,8 @@
 "gulagKill" = "Gulag Kills";
 "gulagDeath" = "Gulag Deaths";
 "movingTimePer" = "Moving Percentage";
+"longestStreak" = "LongestStreak";
+"distanceTraveled" = "DistanceTraveled";
 
 "selectedplatform" = "Select Platform";
 "enterpsn" = "Enter PSN Online ID";

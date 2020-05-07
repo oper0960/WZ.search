@@ -93,8 +93,6 @@
 		EF6FFD9024591B5000E60D8F /* MatchTeamDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */; };
 		EF6FFD93245948F900E60D8F /* MatchSoloDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */; };
 		EF6FFD94245948F900E60D8F /* MatchSoloDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD92245948F900E60D8F /* MatchSoloDetailTableViewCell.xib */; };
-		EF6FFD9724595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */; };
-		EF6FFD9824595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */; };
 		EF7395D32445591200FCD0A3 /* NewInfomationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D22445591200FCD0A3 /* NewInfomationCodable.swift */; };
 		EF7395D524455FCD00FCD0A3 /* InfomationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7395D424455FCD00FCD0A3 /* InfomationViewModel.swift */; };
 		EF9E7AE7242B5F2E0024BD0F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */; };
@@ -238,8 +236,6 @@
 		EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTeamDetailTableViewCell.xib; sourceTree = "<group>"; };
 		EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSoloDetailTableViewCell.swift; sourceTree = "<group>"; };
 		EF6FFD92245948F900E60D8F /* MatchSoloDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSoloDetailTableViewCell.xib; sourceTree = "<group>"; };
-		EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamTableViewHeaderCell.swift; sourceTree = "<group>"; };
-		EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTeamTableViewHeaderCell.xib; sourceTree = "<group>"; };
 		EF7395D22445591200FCD0A3 /* NewInfomationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfomationCodable.swift; sourceTree = "<group>"; };
 		EF7395D424455FCD00FCD0A3 /* InfomationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewModel.swift; sourceTree = "<group>"; };
 		EF9E7AE6242B5F2E0024BD0F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -697,8 +693,6 @@
 		EF6FFD8C24591B3400E60D8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF6FFD9524595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift */,
-				EF6FFD9624595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib */,
 				EF6FFD8D24591B5000E60D8F /* MatchTeamDetailTableViewCell.swift */,
 				EF6FFD8E24591B5000E60D8F /* MatchTeamDetailTableViewCell.xib */,
 				EF6FFD91245948F900E60D8F /* MatchSoloDetailTableViewCell.swift */,
@@ -847,7 +841,6 @@
 			files = (
 				EF6FFD9024591B5000E60D8F /* MatchTeamDetailTableViewCell.xib in Resources */,
 				EFC5BFDB2440728C00070F2B /* loadingTrophy.json in Resources */,
-				EF6FFD9824595CE300E60D8F /* MatchTeamTableViewHeaderCell.xib in Resources */,
 				EFC5BFB7243C571500070F2B /* SettingTableViewCell.xib in Resources */,
 				EF5FAF21243C13C30087186F /* OpenSourceCell.xib in Resources */,
 				EF6FFD862456DE5C00E60D8F /* MatchHistoryDetailViewController.xib in Resources */,
@@ -995,7 +988,6 @@
 				EF5BAB752420691600B8E285 /* AppDelegate.swift in Sources */,
 				EF6FFD882456E74000E60D8F /* MatchHistoryDetailCodable.swift in Sources */,
 				EF6FFD822456DE5C00E60D8F /* MatchHistoryDetailRouter.swift in Sources */,
-				EF6FFD9724595CE300E60D8F /* MatchTeamTableViewHeaderCell.swift in Sources */,
 				EF5BAB7F2420691600B8E285 /* WarzoneSearch.xcdatamodeld in Sources */,
 				EF7395D524455FCD00FCD0A3 /* InfomationViewModel.swift in Sources */,
 				EF5BB1D5242311C200B8E285 /* InfomationTableViewHeaderCell.swift in Sources */,

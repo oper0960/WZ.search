@@ -66,8 +66,7 @@ public protocol MatchHistoryDetailViewable {
     var isSolo: Bool { get }
     var mapImageUrl: URL? { get }
     
-    var soloPlayers: [MatchPlayerViewable]? { get }
-    var teamPlayers: [MatchTeamViewable]? { get }
+    var players: [MatchTeamViewable]? { get }
 }
 
 public protocol MatchTeamViewable {
@@ -78,4 +77,19 @@ public protocol MatchTeamViewable {
 public protocol MatchPlayerViewable {
     var userName: String { get }
     var platform: UIImage { get }
+    var kills: String { get }
+    var kdRatio: String { get }
+    var score: String { get }
+    var timePlayed: String { get }
+    var headshots: String { get }
+    var executions: String { get }
+    var assists: String { get }
+    var percentTimeMoving: String { get }
+    var longestStreak: String { get }
+    var scorePerMinute: String { get }
+    var damageDone: String { get }
+    var distanceTraveled: String { get }
+    var deaths: String { get }
+    var damageTaken: String { get }
+    var damageDonePerMinute: String { get }
 }
