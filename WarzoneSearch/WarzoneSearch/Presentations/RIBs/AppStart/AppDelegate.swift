@@ -21,11 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         #if DEBUG
-        #else
         
-        #endif
-        FirebaseApp.configure()
+        #else
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        FirebaseApp.configure()
+        #endif
+         
         setUserDefault()
         
         let window = UIWindow(frame: UIScreen.main.bounds)

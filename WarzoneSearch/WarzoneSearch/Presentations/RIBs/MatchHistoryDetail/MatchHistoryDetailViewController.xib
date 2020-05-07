@@ -23,7 +23,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mAl-dk-afg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AC0-Ta-yjH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mAl-dk-afg" secondAttribute="trailing" id="NUA-In-pD2"/>

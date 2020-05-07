@@ -98,6 +98,25 @@ struct Stat: Codable {
     let value: Double?
     let displayValue: String?
     let displayType: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case value = "value"
+        case rank, percentile, displayName, displayCategory
+        case category, metadata, displayValue, displayType
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        value = (try? values.decode(Double.self, forKey: .value)) ?? 0.0
+        rank = try? values.decode(Int.self, forKey: .rank)
+        percentile = try? values.decode(Int.self, forKey: .percentile)
+        displayName = try? values.decode(String.self, forKey: .displayName)
+        displayCategory = try? values.decode(String.self, forKey: .displayCategory)
+        category = try? values.decode(String.self, forKey: .category)
+        metadata = try? values.decode(StatMetadata.self, forKey: .metadata)
+        displayValue = try? values.decode(String.self, forKey: .displayValue)
+        displayType = try? values.decode(String.self, forKey: .displayType)
+    }
 }
 
 // MARK: - StatMetadata

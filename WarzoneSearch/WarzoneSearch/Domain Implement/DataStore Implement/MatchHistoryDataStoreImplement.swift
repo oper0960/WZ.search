@@ -61,8 +61,6 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
         
         let replacingMatchId = detailUrlString.replacingOccurrences(of: "matchid", with: matchId)
         
-        print(replacingMatchId)
-        
         return RxAlamofire.requestData(.get, URL(string: replacingMatchId)!,
                                                         parameters: nil,
                                                         encoding: URLEncoding(destination: .methodDependent),

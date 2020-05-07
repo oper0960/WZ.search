@@ -141,7 +141,7 @@ extension MatchHistoryDetailViewController: UITableViewDelegate, UITableViewData
             guard let teams = detailData?.players else { return nil }
             
             let header2 = UIView()
-            header2.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7)
+            header2.backgroundColor = #colorLiteral(red: 0.137254902, green: 0.137254902, blue: 0.137254902, alpha: 1)
             
             let rankLabel = UILabel()
             rankLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

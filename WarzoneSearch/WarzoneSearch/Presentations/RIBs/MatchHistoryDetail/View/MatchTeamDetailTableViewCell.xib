@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwF-Q2-Jhq">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwF-Q2-Jhq" userLabel="ContentView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfV-XN-tQN">
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="374" y="13" width="24" height="24"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="R3J-sa-KtC" secondAttribute="trailing" constant="16" id="KIE-XZ-Oot"/>
                             <constraint firstItem="R3J-sa-KtC" firstAttribute="centerY" secondItem="jwF-Q2-Jhq" secondAttribute="centerY" id="Lbq-ym-hFf"/>
@@ -323,7 +323,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Y0J-Jw-hO5" firstAttribute="leading" secondItem="oRY-UA-XfZ" secondAttribute="leading" constant="16" id="2zR-xG-gNw"/>
                             <constraint firstAttribute="trailing" secondItem="luY-nJ-Pwt" secondAttribute="trailing" constant="16" id="75r-8G-Pgj"/>

@@ -43,7 +43,7 @@
                                 <rect key="frame" x="374" y="13" width="24" height="24"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mbc-JM-4X5" firstAttribute="leading" secondItem="AOb-Yx-Oz5" secondAttribute="trailing" constant="16" id="4D4-nI-2q3"/>
                             <constraint firstItem="mbc-JM-4X5" firstAttribute="centerY" secondItem="2Xa-nO-kNR" secondAttribute="centerY" id="JFE-RI-Vho"/>

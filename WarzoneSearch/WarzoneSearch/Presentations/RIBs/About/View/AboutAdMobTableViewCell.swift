@@ -42,7 +42,7 @@ class AboutAdMobTableViewCell: UITableViewCell {
 extension AboutAdMobTableViewCell: GADBannerViewDelegate {
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("adViewDidReceiveAd")
+//        print("adViewDidReceiveAd")
         addBannerViewToView(bannerView)
     }
     

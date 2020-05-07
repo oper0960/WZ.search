@@ -26,8 +26,6 @@ class LeaderBoardDataStoreImplement: LeaderBoardDataStore {
                                        encoding: URLEncoding(destination: .methodDependent),
                                        headers: [:])
             .map { _ , data in
-//                print(JSON(data))
-                
                 let decodableJson = try JSONDecoder().decode(LeaderBoardCodable.self, from: data)
                 
                 guard let data = decodableJson.data else { return LeaderBoardViewModel() }

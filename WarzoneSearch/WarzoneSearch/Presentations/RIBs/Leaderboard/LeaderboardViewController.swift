@@ -257,7 +257,7 @@ extension LeaderboardViewController: LeaderboardViewControllable {
 extension LeaderboardViewController: GADBannerViewDelegate {
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("adViewDidReceiveAd")
+//        print("adViewDidReceiveAd")
     }
     
     /// Tells the delegate an ad request failed.
