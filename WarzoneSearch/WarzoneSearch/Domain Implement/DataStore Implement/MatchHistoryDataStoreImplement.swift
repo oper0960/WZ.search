@@ -43,6 +43,7 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> MatchHistoryViewable in
+                print(JSON(data.1))
                 let decodableJson = try JSONDecoder().decode(MatchHistoryCodable.self, from: data.1)
                 
                 guard let data = decodableJson.data else { return MatchHistoryViewModel() }
@@ -66,6 +67,7 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> MatchHistoryDetailViewable in
+//                print(JSON(data.1))
                 do {
                     let decodableJson = try JSONDecoder().decode(MatchHistoryDetailCodable.self, from: data.1)
                     return MatchHisitoryDetailViewModel(matchHistoryData: decodableJson.data!)

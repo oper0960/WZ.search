@@ -71,7 +71,7 @@ class MatchViewModel: MatchViewable {
     }
     
     var modeName: String {
-        return (match.metadata?.modeName ?? "").localized
+        return (match.metadata?.modeName ?? "newmode").localized
     }
     
     var mapName: String {

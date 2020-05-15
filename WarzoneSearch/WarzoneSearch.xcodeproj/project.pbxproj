@@ -1184,7 +1184,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.5;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
 				PRODUCT_NAME = WZ.search;
 				SWIFT_VERSION = 5.0;
@@ -1207,7 +1207,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.5;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
 				PRODUCT_NAME = WZ.search;
 				SWIFT_VERSION = 5.0;

@@ -46,11 +46,11 @@
 "BR Trios" = "Battle Royale Trios";
 "BR Duos" = "Battle Royale Duos";
 "BR Solos" = "Battle Royale Solos";
-
 "Plunder Quads" = "Plunder Quads";
 "Plunder Trios" = "Plunder Trios";
 "Plunder Duos" = "Plunder Duos";
 "Plunder Solos" = "Plunder Solos";
+"newmode" = "New Mode (Update scheduled)";
 
 // LifeTime, Weekly Preperty
 "K/D" = "K/D";
