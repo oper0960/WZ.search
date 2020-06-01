@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="16" y="16" width="343" height="668"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle Royal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS8-5g-9GB">
-                                <rect key="frame" x="16" y="16" width="311" height="30"/>
+                                <rect key="frame" x="16" y="16" width="281" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -382,19 +382,28 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow_white" translatesAutoresizingMaskIntoConstraints="NO" id="pFW-tX-yaK">
+                                <rect key="frame" x="307" y="21" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GQ7-Qu-I2e"/>
+                                    <constraint firstAttribute="height" constant="20" id="fWX-bh-4VE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ky5-Qc-0VO" firstAttribute="top" secondItem="gS8-5g-9GB" secondAttribute="bottom" constant="8" id="0Zk-bE-ncN"/>
                             <constraint firstItem="XYg-BI-hK4" firstAttribute="leading" secondItem="Mdt-KZ-vdc" secondAttribute="leading" constant="16" id="2he-qr-elw"/>
-                            <constraint firstAttribute="trailing" secondItem="gS8-5g-9GB" secondAttribute="trailing" constant="16" id="7gF-zs-v8p"/>
                             <constraint firstItem="XYg-BI-hK4" firstAttribute="top" secondItem="ky5-Qc-0VO" secondAttribute="bottom" constant="16" id="Aor-ar-FN7"/>
                             <constraint firstItem="ky5-Qc-0VO" firstAttribute="leading" secondItem="Mdt-KZ-vdc" secondAttribute="leading" constant="16" id="Ckh-0T-BBZ"/>
                             <constraint firstAttribute="trailing" secondItem="ky5-Qc-0VO" secondAttribute="trailing" constant="16" id="U3Z-Ca-Pyu"/>
                             <constraint firstAttribute="trailing" secondItem="lEr-cC-3S1" secondAttribute="trailing" constant="16" id="bV8-rZ-eIU"/>
+                            <constraint firstItem="pFW-tX-yaK" firstAttribute="centerY" secondItem="gS8-5g-9GB" secondAttribute="centerY" id="dXc-4s-xGu"/>
                             <constraint firstItem="lEr-cC-3S1" firstAttribute="top" secondItem="ky5-Qc-0VO" secondAttribute="bottom" constant="16" id="fyH-gK-gB7"/>
                             <constraint firstItem="lEr-cC-3S1" firstAttribute="width" secondItem="Mdt-KZ-vdc" secondAttribute="width" multiplier="1:2" constant="-16" id="gef-XA-9Pi"/>
                             <constraint firstItem="gS8-5g-9GB" firstAttribute="top" secondItem="Mdt-KZ-vdc" secondAttribute="top" constant="16" id="jda-e6-c59"/>
+                            <constraint firstAttribute="trailing" secondItem="pFW-tX-yaK" secondAttribute="trailing" constant="16" id="mfq-Ob-T5A"/>
+                            <constraint firstItem="pFW-tX-yaK" firstAttribute="leading" secondItem="gS8-5g-9GB" secondAttribute="trailing" constant="10" id="nYw-c4-mud"/>
                             <constraint firstItem="XYg-BI-hK4" firstAttribute="width" secondItem="Mdt-KZ-vdc" secondAttribute="width" multiplier="1:2" constant="-16" id="vYE-3q-eju"/>
                             <constraint firstItem="gS8-5g-9GB" firstAttribute="leading" secondItem="Mdt-KZ-vdc" secondAttribute="leading" constant="16" id="yNc-9A-yS7"/>
                         </constraints>
@@ -458,7 +467,10 @@
                 <outlet property="totalXpLabel" destination="nbC-wL-eR5" id="FYo-4J-6sw"/>
                 <outlet property="totalXpTitleLabel" destination="Y3X-8w-Yu0" id="9fc-YK-0XO"/>
             </connections>
-            <point key="canvasLocation" x="232.60869565217394" y="374.66517857142856"/>
+            <point key="canvasLocation" x="232.60869565217394" y="374.33035714285711"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="rightArrow_white" width="25" height="25"/>
+    </resources>
 </document>
