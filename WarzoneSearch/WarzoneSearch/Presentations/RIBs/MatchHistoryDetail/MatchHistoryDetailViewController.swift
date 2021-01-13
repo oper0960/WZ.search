@@ -133,40 +133,46 @@ extension MatchHistoryDetailViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        guard let data = detailData else { return nil }
+//        guard let data = detailData else { return nil }
         
-        if data.isSolo {
-            return nil
-        } else {
-            guard let teams = detailData?.players else { return nil }
-            
-            let header2 = UIView()
-            header2.backgroundColor = #colorLiteral(red: 0.137254902, green: 0.137254902, blue: 0.137254902, alpha: 1)
-            
-            let rankLabel = UILabel()
-            rankLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            rankLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-            rankLabel.text = "#\(teams[section].rank.description)"
-            rankLabel.textAlignment = .left
-            header2.addSubview(rankLabel)
-            rankLabel.snp.makeConstraints {
-                $0.leading.equalTo(header2.snp.leading).offset(16)
-                $0.trailing.equalTo(header2.snp.trailing).offset(-16)
-                $0.centerY.equalToSuperview()
-            }
-            return header2
-        }
+        return nil
+        
+        // 2021 1 11 - 같은팀인지 알수있는 키가없어서 팀플레이 팀원확인불가
+        
+//        if data.isSolo {
+//            return nil
+//        } else {
+//            guard let teams = detailData?.players else { return nil }
+//
+//            let header2 = UIView()
+//            header2.backgroundColor = #colorLiteral(red: 0.137254902, green: 0.137254902, blue: 0.137254902, alpha: 1)
+//
+//            let rankLabel = UILabel()
+//            rankLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//            rankLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+//            rankLabel.text = "#\(teams[section].rank.description)"
+//            rankLabel.textAlignment = .left
+//            header2.addSubview(rankLabel)
+//            rankLabel.snp.makeConstraints {
+//                $0.leading.equalTo(header2.snp.leading).offset(16)
+//                $0.trailing.equalTo(header2.snp.trailing).offset(-16)
+//                $0.centerY.equalToSuperview()
+//            }
+//            return header2
+//        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        guard let data = detailData else { return 0 }
+        return 0
         
-        if data.isSolo {
-            return 0
-        } else {
-            return 60
-        }
+//        guard let data = detailData else { return 0 }
+//
+//        if data.isSolo {
+//            return 0
+//        } else {
+//            return 60
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -181,88 +187,121 @@ extension MatchHistoryDetailViewController: UITableViewDelegate, UITableViewData
         
         guard let data = detailData else { return UITableViewCell() }
         
-        if data.isSolo {
-            let soloCell = tableView.dequeueReusableCell(withIdentifier: "SoloCell", for: indexPath) as! MatchSoloDetailTableViewCell
-            
-            soloCell.isExpanded = expandedSections.contains(indexPath.section)
-            
-            guard let rank = data.players?[indexPath.section].rank.description, let player = data.players?[indexPath.section].team[indexPath.row] else { return soloCell }
-            
-            soloCell.bind(rank: rank, player: player)
-            
-            return soloCell
-        } else {
-            let teamCell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! MatchTeamDetailTableViewCell
-            
-            teamCell.isExpanded = expandedTeamSections.contains(indexPath.section) && expandedTeamRows.contains(indexPath.row)
-            
-            guard let player = data.players?[indexPath.section].team[indexPath.row] else { return teamCell }
-            
-            teamCell.bind(player: player)
-            
-            return teamCell
-        }
+        let soloCell = tableView.dequeueReusableCell(withIdentifier: "SoloCell", for: indexPath) as! MatchSoloDetailTableViewCell
+        
+        soloCell.isExpanded = expandedSections.contains(indexPath.section)
+        
+        guard let rank = data.players?[indexPath.section].rank.description, let player = data.players?[indexPath.section].team[indexPath.row] else { return soloCell }
+        
+        soloCell.bind(rank: rank, player: player)
+        
+        return soloCell
+        
+//        if data.isSolo {
+//            let soloCell = tableView.dequeueReusableCell(withIdentifier: "SoloCell", for: indexPath) as! MatchSoloDetailTableViewCell
+//
+//            soloCell.isExpanded = expandedSections.contains(indexPath.section)
+//
+//            guard let rank = data.players?[indexPath.section].rank.description, let player = data.players?[indexPath.section].team[indexPath.row] else { return soloCell }
+//
+//            soloCell.bind(rank: rank, player: player)
+//
+//            return soloCell
+//        } else {
+//            let teamCell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as! MatchTeamDetailTableViewCell
+//
+//            teamCell.isExpanded = expandedTeamSections.contains(indexPath.section) && expandedTeamRows.contains(indexPath.row)
+//
+//            guard let player = data.players?[indexPath.section].team[indexPath.row] else { return teamCell }
+//
+//            teamCell.bind(player: player)
+//
+//            return teamCell
+//        }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let data = detailData else { return }
         
-        if data.isSolo {
-            guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
-            
-            switch soloCell.isExpanded {
-            case true:
-                expandedSections.remove(indexPath.section)
-            case false:
-                expandedSections.insert(indexPath.section)
-            }
-            
-            soloCell.isExpanded = !soloCell.isExpanded
-            
-            matchTableView.beginUpdates()
-            matchTableView.endUpdates()
-        } else {
-            guard let teamCell = tableView.cellForRow(at: indexPath) as? MatchTeamDetailTableViewCell else { return }
-            
-            switch teamCell.isExpanded {
-            case true:
-                expandedTeamSections.remove(indexPath.section)
-                expandedTeamRows.remove(indexPath.row)
-            case false:
-                expandedTeamSections.insert(indexPath.section)
-                expandedTeamRows.insert(indexPath.row)
-            }
-            
-            teamCell.isExpanded = !teamCell.isExpanded
-            
-            matchTableView.beginUpdates()
-            matchTableView.endUpdates()
+        guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
+        
+        switch soloCell.isExpanded {
+        case true:
+            expandedSections.remove(indexPath.section)
+        case false:
+            expandedSections.insert(indexPath.section)
         }
+        
+        soloCell.isExpanded = !soloCell.isExpanded
+        
+        matchTableView.beginUpdates()
+        matchTableView.endUpdates()
+        
+//        if data.isSolo {
+//            guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
+//
+//            switch soloCell.isExpanded {
+//            case true:
+//                expandedSections.remove(indexPath.section)
+//            case false:
+//                expandedSections.insert(indexPath.section)
+//            }
+//
+//            soloCell.isExpanded = !soloCell.isExpanded
+//
+//            matchTableView.beginUpdates()
+//            matchTableView.endUpdates()
+//        } else {
+//            guard let teamCell = tableView.cellForRow(at: indexPath) as? MatchTeamDetailTableViewCell else { return }
+//
+//            switch teamCell.isExpanded {
+//            case true:
+//                expandedTeamSections.remove(indexPath.section)
+//                expandedTeamRows.remove(indexPath.row)
+//            case false:
+//                expandedTeamSections.insert(indexPath.section)
+//                expandedTeamRows.insert(indexPath.row)
+//            }
+//
+//            teamCell.isExpanded = !teamCell.isExpanded
+//
+//            matchTableView.beginUpdates()
+//            matchTableView.endUpdates()
+//        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         guard let data = detailData else { return }
         
-        if data.isSolo {
-            guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
-            
-            expandedSections.remove(indexPath.section)
-            
-            soloCell.isExpanded = false
+        guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
+        
+        expandedSections.remove(indexPath.section)
+        
+        soloCell.isExpanded = false
 
-            matchTableView.beginUpdates()
-            matchTableView.endUpdates()
-        } else {
-            guard let teamCell = tableView.cellForRow(at: indexPath) as? MatchTeamDetailTableViewCell else { return }
-            
-            expandedTeamSections.remove(indexPath.section)
-            expandedTeamRows.remove(indexPath.row)
-            
-            teamCell.isExpanded = false
-
-            matchTableView.beginUpdates()
-            matchTableView.endUpdates()
-        }
+        matchTableView.beginUpdates()
+        matchTableView.endUpdates()
+        
+//        if data.isSolo {
+//            guard let soloCell = tableView.cellForRow(at: indexPath) as? MatchSoloDetailTableViewCell else { return }
+//            
+//            expandedSections.remove(indexPath.section)
+//            
+//            soloCell.isExpanded = false
+//
+//            matchTableView.beginUpdates()
+//            matchTableView.endUpdates()
+//        } else {
+//            guard let teamCell = tableView.cellForRow(at: indexPath) as? MatchTeamDetailTableViewCell else { return }
+//            
+//            expandedTeamSections.remove(indexPath.section)
+//            expandedTeamRows.remove(indexPath.row)
+//            
+//            teamCell.isExpanded = false
+//
+//            matchTableView.beginUpdates()
+//            matchTableView.endUpdates()
+//        }
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

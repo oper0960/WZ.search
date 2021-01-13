@@ -16,7 +16,7 @@ struct MatchHistoryDetailCodable: Codable {
 // MARK: - DataClass
 struct MatchHistoryDetailData: Codable {
     let attributes: MatchAttributes?
-    let metadata: MatchMetadata?
+    let metadata: MatchDetailMetadata?
     let segments: [DetailSegment]?
 }
 
@@ -27,6 +27,17 @@ struct DetailSegment: Codable {
     let metadata: DetailMetadata?
     let expiryDate: String?
     let stats: [String: Stat]?
+}
+
+// MARK: - MatchDetailMetadata
+struct MatchDetailMetadata: Codable {
+    let duration: Duration?
+    let timestamp: Int?
+    let playerCount: Int?
+    let teamCount: Int?
+    let mapName: String?
+    let mapImageUrl: String?
+    let modeName: String?
 }
 
 // MARK: - DetailAttributes

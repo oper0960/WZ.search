@@ -148,7 +148,7 @@
 		2A472A5C2D0973BC560BBDA4 /* Pods-WarzoneSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarzoneSearch.debug.xcconfig"; path = "Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		8F44096B3C64635C28D02BA1 /* Pods_WarzoneSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarzoneSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07508E454E34E54D71A8D42 /* Pods-WarzoneSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarzoneSearch.release.xcconfig"; path = "Target Support Files/Pods-WarzoneSearch/Pods-WarzoneSearch.release.xcconfig"; sourceTree = "<group>"; };
-		EF5BAB712420691600B8E285 /* WZ.search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZ.search.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5BAB712420691600B8E285 /* WZ.GG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZ.GG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5BAB742420691600B8E285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF5BAB7E2420691600B8E285 /* WarzoneSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WarzoneSearch.xcdatamodel; sourceTree = "<group>"; };
 		EF5BAB802420691D00B8E285 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 		EF5BAB722420691600B8E285 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF5BAB712420691600B8E285 /* WZ.search.app */,
+				EF5BAB712420691600B8E285 /* WZ.GG.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -797,7 +797,7 @@
 			);
 			name = WarzoneSearch;
 			productName = WarzoneSearch;
-			productReference = EF5BAB712420691600B8E285 /* WZ.search.app */;
+			productReference = EF5BAB712420691600B8E285 /* WZ.GG.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1175,7 +1175,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2006010;
+				CURRENT_PROJECT_VERSION = 2101111;
 				DEVELOPMENT_TEAM = QPVS7TPGTF;
 				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1183,10 +1183,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
-				PRODUCT_NAME = WZ.search;
+				PRODUCT_NAME = WZ.GG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1198,7 +1198,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2006010;
+				CURRENT_PROJECT_VERSION = 2101111;
 				DEVELOPMENT_TEAM = QPVS7TPGTF;
 				INFOPLIST_FILE = WarzoneSearch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1206,10 +1206,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilwanryu.WarzoneSearch;
-				PRODUCT_NAME = WZ.search;
+				PRODUCT_NAME = WZ.GG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

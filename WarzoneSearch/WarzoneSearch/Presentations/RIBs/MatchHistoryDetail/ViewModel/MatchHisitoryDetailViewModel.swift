@@ -64,14 +64,14 @@ class MatchHisitoryDetailViewModel: MatchHistoryDetailViewable {
     var timestamp: String {
         guard let timestamp = matchHistoryData?.metadata?.timestamp else { return "" }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let convertDate = dateFormatter.date(from: timestamp)
+        let unixDate = Date(timeIntervalSince1970: TimeInterval(timestamp/1000))
+        
+        // 2021 1 11 - 매치상세정보 값중 timestamp 가 string에서 unix time 으로 변경되어 수정
         
         let stringFormatter = DateFormatter()
         stringFormatter.locale = Locale(identifier: "ko-KR")
         stringFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return stringFormatter.string(from: convertDate!)
+        return stringFormatter.string(from: unixDate)
     }
     
     var playerCount: String {
