@@ -13,6 +13,7 @@ import Domain
 protocol RootRouting: ViewableRouting {
     func routeLoggedIn()
     func routeLoggedOut()
+    func editWebsite()
 }
 
 protocol RootPresentable: Presentable {
@@ -85,6 +86,10 @@ extension RootInteractor: RootInteractable {
     
     func closeInfomationView() {
         router?.routeLoggedOut()
+    }
+    
+    func editWebsite() {
+        router?.editWebsite()
     }
 }
 

@@ -23,18 +23,27 @@ class InfomationDataStoreImplement: InfomationDataStore {
         let replacingPlatform = urlString.replacingOccurrences(of: "platform", with: platform.matchHistoryName)
         let replacingid = replacingPlatform.replacingOccurrences(of: "id", with: id.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
         
+        print(replacingid)
+        
         return RxAlamofire.requestData(.get, URL(string: replacingid)!,
                                        parameters: [:],
                                        encoding: URLEncoding(destination: .methodDependent),
                                        headers: [:])
-            .map { _ , data in
-                do {
-                    let decodableJson = try JSONDecoder().decode(InfomationCodable.self, from: data)
-                    return InfomationViewModel(infomation: decodableJson.data)
-                } catch {
-                    print(error)
+            .map { response , data in
+                
+                let response = ResponseCode(code: response.statusCode)
+                
+                switch response {
+                case .profilePrivate, .notAccount:
+                    return InfomationViewModel(status: response, infomation: nil)
+                case .normal:
+                    do {
+                        let decodableJson = try JSONDecoder().decode(InfomationCodable.self, from: data)
+                        return InfomationViewModel(status: response, infomation: decodableJson.data)
+                    } catch {
+                        return InfomationViewModel(status: ResponseCode.notAccount, infomation: nil)
+                    }
                 }
-                return InfomationViewModel()
         }
     }
 }

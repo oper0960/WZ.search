@@ -50,4 +50,13 @@ extension RootViewController: RootViewControllable {
             dismiss(animated: true, completion: nil)
         }
     }
+    
+    func editWebsite() {
+        
+        let codUrl = "https://cod.tracker.gg/modern-warfare/articles/how-to-public-stats"
+        
+        guard let url = URL(string: codUrl), UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 }

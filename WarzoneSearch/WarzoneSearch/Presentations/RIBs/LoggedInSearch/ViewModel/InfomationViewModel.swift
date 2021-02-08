@@ -12,13 +12,19 @@ import Domain
 class InfomationViewModel: InfomationViewable {
     
     private var infomation: InfomationData?
+    private var statusCode: ResponseCode = .normal
     
-    init(infomation: InfomationData?) {
+    init(status: ResponseCode, infomation: InfomationData?) {
+        self.statusCode = status
         self.infomation = infomation
     }
     
     init() {
         
+    }
+    
+    var status: ResponseCode {
+        return self.statusCode
     }
     
     var platform: UIImage {
@@ -41,7 +47,6 @@ class InfomationViewModel: InfomationViewable {
     }
     
     var avatarUrl: URL? {
-        
         guard let urlString = infomation?.platformInfo?.avatarUrl else { return nil }
         
         return URL(string: urlString)

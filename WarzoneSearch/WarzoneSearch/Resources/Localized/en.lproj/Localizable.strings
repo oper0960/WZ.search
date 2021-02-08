@@ -7,6 +7,7 @@
 */
 
 "done" = "Done";
+"edit" = "Edit";
 "go" = "Go";
 "cancel" = "Cancel";
 "routeProfile" = "Move to Profile";
@@ -124,3 +125,7 @@
 
 "not_found_matchid_title" = "Not found Match ID";
 "not_found_matchid_message" = "Choose other Match History.";
+
+"account_private_title" = "Your account visibility is private.";
+"account_private_message" = "Please modify the account disclosure scope on the Call of Duty Website.";
+

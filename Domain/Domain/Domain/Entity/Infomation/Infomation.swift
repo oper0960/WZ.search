@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: - Infomation ViewModel
 public protocol InfomationViewable {
+    var status: ResponseCode { get }
     var platform: UIImage { get }                               // 플랫폼 (XBOX, PSN, BATTLENET)
     var userId: String { get }                                  // ID
     var avatarUrl: URL? { get }                                 // Profile URL

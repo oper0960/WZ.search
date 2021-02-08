@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EF5BAB702420691600B8E285"
-               BuildableName = "WZ.search.app"
+               BuildableName = "WZ.GG.app"
                BlueprintName = "WarzoneSearch"
                ReferencedContainer = "container:WarzoneSearch.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF5BAB702420691600B8E285"
-            BuildableName = "WZ.search.app"
+            BuildableName = "WZ.GG.app"
             BlueprintName = "WarzoneSearch"
             ReferencedContainer = "container:WarzoneSearch.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EF5BAB702420691600B8E285"
-            BuildableName = "WZ.search.app"
+            BuildableName = "WZ.GG.app"
             BlueprintName = "WarzoneSearch"
             ReferencedContainer = "container:WarzoneSearch.xcodeproj">
          </BuildableReference>

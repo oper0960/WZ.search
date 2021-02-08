@@ -17,6 +17,7 @@ protocol RootViewControllable: ViewControllable {
     // TODO: View를 Control 하기 위해 ViewController에 전달할 메소드, 프로퍼티 구현
     func present(modelPresentation: UIModalPresentationStyle, viewController: ViewControllable, complete: @escaping () -> ())
     func dismiss(viewController: ViewControllable)
+    func editWebsite()
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable> {
@@ -55,6 +56,22 @@ extension RootRouter: RootRouting {
     }
     
     func routeLoggedOut() {
+        
+        if let current = currentRouter {
+            detachChild(current)
+            viewController.dismiss(viewController: current.viewControllable)
+        }
+        
+        let loggedOut = loggedOutBuilder.build(withListener: interactor)
+        currentRouter = loggedOut
+        viewController.present(modelPresentation: .fullScreen, viewController: loggedOut.viewControllable, complete: {
+            self.attachChild(loggedOut)
+        })
+    }
+    
+    func editWebsite() {
+        
+        viewController.editWebsite()
         
         if let current = currentRouter {
             detachChild(current)

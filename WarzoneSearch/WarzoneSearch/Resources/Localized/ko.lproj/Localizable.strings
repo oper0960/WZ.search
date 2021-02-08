@@ -7,6 +7,7 @@
 */
 
 "done" = "완료";
+"edit" = "수정하기";
 "go" = "시작";
 "cancel" = "취소";
 "routeProfile" = "프로필 보기";
@@ -124,3 +125,6 @@
 
 "not_found_matchid_title" = "매치 ID 없음";
 "not_found_matchid_message" = "다른 매치를 선택해주세요.";
+
+"account_private_title" = "계정 공개 범위가 제한되어 있습니다.";
+"account_private_message" = "콜오브듀티 웹사이트에서 공개 범위를 수정해주세요.";

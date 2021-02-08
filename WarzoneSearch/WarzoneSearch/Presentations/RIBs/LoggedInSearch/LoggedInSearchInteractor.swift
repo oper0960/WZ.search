@@ -25,16 +25,18 @@ protocol LoggedInSearchPresentable: Presentable {
     func playLoading()
     func stopLoading()
     func showNotAccountAlert()
+    func showPrivateAccountAlert()
     func showNotFoundIdAlert()
 }
 
 protocol LoggedInSearchListener: class {
     // TODO: 부모 RIB 과의 통신을 위해 부모 RIB Interactor로 전달할 메소드, 프로퍼티 구현.
     func closeInfomationView()
+    func editWebsite()
 }
 
 final class LoggedInSearchInteractor: PresentableInteractor<LoggedInSearchPresentable> {
-
+    
     weak var router: LoggedInSearchRouting?
     weak var listener: LoggedInSearchListener?
     
@@ -48,13 +50,13 @@ final class LoggedInSearchInteractor: PresentableInteractor<LoggedInSearchPresen
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
+    
     override func didBecomeActive() {
         super.didBecomeActive()
         setRx()
         getUserInfomation()
     }
-
+    
     override func willResignActive() {
         super.willResignActive()
         
@@ -85,28 +87,32 @@ extension LoggedInSearchInteractor {
         
         presenter.playLoading()
         Observable.combineLatest(id, platform).subscribe { [weak self] user in
-
+            
             guard let self = self else { return }
             guard let element = user.element else { return }
             
             self.infomationUseCase.getUserInfomation(platform: element.1, id: element.0).subscribe(onNext: { [weak self] infomation in
                 guard let self = self else { return }
-
-                guard !infomation.userId.isEmpty else {
+                
+                switch infomation.status {
+                case .profilePrivate:
+                    self.presenter.showPrivateAccountAlert()
+                    return
+                case .notAccount:
                     self.presenter.showNotAccountAlert()
                     return
+                case .normal:
+                    self.userUseCase.saveUser(platform: element.1, id: element.0)
+                    
+                    self.matchHistoryUseCase.getUserMatchHistory(platform: element.1, id: element.0).subscribe(onNext: { [weak self] match in
+                        guard let self = self else { return }
+                        self.presenter.setInfomation(infomation: infomation, matchs: match)
+                        }, onError: { error in
+                            self.presenter.setInfomation(infomation: infomation, matchs: nil)
+                    }, onDisposed: {
+                        self.presenter.stopLoading()
+                    }).disposed(by: self.disposeBag)
                 }
-                
-                self.userUseCase.saveUser(platform: element.1, id: element.0)
-                
-                self.matchHistoryUseCase.getUserMatchHistory(platform: element.1, id: element.0).subscribe(onNext: { [weak self] match in
-                    guard let self = self else { return }
-                    self.presenter.setInfomation(infomation: infomation, matchs: match)
-                    }, onError: { error in
-                        self.presenter.setInfomation(infomation: infomation, matchs: nil)
-                }, onDisposed: {
-                    self.presenter.stopLoading()
-                }).disposed(by: self.disposeBag)
             }).disposed(by: self.disposeBag)
         }.disposed(by: disposeBag)
     }
@@ -131,5 +137,9 @@ extension LoggedInSearchInteractor: LoggedInSearchPresentableListener {
         }, onDisposed: {
             self.presenter.stopLoading()
         }).disposed(by: disposeBag)
+    }
+    
+    func editWebsite() {
+        self.listener?.editWebsite()
     }
 }

@@ -13,10 +13,12 @@ import UIKit
 import Domain
 import GoogleMobileAds
 import SnapKit
+import SafariServices
 
 protocol LoggedInSearchPresentableListener: class {
     // TODO: Business Logic의 수행을 위해 Interactor로 호출할 메소드, 프로퍼티를 구현
     func routeLoggedOut()
+    func editWebsite()
     func searchMatchDetail(id: String)
 }
 
@@ -27,7 +29,7 @@ final class LoggedInSearchViewController: UIViewController {
     }
     
     private var menuArray: [SectionType] = []
-
+    
     weak var listener: LoggedInSearchPresentableListener?
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -90,7 +92,7 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
         self.infomation = infomation
         self.matchs = matchs
         
-         menuArray = {
+        menuArray = {
             
             var array = [SectionType]()
             guard let infomation = self.infomation else { return array }
@@ -124,6 +126,19 @@ extension LoggedInSearchViewController: LoggedInSearchPresentable {
     
     func stopLoading() {
         indicator.stop()
+    }
+    
+    func showPrivateAccountAlert() {
+        let alert = UIAlertController(title: "account_private_title".localized, message: "account_private_message".localized, preferredStyle: .alert)
+        let done = UIAlertAction(title: "done".localized, style: .default, handler: { _ in
+            self.listener?.routeLoggedOut()
+        })
+        let edit = UIAlertAction(title: "edit".localized, style: .default, handler: { _ in
+            self.listener?.editWebsite()
+        })
+        alert.addAction(done)
+        alert.addAction(edit)
+        present(alert, animated: true, completion: nil)
     }
     
     func showNotAccountAlert() {
@@ -263,7 +278,7 @@ extension LoggedInSearchViewController: UITableViewDelegate, UITableViewDataSour
 extension LoggedInSearchViewController: GADBannerViewDelegate {
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-//        print("adViewDidReceiveAd")
+        //        print("adViewDidReceiveAd")
     }
     
     /// Tells the delegate an ad request failed.
