@@ -16,8 +16,8 @@ public struct Constants {
     
     public struct MatchHistory {
         public static let profile = "https://api.tracker.gg/api/v2/warzone/standard/profile/platform/id"
-        public static let matchHistory = "https://api.tracker.gg/api/v1/warzone/matches/platform/id?type=wz&next=null"
-        public static let matchHistoryDetail = "https://api.tracker.gg/api/v1/warzone/matches/matchid"
+        public static let matchHistory = "https://api.tracker.gg/api/v2/warzone/standard/matches/platform/id?type=wz&next=null"
+        public static let matchHistoryDetail = "https://api.tracker.gg/api/v2/warzone/standard/matches/matchid"
         public static let leaderboard = "https://api.tracker.gg/api/v1/warzone/standard/leaderboards?type=stats&platform=where&board=filter&skip=0&take=100"
     }
 }

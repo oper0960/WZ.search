@@ -43,7 +43,7 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
                                                         encoding: URLEncoding(destination: .methodDependent),
                                                         headers: nil)
             .map { data -> MatchHistoryViewable in
-                print(JSON(data.1))
+//                print(JSON(data.1))
                 let decodableJson = try JSONDecoder().decode(MatchHistoryCodable.self, from: data.1)
                 
                 guard let data = decodableJson.data else { return MatchHistoryViewModel() }
@@ -61,6 +61,8 @@ class MatchHistoryDataStoreImplement: MatchHistoryDataStore {
         let detailUrlString = Constants.MatchHistory.matchHistoryDetail
         
         let replacingMatchId = detailUrlString.replacingOccurrences(of: "matchid", with: matchId)
+        
+        print(replacingMatchId)
         
         return RxAlamofire.requestData(.get, URL(string: replacingMatchId)!,
                                                         parameters: nil,
